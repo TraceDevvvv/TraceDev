@@ -31,10 +31,9 @@ cd TraceDev
 You can configure ` agent/config/config.ymll` :
 
 ```yml
-llm:
-  agent_api_key : "YOUR_API_KEY"
-	agent_api_url : "https://api.openai.com/v1"  # or forward url / other llm url
-	agent_model_name : "deepseek-v3.2"  
+agent_api_key : "YOUR_API_KEY"
+agent_api_url : "https://api.openai.com/v1"  # or forward url / other llm url
+agent_model_name : "deepseek-v3.2"  
 ```
 
 ### 3. Run
