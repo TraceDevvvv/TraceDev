@@ -1,0 +1,118 @@
+classDiagram
+    class InsertBannerApplication {
+        +main(String[] args)
+    }
+
+    class BannerController {
+        +insertBanner(MultipartFile image, String refreshmentPointId): ResponseEntity<UploadResponseDTO>
+        +getRefreshmentPoints(): ResponseEntity<List<RefreshmentPointDTO>>
+    }
+
+    class BannerService {
+        -BannerRepository bannerRepository
+        -RefreshmentPointRepository refreshmentPointRepository
+        -ImageService imageService
+        -EtourClient etourClient
+        +insertBanner(MultipartFile image, String refreshmentPointId): Banner
+        +getRefreshmentPoints(): List<RefreshmentPoint>
+        -validateBanner(MultipartFile image): void
+        -checkBannerLimit(String refreshmentPointId): void
+    }
+
+    class ImageService {
+        +validateImage(MultipartFile image): void
+        +storeImage(MultipartFile image): String
+        +getImageUrl(String imageName): String
+    }
+
+    class EtourClient {
+        <<interface>>
+        +fetchRefreshmentPoints(): List<RefreshmentPoint>
+        +notifyBannerInsertion(Banner banner, RefreshmentPoint refreshmentPoint): void
+    }
+
+    class EtourClientImpl {
+        +fetchRefreshmentPoints(): List<RefreshmentPoint>
+        +notifyBannerInsertion(Banner banner, RefreshmentPoint refreshmentPoint): void
+    }
+
+    class BannerRepository {
+        <<interface>>
+        +findByRefreshmentPointId(String refreshmentPointId): List<Banner>
+        +save(Banner banner): Banner
+    }
+
+    class RefreshmentPointRepository {
+        <<interface>>
+        +findById(String id): Optional<RefreshmentPoint>
+        +findAll(): List<RefreshmentPoint>
+    }
+
+    class Banner {
+        -String id
+        -String refreshmentPointId
+        -String imageUrl
+        -LocalDateTime uploadDate
+        +getId(): String
+        +getRefreshmentPointId(): String
+        +getImageUrl(): String
+        +getUploadDate(): LocalDateTime
+        +setId(String id): void
+        +setRefreshmentPointId(String id): void
+        +setImageUrl(String url): void
+        +setUploadDate(LocalDateTime date): void
+    }
+
+    class RefreshmentPoint {
+        -String id
+        -String name
+        -int maxBanners
+        +getId(): String
+        +getName(): String
+        +getMaxBanners(): int
+        +setId(String id): void
+        +setName(String name): void
+        +setMaxBanners(int maxBanners): void
+    }
+
+    class BannerDTO {
+        +String refreshmentPointId
+        +MultipartFile image
+    }
+
+    class RefreshmentPointDTO {
+        +String id
+        +String name
+    }
+
+    class UploadResponseDTO {
+        +String message
+        +String bannerId
+        +String imageUrl
+    }
+
+    class BannerLimitExceededException {
+        +BannerLimitExceededException(String message)
+    }
+
+    class ImageValidationException {
+        +ImageValidationException(String message)
+    }
+
+    class ResourceNotFoundException {
+        +ResourceNotFoundException(String message)
+    }
+
+    InsertBannerApplication --> BannerController
+    BannerController --> BannerService
+    BannerService --> BannerRepository
+    BannerService --> RefreshmentPointRepository
+    BannerService --> ImageService
+    BannerService --> EtourClient
+    EtourClient <|.. EtourClientImpl
+    BannerRepository <|.. JpaBannerRepository : (Example)
+    RefreshmentPointRepository <|.. JpaRefreshmentPointRepository : (Example)
+    Banner --o RefreshmentPoint : "many to one"
+    BannerDTO --> Banner
+    RefreshmentPointDTO --> RefreshmentPoint
+    UploadResponseDTO --> Banner

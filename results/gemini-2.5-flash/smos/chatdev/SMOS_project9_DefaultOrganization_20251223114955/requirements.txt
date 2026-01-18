@@ -1,0 +1,10 @@
+# This file specifies the runtime and library dependencies for the Java project.
+# While 'requirements.txt' is typically used for Python, this format is used
+# here as instructed to list the Java-specific dependencies.
+#
+# Java Runtime Environment: The version of the JRE/JDK required to run the application.
+java-runtime==17
+#
+# OpenJFX (JavaFX) Controls: The specific JavaFX module required for GUI components.
+# This project uses JavaFX for its user interface.
+openjfx-controls==17.0.0.1

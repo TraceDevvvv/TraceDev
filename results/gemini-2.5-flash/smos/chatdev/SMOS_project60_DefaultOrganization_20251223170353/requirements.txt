@@ -1,0 +1,5 @@
+# This project is a pure Java Swing application and does not use Python external packages.
+# Therefore, a requirements.txt file for Python dependencies is not applicable.
+# All necessary libraries (Swing, AWT, etc.) are part of the standard Java Development Kit (JDK).
+# To compile and run this program, you will need a Java Development Kit (JDK) 8 or higher.
+# To run the compiled program, a Java Runtime Environment (JRE) 8 or higher is sufficient.

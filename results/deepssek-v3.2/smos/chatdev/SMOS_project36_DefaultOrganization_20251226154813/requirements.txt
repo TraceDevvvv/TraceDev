@@ -1,0 +1,13 @@
+# This project is a Java Swing application with no external dependencies
+# All required libraries are part of the standard Java SE platform
+
+# Required Java Version: Java 8 or higher
+# Java packages used:
+# - javax.swing.*
+# - java.awt.*
+# - java.time.*
+# - java.util.*
+# - java.awt.event.*
+
+# Note: Java projects typically use build systems like Maven or Gradle for dependency management
+# This is a self-contained Java Swing application with no external library requirements

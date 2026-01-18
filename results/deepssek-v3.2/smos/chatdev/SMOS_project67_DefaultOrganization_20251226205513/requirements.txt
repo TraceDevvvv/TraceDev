@@ -1,0 +1,2 @@
+Java Runtime Environment (JRE) >= 8
+Java Development Kit (JDK) >= 8 for compilation

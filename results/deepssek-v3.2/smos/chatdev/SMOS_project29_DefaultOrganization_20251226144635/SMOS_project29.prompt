@@ -1,0 +1,33 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: EnterAbsencesAdmin
+Actors: Administrator
+Description: Register digitization, data entry by the administrator
+Preconditions:
+â¢ â¢ â¢
+The user must be logged in to the system as an administrator, the user took the case of use "SeveralTetTingloregister" selects the date on which he wants to enter the information.
+Events sequence
+User
+System
+2. Fill out the form by entering absent students / present and click "Save"
+1. Update the screen displayed according to the date
+3. Send data to the server. The server for each absence sends a notification e-mail to the parent of the student.
+4. Displays the updated log data.
+Postconditions:
+â¢ The data of absences and delays have been entered in the system, and the system sent notifications to parents. The system remains on the registry screen.
+â¢ The administrator interrupts the operation.â¢ Connection to the interrupted SMOS server.
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

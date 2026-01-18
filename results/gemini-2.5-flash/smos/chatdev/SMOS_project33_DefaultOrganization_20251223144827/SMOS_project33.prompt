@@ -1,0 +1,32 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: DeleteDelay
+Actors: Administrator
+Description: Elimination of a delay by the administrator
+Preconditions:
+â¢ â¢ â¢
+The user must be logged in to the system as an administrator, the user took the case "SplitTaTtAlloreGloregistration" selects the date he wants to eliminate a delay.
+Events sequence
+User
+System
+2. Remove the late input of a student and click "Save"
+1. Update the screen based on the selected date
+3. Delete late entry from the archive.
+Postconditions:
+â¢ The system has eliminated the delay. The system remains on the registry screen.
+â¢ The administrator interrupts the operation â¢ Connection to the SMOS server interrupted
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

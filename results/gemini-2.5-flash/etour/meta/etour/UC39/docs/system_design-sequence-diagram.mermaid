@@ -1,0 +1,50 @@
+sequenceDiagram
+    participant Operator as Point Of Restaurant Operator
+    participant FE as Frontend Application
+    participant BC as BannerController
+    participant BS as BannerService
+    participant BR as BannerRepository
+    participant IVS as ImageValidationService
+    participant ISS as ImageStorageService
+
+    Operator->>FE: 1. Select banner editing functionality
+    FE->>BC: GET /banners?restaurantId={id}
+    BC->>BS: getBannersByRestaurant(restaurantId)
+    BS->>BR: findByRestaurantId(restaurantId)
+    BR-->>BS: List<Banner>
+    BS-->>BC: List<BannerResponse>
+    BC-->>FE: 2. Display list of banners
+
+    Operator->>FE: 3. Select a banner and enter editing
+    FE->>FE: 4. Displays form for image selection
+    Operator->>FE: 5. Select a picture and send request
+    FE->>BC: POST /banners/{bannerId}/image (with new image data)
+
+    BC->>BS: updateBannerImage(bannerId, imageData)
+
+    BS->>BR: findById(bannerId)
+    BR-->>BS: Optional<Banner> (existing banner)
+    alt Banner not found
+        BS-->>BC: throws BannerNotFoundException
+        BC-->>FE: 404 Not Found
+        FE-->>Operator: Display error
+    else Banner found
+        BS->>IVS: validateImage(imageData)
+        alt Image is invalid
+            IVS-->>BS: throws InvalidImageException
+            BS-->>BC: throws InvalidImageException
+            BC-->>FE: 400 Bad Request (with error details)
+            FE-->>Operator: 6. Display error (Errored use case)
+        else Image is valid
+            BS->>ISS: uploadImage(imageData, fileName)
+            ISS-->>BS: newImageUrl (URL of stored image)
+            BS->>BR: save(updatedBanner)
+            BR-->>BS: updatedBanner
+            BS-->>BC: BannerResponse
+            BC-->>FE: 200 OK (with updated banner info)
+            FE->>Operator: 7. Confirmation of transaction change
+            FE->>Operator: 8. Notify successful modification
+    end
+
+    Note over Operator,FE: Exit Condition: Operator cancels operation
+    Note over FE,BC: Exit Condition: Interruption of connection to ETOUR server

@@ -1,0 +1,71 @@
+sequenceDiagram
+    participant Operator as Agency Operator
+    participant MainApp as Main
+    participant Controller as ModifyCommentController
+    participant SiteSvc as SiteService
+    participant FeedbackSvc as FeedbackService
+    participant CommentSvc as CommentService
+    participant SiteRepo as SiteRepository
+    participant FeedbackRepo as FeedbackRepository
+    participant CommentRepo as CommentRepository
+
+    Operator->>MainApp: Starts application
+    MainApp->>Controller: new ModifyCommentController()
+    Controller->>SiteSvc: new SiteService(SiteRepo)
+    Controller->>FeedbackSvc: new FeedbackService(FeedbackRepo)
+    Controller->>CommentSvc: new CommentService(CommentRepo)
+
+    Operator->>Controller: startModifyCommentProcess()
+
+    Controller->>SiteSvc: getAllSites()
+    SiteSvc->>SiteRepo: findAllSites()
+    SiteRepo-->>SiteSvc: List<Site>
+    SiteSvc-->>Controller: List<Site>
+    Controller->>Operator: displaySites(List<Site>)
+
+    Operator->>Controller: selectSite(siteId: String)
+    Controller->>FeedbackSvc: getFeedbacksBySiteId(siteId)
+    FeedbackSvc->>FeedbackRepo: findFeedbacksBySiteId(siteId)
+    FeedbackRepo-->>FeedbackSvc: List<Feedback>
+    FeedbackSvc-->>Controller: List<Feedback>
+    Controller->>Operator: displayFeedbacks(List<Feedback>)
+
+    Operator->>Controller: selectFeedback(feedbackId: String)
+    Controller->>FeedbackSvc: getFeedbackById(feedbackId)
+    FeedbackSvc->>FeedbackRepo: findFeedbackById(feedbackId)
+    FeedbackRepo-->>FeedbackSvc: Feedback
+    FeedbackSvc-->>Controller: Feedback (containing Comment)
+    Controller->>Operator: displayCommentForm(Comment)
+
+    Operator->>Controller: submitEditedComment(commentId: String, newText: String)
+    Controller->>CommentSvc: getCommentById(commentId)
+    CommentSvc->>CommentRepo: findCommentById(commentId)
+    CommentRepo-->>CommentSvc: oldComment
+    CommentSvc-->>Controller: oldComment
+
+    Controller->>CommentSvc: validateComment(new Comment(commentId, newText))
+    alt Data is invalid or insufficient
+        CommentSvc-->>Controller: false (validation failed)
+        Controller->>Controller: handleInvalidData() (activates Errored use case)
+        Controller->>Operator: Display error message
+        Operator->>Controller: cancelOperation()
+        Controller-->>Operator: Operation cancelled
+    else Data is valid
+        CommentSvc-->>Controller: true (validation successful)
+        Controller->>Operator: confirmChange(oldComment.getText(), newText)
+        Operator->>Controller: confirmOperation(true)
+        Controller->>CommentSvc: updateCommentText(commentId, newText)
+        CommentSvc->>CommentRepo: saveComment(new Comment(commentId, newText))
+        CommentRepo-->>CommentSvc: Comment saved
+        CommentSvc-->>Controller: Comment updated
+        Controller-->>Operator: Comment successfully updated.
+    end
+
+    alt Operator cancels operation
+        Operator->>Controller: cancelOperation()
+        Controller-->>Operator: Operation cancelled
+    end
+
+    alt Interruption of connection to server
+        Controller--xOperator: Connection lost
+    end

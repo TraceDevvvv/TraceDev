@@ -1,0 +1,12 @@
+
+## System Requirements
+- Operating System: Windows, macOS, or Linux
+- Minimum RAM: 512MB
+- Minimum Disk Space: 10MB
+- Screen Resolution: 1024x768 or higher
+
+## Additional Notes
+- This is a standalone Java application
+- No database connectivity included (uses in-memory data)
+- SMOS server simulation is built-in
+- Application includes sample data for demonstration

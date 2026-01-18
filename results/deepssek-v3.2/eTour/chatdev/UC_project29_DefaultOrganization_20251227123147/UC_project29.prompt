@@ -1,0 +1,27 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Use case name: ExistingErrorTag 
+Description: He was asked to enter a search tags already in the system. 
+Participating Actor: 
+Entry conditions: He was asked to enter a search tags already in the system. 
+Flow of events User System: 
+1. Notice the error message and asks for confirmation of its reading. 
+2 Confirmation of the reading of the notification. 
+3 Recovers the previous state. 
+Exit conditions: The system returns control to the user interaction. 
+Quality requirements:
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

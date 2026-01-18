@@ -1,0 +1,59 @@
+sequenceDiagram
+    participant O as Operator
+    participant M as Main
+    participant MS as MenuService
+    participant MR as MenuRepository
+    participant IV as InputValidator
+    participant ME as Menu
+    participant MI as MenuItem
+
+    O->>M: Starts application
+    M->>M: Displays welcome message and main menu
+    O->>M: Selects 'Modify Menu' option
+
+    M->>MS: getAllDaysOfWeek()
+    MS->>MR: getAvailableDays()
+    MR-->>MS: List<String> days
+    MS-->>M: List<String> days
+    M->>M: Displays form with seven days of the week
+
+    O->>M: Selects a day (e.g., "Monday")
+    M->>IV: isValidDayOfWeek("Monday")
+    IV-->>M: true
+    M->>MS: getMenuForDay("Monday")
+    MS->>MR: loadMenu("Monday")
+    MR->>ME: Creates Menu object from stored data
+    ME-->>MR: Menu object
+    MR-->>MS: Menu object
+    MS-->>M: Menu object (current menu for Monday)
+    M->>M: Displays current menu for Monday in an editable form
+
+    O->>M: Edits menu (e.g., adds a new item, changes price)
+    M->>M: Collects updated menu data
+    M->>IV: Validates new menu item data (e.g., isValidMenuItemName, isValidMenuItemPrice)
+    IV-->>M: Validation results
+
+    alt Data Insufficient/Invalid
+        M->>O: Displays error message
+        M->>M: Active use case Errored (returns to editing or cancels)
+    else Data Valid
+        M->>M: Asks for confirmation of the edit menu
+        O->>M: Confirms operation
+        M->>MS: updateMenu("Monday", updatedMenu)
+        MS->>MR: saveMenu("Monday", updatedMenu)
+        MR->>ME: Serializes Menu object to storage format
+        ME-->>MR: Serialized data
+        MR-->>MS: true (success)
+        MS-->>M: true (success)
+        M->>O: Notifies successful modification of the menu
+    end
+
+    alt Operator cancels
+        O->>M: Cancels operation
+        M->>O: Notifies cancellation
+    end
+
+    alt Interruption of connection to server (ETOUR)
+        M->>O: Displays error message (e.g., "Connection interrupted")
+        M->>M: Handles exception (e.g., logs error, attempts retry)
+    end

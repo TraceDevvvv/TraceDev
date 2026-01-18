@@ -1,0 +1,62 @@
+sequenceDiagram
+    participant UI as User Interface
+    participant AC as AbsenceController
+    participant AS as AbsenceService
+    participant AR as AbsenceRepository
+    participant SR as StudentRepository
+    participant CR as ClassRepository
+    participant NS as NotificationService
+    participant SIS as SmosIntegrationService
+    participant JMA as JavaMailSender
+    participant SMOS as SMOS Server
+    participant DB as Database
+
+    UI->>AC: GET /api/classes/{classId}/students (Request students for class)
+    AC->>SR: findByClassId(classId)
+    SR-->>AC: List<Student>
+    AC->>UI: List<StudentAttendanceDTO> (Display students with default 'present')
+
+    UI->>AC: POST /api/absences (Save Absences)
+    activate AC
+    AC->>AS: processAbsences(AbsenceRequest request)
+    activate AS
+
+    AS->>CR: findById(request.classId)
+    CR-->>AS: Class
+    AS->>SR: findAllById(studentIds)
+    SR-->>AS: List<Student>
+
+    loop For each absent student in request
+        AS->>AS: Create Absence object
+        AS->>AR: save(Absence)
+        AR-->>DB: INSERT Absence
+        DB-->>AR: Absence saved
+        AR-->>AS: Saved Absence
+
+        AS->>NS: sendAbsenceNotification(student, class, absenceDate)
+        activate NS
+        NS->>JMA: createMimeMessage()
+        JMA-->>NS: MimeMessage
+        NS->>JMA: send(MimeMessage)
+        JMA-->>NS: Email sent
+        deactivate NS
+    end
+
+    AS->>SIS: sendAbsenceDataToSmos(List<Absence> newAbsences)
+    activate SIS
+    SIS->>SMOS: POST /smos/absences (Absence data)
+    SMOS-->>SIS: 200 OK / Error
+    SIS-->>AS: boolean success
+    deactivate SIS
+
+    AS-->>AC: void
+    deactivate AS
+    AC-->>UI: 200 OK / Error (Absence data saved, notifications sent)
+    deactivate AC
+
+    UI->>UI: Display success message and return to initial screen
+
+    alt User interrupts operation
+        UI->>AC: Cancel action
+        AC-->>UI: 200 OK (Return to initial screen)
+    end

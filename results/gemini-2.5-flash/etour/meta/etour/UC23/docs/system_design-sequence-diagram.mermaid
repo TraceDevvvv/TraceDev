@@ -1,0 +1,86 @@
+sequenceDiagram
+    participant Operator as Agency Operator
+    participant Main as Main Application
+    participant NV as NewsView
+    participant NS as NewsService
+    participant NR as NewsRepository
+    participant IV as InputValidator
+
+    Operator->>Main: Starts application
+    Main->>NV: displayWelcome()
+    NV-->>Operator: Welcome message & prompt to activate editing
+
+    Operator->>NV: Activates editing functionality (e.g., enters 'edit')
+    NV->>NS: getAllNews()
+    NS->>NR: findAll()
+    NR-->>NS: List<News>
+    NS-->>NV: List<News>
+    NV->>NV: displayNewsList(List<News>)
+    NV-->>Operator: Displays all news in a form
+
+    Operator->>NV: Selects a news ID (e.g., 'news123')
+    NV-->>Operator: Submits selection
+    NV->>NS: getNewsById(id)
+    NS->>NR: findById(id)
+    NR-->>NS: Optional<News>
+    NS-->>NV: Optional<News>
+
+    alt News Found
+        NV->>NV: displayNews(News)
+        NV-->>Operator: Loads data and displays in form for editing
+
+        Operator->>NV: Changes data in form and submits
+        NV->>NV: getNewsDetailsFromUser(existingNews) (collects updated data)
+        NV->>NS: validateNews(updatedNews)
+        NS->>IV: isValidString(title, min, max)
+        IV-->>NS: boolean
+        NS->>IV: isValidString(content, min, max)
+        IV-->>NS: boolean
+        NS->>IV: isValidDate(publicationDateStr)
+        IV-->>NS: boolean
+        NS->>IV: isValidNewsStatus(statusStr)
+        IV-->>NS: boolean
+        NS-->>NV: boolean (isValid), List<String> (errors)
+
+        alt Data is Valid
+            NV->>NV: confirmChanges()
+            NV-->>Operator: Asks for confirmation
+
+            Operator->>NV: Confirms operation
+            NV->>NS: updateNews(updatedNews)
+            NS->>NR: update(updatedNews)
+            NR-->>NS: void
+            NS-->>NV: boolean (success)
+
+            alt Update Successful
+                NV->>NV: displaySuccessMessage("News updated successfully.")
+                NV-->>Operator: Notifies successful amendment
+            else Update Failed (e.g., DB error)
+                NV->>NV: displayErrorMessage("Failed to update news.")
+                NV-->>Operator: Notifies failure
+            end
+
+        else Data is Invalid
+            NV->>NV: displayValidationErrors(errors)
+            NV-->>Operator: Displays errors, activates 'Errored' use case
+            Note over Operator,NV: Operator can re-edit or cancel
+        end
+
+    else News Not Found
+        NV->>NV: displayErrorMessage("News not found.")
+        NV-->>Operator: Notifies news not found
+    end
+
+    alt Operator cancels
+        Operator->>NV: Cancels operation
+        NV->>NV: displayCancellationMessage()
+        NV-->>Operator: Notifies cancellation
+    end
+
+    alt Connection Interruption (ETOUR)
+        Note over NS,NR: Connection to server ETOUR interrupted
+        NR--xNS: Throws IOException / Custom Exception
+        NS--xNV: Catches exception, propagates error
+        NV->>NV: displayConnectionErrorMessage()
+        NV-->>Operator: Notifies connection error
+    end

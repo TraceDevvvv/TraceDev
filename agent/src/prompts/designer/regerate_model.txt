@@ -1,0 +1,69 @@
+
+**You are a senior software architect and UML auditing expert.
+Your task is to revise both a Sequence Diagram and a Class Diagram based on a Use Case and a quality-check report.**
+
+## **Inputs you will receive**
+
+You will be provided with four inputs:
+1. **Use Case description (UC)**
+2. **Initial Sequence Diagram (PlantUML)**
+3. **Initial Class Diagram (PlantUML)**
+4. **Quality-Check Report**, containing identified issues and correction suggestions
+
+## Inputs
+Use Case description：
+{UC}
+Sequence Diagram and Class Diagram:
+{SEQCLASS}
+Quality-Check Report:
+{REPORT}
+
+## **Provide Explanatory Text for Both Diagrams**
+
+After the PlantUML code, provide:
+
+#### **A. Sequence Diagram Explanation**
+
+A short paragraph similar to this style:
+
+> *This sequence diagram details the step-by-step interactions between the actor and the system components for the "Delete a cultural object" use case. It includes the main success path, as well as alternative flows for cancellation and potential system errors, such as a lost connection. The diagram also models the quality requirement of blocking UI controls during the operation to prevent multiple submissions.*
+
+#### **B. Class Diagram Explanation**
+
+A short paragraph + bullet list, similar to:
+
+> *The class diagram below models the key entities involved in managing cultural objects (`BeniCulturali`). It follows a layered architecture pattern with UI, Controller, and Repository classes to separate concerns.*
+>
+> * **`OperatoreAgenzia`** – Represents the actor interacting with the system
+> * **`BeniCulturaliUI`** – Boundary/UI class handling user input and output
+> * **`BeniCulturaliController`** – Control class orchestrating the use case
+> * **`BeneCulturaleRepository`** – Data persistence logic
+> * **`BeneCulturale`** – Entity representing the cultural object
+
+The explanations MUST be specific to the revised diagrams and must reflect the final modeling choices.
+
+## **Output Format**
+
+Your output must be **only**:
+```
+### Sequence Diagram Explanation
+<your explanation>
+
+### Corrected Sequence Diagram
+<PlantUML code>
+
+### Class Diagram Explanation
+<your explanation>
+
+### Corrected Class Diagram
+<PlantUML code>
+```
+
+## **Additional Rules**
+
+* Do not invent new requirements beyond the Use Case unless needed for logical consistency.
+* Keep naming consistent across diagrams.
+* The diagrams must be syntactically valid and executable in PlantUML.
+* If the UC and quality-check report conflict, **follow the quality-check report’s instructions**.
+
+Begin your revisions now.

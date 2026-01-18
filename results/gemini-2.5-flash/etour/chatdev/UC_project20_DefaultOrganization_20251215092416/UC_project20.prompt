@@ -1,0 +1,36 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Use case name INSERISCIBANNER 
+Inserting a new banner associated with a point of rest. 
+Partecipating 
+Actor initialization Agency Operator 
+Entry 
+Operator conditions  The agency has logged. 
+Flow of events User System 
+1. Receives a list of turning points of the rest use case RicercaPuntiDiRistoro and select one from the list and access to the function of inserting banners. 
+2 Displays a form for the selection of an image. 
+3 Select an image and sends the request for entering the system. 
+4 Check the characteristics of the inserted, check that the number of banner did not exceed the maximum point of the restaurant and asks for confirmation of the insertion of the banner. In the event that the inserted image is not valid, enable the use case Errored. 
+
+5 Confirm the operation of insertion. 
+6. Remember the banners associated with the selected point of rest. 
+Exit conditions  The notification about the insertion of new banner to the Refreshments selected. 
+ The Operator Agency cancels the operation. 
+ The point of eating has already entered the maximum number of banners allowed. 
+ Interruption of the connection to the server ETOUR. 
+Quality requirements
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

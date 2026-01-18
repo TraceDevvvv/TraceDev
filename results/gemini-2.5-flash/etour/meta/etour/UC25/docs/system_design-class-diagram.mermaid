@@ -1,0 +1,83 @@
+classDiagram
+    class ViewReportStatisticApplication {
+        <<entry point>>
+        +main(String[] args)
+    }
+
+    class ReportController {
+        -ReportService reportService
+        +getLocations(): List<Location>
+        +getStatisticalReport(String locationId): StatisticalReport
+    }
+
+    class ReportService {
+        -LocationRepository locationRepository
+        -SearchSiteIntegrationService searchSiteIntegrationService
+        -ReportGenerator reportGenerator
+        +getAllLocations(): List<Location>
+        +generateReport(String locationId): StatisticalReport
+    }
+
+    class LocationService {
+        -LocationRepository locationRepository
+        +getAllLocations(): List<Location>
+        +getLocationById(String id): Location
+    }
+
+    class LocationRepository {
+        <<interface>>
+        +findAll(): List<Location>
+        +findById(String id): Optional<Location>
+    }
+
+    class SearchSiteIntegrationService {
+        <<interface>>
+        +getSiteFeedback(String locationId): List<SiteFeedback>
+    }
+
+    class SearchSiteIntegrationServiceImpl {
+        +getSiteFeedback(String locationId): List<SiteFeedback>
+    }
+
+    class ReportGenerator {
+        +generate(List<SiteFeedback> feedbackList, Location location): StatisticalReport
+    }
+
+    class Location {
+        -String id
+        -String name
+        -String address
+    }
+
+    class SiteFeedback {
+        -String feedbackId
+        -String locationId
+        -int rating
+        -String comment
+        -LocalDateTime timestamp
+    }
+
+    class StatisticalReport {
+        -String reportId
+        -String locationId
+        -String locationName
+        -int totalFeedbackCount
+        -double averageRating
+        -Map<Integer, Long> ratingDistribution
+        -List<String> recentComments
+        -LocalDateTime generatedAt
+    }
+
+    ViewReportStatisticApplication --> ReportController
+    ReportController --> ReportService
+    ReportService --> LocationRepository
+    ReportService --> SearchSiteIntegrationService
+    ReportService --> ReportGenerator
+    LocationService --> LocationRepository
+    SearchSiteIntegrationServiceImpl .up.|> SearchSiteIntegrationService
+    LocationRepository .up.|> org.springframework.data.jpa.repository.JpaRepository
+
+    Location --* LocationRepository
+    SiteFeedback --* SearchSiteIntegrationService
+    StatisticalReport --* ReportGenerator
+    Location --* ReportGenerator

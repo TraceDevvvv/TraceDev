@@ -1,0 +1,14 @@
+# This is a Java project.
+# The 'requirements.txt' file format is primarily used for specifying Python package dependencies.
+#
+# This Java application uses only standard Java Platform, Standard Edition (Java SE) libraries
+# (e.g., java.util.*, javax.swing.*, java.awt.*).
+#
+# Therefore, it does not have any external third-party library dependencies that would typically
+# be listed in a `requirements.txt` file as seen in Python projects.
+#
+# To compile and run this Java project, a Java Development Kit (JDK) or Java Runtime Environment (JRE)
+# compatible with Java SE 8 or higher is required.
+#
+# If one were to conceptually represent the core runtime dependency in a similar style, it might look like:
+# java-runtime>=8

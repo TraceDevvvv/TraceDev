@@ -1,0 +1,4 @@
+# No external Python-like dependencies are required for this Java project.
+# All necessary libraries (Swing, AWT, java.time, java.util) are part of the
+# standard Java Development Kit (JDK) or Java Runtime Environment (JRE).
+# A Java SE environment (e.g., OpenJDK 11 or newer) is the primary requirement.

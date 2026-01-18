@@ -1,0 +1,5 @@
+# No external Python-style dependencies are required for this Java project.
+# This project uses standard Java Development Kit (JDK) features (e.g., Swing, AWT, Collections).
+# Java projects typically manage external dependencies using build tools like Maven (pom.xml) or Gradle (build.gradle).
+# As per the provided Java code, there are no third-party libraries to list here.
+# Therefore, this requirements.txt file is intentionally left empty.

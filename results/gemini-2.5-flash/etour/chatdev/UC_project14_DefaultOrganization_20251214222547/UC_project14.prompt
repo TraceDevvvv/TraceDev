@@ -1,0 +1,31 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Use case name RICERCATURISTA 
+Returns the list of tourist account in the system according to certain parameters. 
+Partecipating 
+Actor initialization Agency Operator 
+Entry 
+Operator conditions  The agency has logged. 
+Flow of events User System 
+1. Access the search functionality of a tourist. 
+2 Show the form. 
+3 Fill out the form and submit. 
+4 Processing the request. 
+Exit conditions  The system returns a list of accounts that meet Turista your search criteria. 
+ Interruption of the connection to the server ETOUR. 
+Quality requirements
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

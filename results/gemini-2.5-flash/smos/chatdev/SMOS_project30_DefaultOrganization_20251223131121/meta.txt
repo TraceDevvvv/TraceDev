@@ -1,0 +1,65 @@
+Task:
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: InsertDelayAdmin
+Actors: Administrator
+Description: Register digitization, data entry by the administrator
+Preconditions:
+â¢ â¢ â¢
+The user must be logged in to the system as an administrator, the user took the case of use "SeveralTetTingloregister" selects the date on which he wants to enter the information.
+Events sequence
+User
+System
+2. Fill out the form by entering students with delay and click "Save"
+1. Update the screen displayed according to the date
+3. Send data to the server.
+4. Displays the updated log data.
+Postconditions:
+â¢ The delay data has been entered in the system, and the system sent notifications to parents. The system remains on the registry screen.
+â¢ The administrator interrupts the operation.â¢ Connection to the interrupted SMOS server.
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.
+
+Config:
+ChatEnvConfig.with_memory: False
+ChatEnvConfig.clear_structure: True
+ChatEnvConfig.git_management: False
+ChatEnvConfig.gui_design: True
+ChatEnvConfig.incremental_develop: False
+ChatEnvConfig.background_prompt: ChatDev is a software company powered by multiple intelligent agents, such as chief executive officer, chief human resources officer, chief product officer, chief technology officer, etc, with a multi-agent organizational structure and the mission of 'changing the digital world through programming'.
+
+
+Roster:
+Chief Executive Officer, Counselor, Chief Human Resource Officer, Chief Product Officer, Chief Technology Officer, Programmer, Code Reviewer, Software Test Engineer, Chief Creative Officer
+
+Modality:
+website
+
+Ideas:
+
+
+Language:
+ Java
+
+Code_Version:
+4.0
+
+Proposed_images:
+0
+
+Incorporated_images:
+0
+

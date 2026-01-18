@@ -1,0 +1,67 @@
+classDiagram
+    class Parent {
+        -String parentId
+        -String username
+        -String password
+        -List~String~ childrenStudentIds
+        +Parent(String parentId, String username, String password, List~String~ childrenStudentIds)
+        +String getParentId()
+        +String getUsername()
+        +List~String~ getChildrenStudentIds()
+    }
+
+    class Student {
+        -String studentId
+        -String name
+        -String parentId
+        +Student(String studentId, String name, String parentId)
+        +String getStudentId()
+        +String getName()
+        +String getParentId()
+    }
+
+    class StudentRecord {
+        -String recordId
+        -String studentId
+        -LocalDate date
+        -int absences
+        -String disciplinaryNotes
+        -int delays
+        -String justification
+        +StudentRecord(String recordId, String studentId, LocalDate date, int absences, String disciplinaryNotes, int delays, String justification)
+        +String getStudentId()
+        +LocalDate getDate()
+        +int getAbsences()
+        +String getDisciplinaryNotes()
+        +int getDelays()
+        +String getJustification()
+    }
+
+    class StudentService {
+        -Map~String, Parent~ parents
+        -Map~String, Student~ students
+        -Map~String, List~StudentRecord~~ studentRecords
+        +StudentService()
+        +void initMockData()
+        +Parent getParentById(String parentId)
+        +Student getStudentById(String studentId)
+        +List~StudentRecord~ getStudentRecordsForParentAndChild(String parentId, String studentId)
+        +boolean isChildOfParent(String parentId, String studentId)
+    }
+
+    class SMOSIntegrationService {
+        +void interruptSMOSConnection(String parentId)
+    }
+
+    class ViewStudentDataApp {
+        +static void main(String[] args)
+        -static void displayStudentSummary(List~StudentRecord~ records)
+    }
+
+    Parent "1" -- "*" Student : has
+    Student "1" -- "*" StudentRecord : has
+    StudentService ..> Parent : uses
+    StudentService ..> Student : uses
+    StudentService ..> StudentRecord : uses
+    ViewStudentDataApp ..> StudentService : uses
+    ViewStudentDataApp ..> SMOSIntegrationService : uses

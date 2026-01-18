@@ -1,0 +1,2 @@
+java-jdk==21
+javafx-sdk==21

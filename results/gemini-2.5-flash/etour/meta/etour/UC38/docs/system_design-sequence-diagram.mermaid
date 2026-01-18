@@ -1,0 +1,64 @@
+sequenceDiagram
+    participant Operator as Point Of Restaurant Operator
+    participant Frontend as Frontend UI
+    participant Controller as BannerController
+    participant Service as BannerService
+    participant ImageUtil as ImageValidator
+    participant Repository as BannerRepository
+    participant EtourServer as ETOUR Server
+    participant DB as Database
+
+    Operator->>Frontend: 1. Select 'Insert New Banner' feature
+    Frontend->>Operator: 2. Displays form for image selection
+    Operator->>Frontend: 3. Selects image, provides PointOfRest ID, and submits
+    Frontend->>Controller: POST /api/banners (BannerUploadRequest)
+
+    Controller->>Service: insertBanner(request)
+
+    Service->>ImageUtil: validate(imageFile)
+    alt Image is invalid
+        ImageUtil-->>Service: throws InvalidImageException
+        Service-->>Controller: throws InvalidImageException
+        Controller-->>Frontend: 400 Bad Request (InvalidImageException)
+        Frontend->>Operator: Displays 'Invalid image' error (Errored Use Case)
+    else Image is valid
+        Service->>Repository: countByPointOfRestId(pointOfRestId)
+        Repository->>DB: SELECT COUNT(*) FROM banners WHERE point_of_rest_id = ?
+        DB-->>Repository: count
+        Repository-->>Service: count
+
+        alt Max banners exceeded
+            Service-->>Controller: throws MaxBannersExceededException
+            Controller-->>Frontend: 400 Bad Request (MaxBannersExceededException)
+            Frontend->>Operator: Displays 'Max banners exceeded' error
+        else Max banners not exceeded
+            Service->>Service: Generate unique banner ID and image URL
+            Service->>Service: Store image file (e.g., local filesystem/cloud storage)
+            Service->>DB: Save image file path/metadata
+
+            Service->>Repository: save(new Banner object)
+            Repository->>DB: INSERT INTO banners (id, point_of_rest_id, image_url, ...) VALUES (...)
+            DB-->>Repository: Banner saved
+            Repository-->>Service: Saved Banner object
+
+            Service->>EtourServer: notifyBannerInsertion(bannerDetails)
+            alt ETOUR server connection interrupted
+                EtourServer-->>Service: throws EtourServiceException
+                Service-->>Controller: throws EtourServiceException
+                Controller-->>Frontend: 500 Internal Server Error (EtourServiceException)
+                Frontend->>Operator: Displays 'Connection interrupted' error
+            else ETOUR server notified successfully
+                EtourServer-->>Service: 200 OK
+            end
+
+            Service-->>Controller: Returns Banner object
+            Controller-->>Frontend: 201 Created (BannerResponse)
+            Frontend->>Operator: 5. Displays confirmation: 'Banner successfully inserted!'
+            Operator->>Frontend: 6. Operator remembers banners associated with point of rest
+        end
+    end
+
+    alt Operator cancels operation
+        Operator->>Frontend: Clicks 'Cancel'
+        Frontend-->>Operator: Operation cancelled
+    end

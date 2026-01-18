@@ -1,0 +1,63 @@
+sequenceDiagram
+    participant A as Agency Operator
+    participant MA as MainApplication
+    participant RPC as RefreshmentPointController
+    participant RPS as RefreshmentPointService
+    participant BAC as BannerController
+    participant BAS as BannerService
+    participant EAC as EtourApiClient
+    participant CD as ConfirmationDialog
+    participant ES as ETOUR Server
+
+    A->>MA: Starts Application
+    MA->>RPC: showRefreshmentPointView()
+    RPC->>RPS: getRefreshmentPoints()
+    RPS->>EAC: get("/refreshmentpoints")
+    EAC->>ES: HTTP GET /refreshmentpoints
+    ES-->>EAC: Returns List<RefreshmentPoint>
+    EAC-->>RPS: Returns List<RefreshmentPoint>
+    RPS-->>RPC: Returns List<RefreshmentPoint>
+    RPC-->>A: Displays Refreshment Points (Screen 1)
+
+    A->>RPC: Selects Refreshment Point
+    A->>RPC: Clicks "View Banners"
+    RPC->>BAC: loadBanners(selectedRefreshmentPoint)
+    BAC->>BAS: getBannersForRefreshmentPoint(rpId)
+    BAS->>EAC: get("/refreshmentpoints/{rpId}/banners")
+    EAC->>ES: HTTP GET /refreshmentpoints/{rpId}/banners
+    ES-->>EAC: Returns List<Banner>
+    EAC-->>BAS: Returns List<Banner>
+    BAS-->>BAC: Returns List<Banner>
+    BAC-->>A: Displays Banners (Screen 2)
+
+    A->>BAC: Selects Banner
+    A->>BAC: Clicks "Delete Banner"
+    BAC->>CD: show("Confirm Deletion", "Are you sure...")
+    CD-->>A: Displays Confirmation Dialog (Screen 3)
+
+    alt User Confirms Deletion
+        A->>CD: Clicks "Confirm Deletion"
+        CD-->>BAC: Returns true
+        BAC->>BAS: deleteBanner(bannerId)
+        BAS->>EAC: delete("/banners/{bannerId}")
+        EAC->>ES: HTTP DELETE /banners/{bannerId}
+        ES-->>EAC: Returns 200 OK / 500 Error
+        EAC-->>BAS: Returns boolean (success/failure)
+        BAS-->>BAC: Returns boolean (success/failure)
+        alt Deletion Successful
+            BAC-->>A: Displays Success Notification (Screen 4)
+        else Deletion Failed
+            BAC-->>A: Displays Failure Notification (Screen 4)
+        end
+    else User Cancels Deletion
+        A->>CD: Clicks "Cancel"
+        CD-->>BAC: Returns false
+        BAC-->>A: Returns to Banner List (Screen 2)
+    end
+
+    alt ETOUR Server Connection Interruption
+        EAC--xES: Connection Lost
+        EAC--xRPS: Throws NetworkException
+        RPS--xRPC: Throws NetworkException
+        RPC-->>A: Displays Error Message (e.g., "Connection to ETOUR server interrupted.")
+    end

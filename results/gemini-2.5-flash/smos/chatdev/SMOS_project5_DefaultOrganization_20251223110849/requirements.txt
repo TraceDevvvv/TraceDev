@@ -1,0 +1,10 @@
+# This Java project utilizes only standard libraries available in the Java Development Kit (JDK).
+# Therefore, it does not have external third-party dependencies that would be listed in a
+# 'requirements.txt' file, which is typically used for Python projects.
+#
+# To compile and run this application, a Java Development Kit (JDK) or Java Runtime Environment (JRE)
+# is required. It has been developed and tested with Java 8 (or higher) compatibility.
+#
+# No specific third-party JAR files or external package managers (like Maven or Gradle) are used
+# for dependency management in this particular implementation, as all used classes are part of
+# the standard Java API (e.g., javax.swing, java.awt, java.util).

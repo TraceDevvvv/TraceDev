@@ -1,0 +1,5 @@
+Mathematics|John Doe|2023-09-01|Introduction to Algebra
+Physics|Jane Smith|2023-09-15|Mechanics and Thermodynamics
+Computer Science|Bob Johnson|2023-10-01|Data Structures and Algorithms
+History|Alice Williams|2023-10-15|World History from 1900 to Present
+Literature|Charlie Brown|2023-11-01|Modern American Literature

@@ -1,0 +1,320 @@
+'''
+This panel provides the graphical user interface for an administrator
+to view and edit delay settings for specific dates.
+It interacts with the DelayService to fetch and save data.
+'''
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.text.MaskFormatter;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.Optional;
+import java.util.concurrent.CancellationException; // Import for handling cancellation specifically
+public class EditDelayPanel extends JPanel {
+    private final DelayService delayService;
+    private final DateTimeFormatter dateFormatter;
+    // GUI Components
+    private JFormattedTextField dateInputTextField;
+    private JTextField delayInputTextField;
+    private JButton selectDateButton;
+    private JButton saveButton;
+    private JButton cancelButton; // Added cancel button
+    private JLabel statusLabel;
+    private LocalDate currentSelectedDate; // Stores the date currently being edited
+    // Reference to the currently active SwingWorker for cancellation
+    private SwingWorker<?, ?> currentActiveWorker;
+    /**
+     * Constructor for EditDelayPanel.
+     * Initializes the service, date formatter, and sets up the GUI components and their listeners.
+     * Automatically loads the delay for today's date upon initialization.
+     */
+    public EditDelayPanel() {
+        delayService = new DelayService();
+        dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        currentSelectedDate = null; // Will be set after initial load
+        currentActiveWorker = null; // No worker active initially
+        setupLayout();
+        addEventListeners();
+        // Automatically load delay for today's date on startup
+        // This ensures the screen updates based on a 'selected' date immediately
+        LocalDate initialDate = LocalDate.now();
+        dateInputTextField.setText(initialDate.format(dateFormatter)); // Ensure text field is set
+        loadDelayForDate(initialDate); // Trigger initial load
+    }
+    /**
+     * Sets up the layout and initializes all GUI components.
+     */
+    private void setupLayout() {
+        setLayout(new BorderLayout(10, 10)); // Use BorderLayout for overall structure
+        setBorder(new EmptyBorder(10, 10, 10, 10)); // Add padding
+        // Panel for date input and selection
+        JPanel datePanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 5));
+        datePanel.add(new JLabel("Date (yyyy-MM-dd):"));
+        try {
+            // MaskFormatter helps guide user input for date format
+            MaskFormatter dateFormatterMask = new MaskFormatter("####-##-##");
+            dateFormatterMask.setPlaceholderCharacter('_');
+            dateInputTextField = new JFormattedTextField(dateFormatterMask);
+        } catch (ParseException e) {
+            dateInputTextField = new JFormattedTextField(); // Fallback if mask fails
+            System.err.println("Error creating MaskFormatter: " + e.getMessage());
+        }
+        dateInputTextField.setColumns(10);
+        datePanel.add(dateInputTextField);
+        selectDateButton = new JButton("Select Date");
+        datePanel.add(selectDateButton);
+        add(datePanel, BorderLayout.NORTH);
+        // Panel for delay input and save
+        JPanel editPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 5));
+        editPanel.add(new JLabel("Delay (milliseconds):"));
+        delayInputTextField = new JTextField(10);
+        delayInputTextField.setEnabled(false); // Initially disabled until a date is selected or loaded
+        editPanel.add(delayInputTextField);
+        saveButton = new JButton("Save Delay");
+        saveButton.setEnabled(false); // Initially disabled
+        editPanel.add(saveButton);
+        cancelButton = new JButton("Cancel"); // Initialize cancel button
+        cancelButton.setEnabled(false); // Initially disabled
+        cancelButton.setVisible(false); // Initially hidden
+        editPanel.add(cancelButton); // Add cancel button to the panel
+        add(editPanel, BorderLayout.CENTER);
+        // Status label at the bottom
+        statusLabel = new JLabel("Please select a date to view/edit delay.");
+        statusLabel.setForeground(Color.BLUE); // Default informational color
+        add(statusLabel, BorderLayout.SOUTH);
+    }
+    /**
+     * Adds action listeners to the buttons.
+     */
+    private void addEventListeners() {
+        selectDateButton.addActionListener(this::onSelectDate);
+        saveButton.addActionListener(this::onSaveDelay);
+        cancelButton.addActionListener(this::onCancelOperation); // Add listener for cancel button
+    }
+    /**
+     * Handles the "Select Date" button click event.
+     * Parses the date from the input field and triggers loading the delay.
+     *
+     * @param e ActionEvent generated by the button click.
+     */
+    private void onSelectDate(ActionEvent e) {
+        String dateString = dateInputTextField.getText().trim();
+        LocalDate parsedDate;
+        try {
+            parsedDate = LocalDate.parse(dateString, dateFormatter);
+        } catch (DateTimeParseException ex) {
+            updateStatus("Error: Invalid date format. Please use yyyy-MM-dd.", true);
+            delayInputTextField.setText("");
+            delayInputTextField.setEnabled(false);
+            saveButton.setEnabled(false);
+            currentSelectedDate = null;
+            return;
+        }
+        loadDelayForDate(parsedDate); // Call the dedicated load method
+    }
+    /**
+     * Handles the "Cancel" button click event.
+     * Attempts to cancel any currently running SwingWorker operation.
+     *
+     * @param e ActionEvent generated by the button click.
+     */
+    private void onCancelOperation(ActionEvent e) {
+        if (currentActiveWorker != null && !currentActiveWorker.isDone()) {
+            currentActiveWorker.cancel(true); // Request cancellation of the background task
+            updateStatus("Cancellation requested...", false);
+            // Disable cancel button immediately as cancellation is in progress.
+            // UI state will be fully reset in the worker's done() method.
+            cancelButton.setEnabled(false);
+        }
+    }
+    /**
+     * Loads the delay for a specified date using a SwingWorker
+     * to avoid freezing the UI. Updates the delay input field and status label.
+     *
+     * @param date The date for which to fetch and display the delay.
+     */
+    private void loadDelayForDate(LocalDate date) {
+        // Cancel any existing operation before starting a new one.
+        // This handles cases where user rapidly clicks "Select Date" or tries to select a date mid-save.
+        if (currentActiveWorker != null && !currentActiveWorker.isDone()) {
+            currentActiveWorker.cancel(true);
+            updateStatus("Previous operation cancelled. Starting new fetch...", false);
+        }
+        currentSelectedDate = date; // Store the valid parsed date
+        updateStatus("Fetching delay for " + currentSelectedDate.format(dateFormatter) + "...", false);
+        setOperationInProgress(true); // Disable UI components, enable cancel button
+        // Use SwingWorker for background operation to keep UI responsive
+        SwingWorker<Optional<Integer>, Void> worker = new SwingWorker<>() {
+            private DelayServiceException serviceException = null;
+            @Override
+            protected Optional<Integer> doInBackground() {
+                try {
+                    return delayService.fetchDelay(currentSelectedDate);
+                } catch (DelayServiceException ex) {
+                    serviceException = ex;
+                    return Optional.empty(); // Indicate failure
+                }
+            }
+            @Override
+            protected void done() {
+                setOperationInProgress(false); // Re-enable UI components, disable cancel button
+                currentActiveWorker = null; // Clear the worker reference
+                try {
+                    if (isCancelled()) {
+                        handleCancellation();
+                        return;
+                    }
+                    if (serviceException != null) {
+                        updateStatus("Error: " + serviceException.getMessage(), true);
+                        delayInputTextField.setText("");
+                        delayInputTextField.setEnabled(false);
+                        saveButton.setEnabled(false);
+                        currentSelectedDate = null; // Reset current date as operation failed or was interrupted
+                        return;
+                    }
+                    Optional<Integer> delay = get(); // Get result from doInBackground
+                    if (delay.isPresent()) {
+                        delayInputTextField.setText(String.valueOf(delay.get()));
+                        updateStatus("Delay loaded. Edit and Save.", false);
+                    } else {
+                        delayInputTextField.setText("0"); // Default to 0 if no delay found for the date
+                        updateStatus("No delay found for " + currentSelectedDate.format(dateFormatter) + ". Enter new delay.", false);
+                    }
+                    delayInputTextField.setEnabled(true);
+                    saveButton.setEnabled(true);
+                } catch (CancellationException ex) {
+                    // This catches cancellation that happens during get(), which is unlikely with isCancelled() check
+                    handleCancellation();
+                } catch (Exception ex) {
+                    updateStatus("An unexpected error occurred: " + ex.getMessage(), true);
+                    delayInputTextField.setText("");
+                    delayInputTextField.setEnabled(false);
+                    saveButton.setEnabled(false);
+                    currentSelectedDate = null; // Reset current date on unexpected error
+                }
+            }
+        };
+        currentActiveWorker = worker; // Store reference to the worker
+        worker.execute();
+    }
+    /**
+     * Handles the "Save Delay" button click event.
+     * Parses the delay value, saves it using a SwingWorker.
+     * Updates the status label based on the operation's success or failure.
+     *
+     * @param e ActionEvent generated by the button click.
+     */
+    private void onSaveDelay(ActionEvent e) {
+        if (currentSelectedDate == null) {
+            updateStatus("Error: No date selected for saving. Select a date first.", true);
+            return;
+        }
+        // Cancel any existing operation before starting a new one.
+        if (currentActiveWorker != null && !currentActiveWorker.isDone()) {
+            currentActiveWorker.cancel(true);
+            updateStatus("Previous operation cancelled. Starting new save...", false);
+        }
+        String delayString = delayInputTextField.getText().trim();
+        int delayValue;
+        try {
+            delayValue = Integer.parseInt(delayString);
+            if (delayValue < 0) {
+                updateStatus("Error: Delay cannot be negative.", true);
+                return;
+            }
+        } catch (NumberFormatException ex) {
+            updateStatus("Error: Invalid delay value. Please enter a number.", true);
+            return;
+        }
+        updateStatus("Saving delay for " + currentSelectedDate.format(dateFormatter) + "...", false);
+        setOperationInProgress(true); // Disable UI components, enable cancel button
+        // Use SwingWorker for background operation to keep UI responsive
+        SwingWorker<Boolean, Void> worker = new SwingWorker<>() {
+            private DelayServiceException serviceException = null;
+            @Override
+            protected Boolean doInBackground() {
+                try {
+                    return delayService.saveDelay(currentSelectedDate, delayValue);
+                } catch (DelayServiceException ex) {
+                    serviceException = ex;
+                    return false; // Indicate failure
+                }
+            }
+            @Override
+            protected void done() {
+                setOperationInProgress(false); // Re-enable UI components, disable cancel button
+                currentActiveWorker = null; // Clear the worker reference
+                try {
+                    if (isCancelled()) {
+                        handleCancellation();
+                        return;
+                    }
+                    if (serviceException != null) {
+                        updateStatus("Error: " + serviceException.getMessage(), true);
+                        return;
+                    }
+                    boolean success = get(); // Get result from doInBackground
+                    if (success) {
+                        updateStatus("Delay for " + currentSelectedDate.format(dateFormatter) + " updated successfully!", false);
+                    } else {
+                        updateStatus("Error: Failed to save delay.", true);
+                    }
+                } catch (CancellationException ex) {
+                    handleCancellation();
+                } catch (Exception ex) {
+                    updateStatus("An unexpected error occurred during save: " + ex.getMessage(), true);
+                }
+            }
+        };
+        currentActiveWorker = worker; // Store reference to the worker
+        worker.execute();
+    }
+    /**
+     * Common logic to handle cancellation by the administrator.
+     * Resets the UI to a state suitable for starting a new operation.
+     */
+    private void handleCancellation() {
+        updateStatus("Operation cancelled by administrator.", false);
+        delayInputTextField.setText(""); // Clear potentially half-fetched/saved data
+        delayInputTextField.setEnabled(false);
+        saveButton.setEnabled(false);
+        currentSelectedDate = null; // Reset current selection to ensure a fresh start
+        // The setOperationInProgress(false) called by done() will re-enable general controls.
+    }
+    /**
+     * Updates the status label with a given message and sets its color based on whether it's an error.
+     *
+     * @param message The message to display.
+     * @param isError True if the message indicates an error, false for informational messages.
+     */
+    private void updateStatus(String message, boolean isError) {
+        statusLabel.setText(message);
+        statusLabel.setForeground(isError ? Color.RED : Color.BLUE);
+    }
+    /**
+     * Enables or disables primary UI interaction components and manages the cancel button visibility.
+     * This method is called to lock the UI during long-running background operations
+     * and unlock it afterward.
+     *
+     * @param inProgress True if a background operation is in progress, false otherwise.
+     */
+    private void setOperationInProgress(boolean inProgress) {
+        dateInputTextField.setEnabled(!inProgress);
+        selectDateButton.setEnabled(!inProgress);
+        // delayInputTextField and saveButton are only enabled if not in progress AND a date is selected
+        delayInputTextField.setEnabled(!inProgress && currentSelectedDate != null);
+        saveButton.setEnabled(!inProgress && currentSelectedDate != null);
+        cancelButton.setEnabled(inProgress);
+        cancelButton.setVisible(inProgress);
+        // If not in progress and no date is selected, disable delay and save buttons.
+        // This ensures they stay disabled until a date is successfully loaded after an operation.
+        if (!inProgress && currentSelectedDate == null) {
+            delayInputTextField.setEnabled(false);
+            saveButton.setEnabled(false);
+        }
+    }
+}

@@ -1,0 +1,7 @@
+# This is a Java project.
+# Java projects typically manage dependencies using build tools like Maven (pom.xml) or Gradle (build.gradle).
+# This specific project uses standard Java libraries (javax.swing, java.awt, java.util, java.util.concurrent)
+# which are part of the Java Development Kit (JDK).
+# Therefore, no external dependencies in the Python 'requirements.txt' format are needed.
+#
+# To run this project, you will need a Java Development Kit (JDK) installed (e.g., JDK 8 or later).

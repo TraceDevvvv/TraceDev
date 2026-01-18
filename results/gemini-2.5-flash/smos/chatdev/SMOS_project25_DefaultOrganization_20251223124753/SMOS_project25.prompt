@@ -1,0 +1,32 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: Edit Teaching
+Actors: Administrator
+Description: Edit details of a teaching
+Preconditions:
+â¢ The user is logged in to the system as an administrator â¢ The user has taken the case of use "displaydeddailsigning" â¢ the user displays the detailed information of a teaching â¢ the user edit one of the information contained in the form of
+Display of teaching details
+Events sequence
+User
+System
+1. Click on the "Save" button
+2. Make checks on the validity of the data entered and changes the teaching in the archive;In the event that the data entered are not valid, activates the case of "Errodati" use.
+3. View the list of updated teachings
+Postconditions:
+â¢ â¢ â¢ â¢
+The user has changed a teaching is notified the data error Connection to the SMOS server interrupted the administrator interrupts the operation
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

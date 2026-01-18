@@ -1,0 +1,29 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: DoStudentsMonitoring
+Actors: Administrator
+Description: allows you to query the system about the number of absences and notes associated with students
+Preconditions:
+â¢ The user is logged in to the system as an administrator â¢ The user click on the "Student Monitoring" button
+Events sequence
+User
+System
+1. Search in the archive the students who have, for the school year in progress a number of absences and notes higher than a predetermined threshold.
+2. Displays a data presentation screen.
+Postconditions ::
+â¢ There was information about absences and notes of the students.â¢ Connection to the interrupted SMOS server.
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

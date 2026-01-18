@@ -1,0 +1,6 @@
+# This Java project uses standard Java SE libraries (java.lang, java.util, java.awt, javax.swing).
+# It does not have external third-party dependencies that would typically be listed in a Python-style requirements.txt.
+# To run this project, a compatible Java Development Kit (JDK) or Java Runtime Environment (JRE) is required,
+# preferably Java 8 or newer, since `java.time` is used.
+#
+# No specific external libraries are required.

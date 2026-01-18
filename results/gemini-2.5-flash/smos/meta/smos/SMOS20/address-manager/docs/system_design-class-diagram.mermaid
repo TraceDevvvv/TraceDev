@@ -1,0 +1,70 @@
+classDiagram
+    class AddressManagerApplication {
+        +main(args: String[]): void
+    }
+
+    class Address {
+        +id: Long
+        +street: String
+        +city: String
+        +zipCode: String
+        +country: String
+        +getId(): Long
+        +setStreet(street: String): void
+        // ... other getters/setters
+    }
+
+    class AssociatedClass {
+        +id: Long
+        +name: String
+        +addressId: Long
+        +getId(): Long
+        +getAddressId(): Long
+        // ... other getters/setters
+    }
+
+    interface AddressRepository {
+        +findById(id: Long): Optional<Address>
+        +deleteById(id: Long): void
+        +existsById(id: Long): boolean
+    }
+
+    interface AssociatedClassRepository {
+        +countByAddressId(addressId: Long): long
+    }
+
+    class AddressService {
+        -addressRepository: AddressRepository
+        -associatedClassRepository: AssociatedClassRepository
+        -smosConnectionManager: SmosConnectionManager
+        +AddressService(addressRepo: AddressRepository, assocClassRepo: AssociatedClassRepository, smosMgr: SmosConnectionManager)
+        +deleteAddress(addressId: Long): void
+    }
+
+    class AddressController {
+        -addressService: AddressService
+        +AddressController(addressService: AddressService)
+        +deleteAddress(addressId: Long): ResponseEntity<String>
+    }
+
+    class AddressNotFoundException {
+        +AddressNotFoundException(message: String)
+    }
+
+    class AddressDeletionForbiddenException {
+        +AddressDeletionForbiddenException(message: String)
+    }
+
+    interface SmosConnectionManager {
+        +disconnect(): void
+        +isConnected(): boolean
+    }
+
+    AddressManagerApplication --> AddressController
+    AddressController --> AddressService
+    AddressService --> AddressRepository
+    AddressService --> AssociatedClassRepository
+    AddressService --> SmosConnectionManager
+    AddressRepository ..|> JpaRepository
+    AssociatedClassRepository ..|> JpaRepository
+    Address "1" -- "*" AssociatedClass : has

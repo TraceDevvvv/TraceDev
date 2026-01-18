@@ -1,0 +1,33 @@
+You are a software verification assistant. Your task is to analyze whether a given set of generated code files satisfy the functional requirements defined in a Use Case.
+
+【Inputs】
+1. Use Case Functional Points JSON:
+{uc_func_json}
+
+2. Generated Code Files:
+{codes}
+
+【Task】
+1. For each functional point in the JSON, determine whether it is implemented in the code files.
+2. Create a mapping matrix in JSON format where each functional point maps to:
+   - "implemented": true or false
+   - "evidence": a short snippet or explanation from the code that shows the point is satisfied (or leave empty if false).
+3. Output the result as a single JSON object with the following structure:
+{{
+  "mapping_matrix": [
+    {{
+      "functional_point": "Partecipating Actor: Actor initialization Agency Operator",
+      "implemented": true,
+      "evidence": "<code snippet or explanation>"
+    }}
+  ]
+}}
+
+【Rules】
+- Preserve the text of functional points exactly as in the input JSON.
+- Use concise evidence from the code for each implemented point.
+- Do not include any explanations outside the JSON object.
+- Ensure valid JSON output that can be parsed directly.
+
+【Output】
+Generate the JSON object as described above based on the given functional points JSON and the code files.

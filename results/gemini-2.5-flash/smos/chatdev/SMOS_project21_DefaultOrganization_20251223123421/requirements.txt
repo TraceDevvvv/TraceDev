@@ -1,0 +1,7 @@
+# This project is a standard Java application using Swing for its GUI.
+# It does not have external third-party library dependencies that would typically
+# be managed by Maven or Gradle. The primary requirement is a Java Runtime Environment.
+# The version `8` is specified as a common baseline for modern Java applications.
+# If specific Java 11/17+ features were used, a higher version would be needed.
+# For this project, Java 8 or newer is sufficient.
+java>=8

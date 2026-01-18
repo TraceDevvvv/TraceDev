@@ -1,0 +1,20 @@
+# Java version requirement
+Java Development Kit (JDK) >= 11
+
+# This project uses Java Swing (javax.swing) which is included in standard Java libraries.
+# No external dependencies are required beyond the standard Java Runtime Environment.
+
+# Build and run instructions:
+# 1. Compile all .java files:
+#    javac culturalheritage/search/*.java
+# 2. Run the application:
+#    java culturalheritage.search.MainApp
+
+# Alternatively, if using an IDE (e.g., Eclipse, IntelliJ IDEA):
+# - Create a new Java project.
+# - Import the 'culturalheritage.search' package with all Java files.
+# - Ensure the project SDK is set to Java 11 or later.
+# - Run MainApp.java as the main class.
+
+# The application is a standalone Java GUI application using built-in Swing libraries.
+# No Maven, Gradle, or external dependencies are needed.

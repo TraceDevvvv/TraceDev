@@ -1,0 +1,37 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Use case name MODIFICACOMMENTO 
+Editing a comment by a feedback selected. 
+Partecipating 
+Actor initialization Agency Operator 
+Entry 
+Operator conditions  The agency has logged. 
+Flow of events User System 
+1. View the list of sites as a result of the use case RicercaSito, it selects and activates a function of change in the selected comment. 
+2 Upload feedback issued to that site and displays them in a form. 
+3 Select a feedback from the list and submit the form. 
+4 Displays a form for editing the comment of feedback selected. 
+5 Edit the comment and submit the form. 
+6. Verify the data entered and asks for confirmation of the change. Where the data is invalid or insufficient, the system activates the use case Errored. 
+7 Confirm the operation. 
+8 Remember the comment changed. 
+Exit conditions  The notification system has been modified for the comment feedback selected. 
+ Operator Agency cancels the operation. 
+ Interruption of the connection to the server 
+Quality 
+requirements
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

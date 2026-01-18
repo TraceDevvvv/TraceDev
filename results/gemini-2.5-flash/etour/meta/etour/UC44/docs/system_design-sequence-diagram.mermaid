@@ -1,0 +1,64 @@
+sequenceDiagram
+    participant Operator as Point Of Restaurant Operator
+    participant UI as User Interface
+    participant CC as ConventionController
+    participant CS as ConventionService
+    participant CV as ConventionValidator
+    participant CR as ConventionRepository
+    participant AS as AgencyService
+    participant ETOUR as ETOUR Server
+
+    Operator->>UI: 1. Enable functionality to request Convention
+    UI->>Operator: 2. Displays form for entering data
+
+    Operator->>UI: 3. Inserts data and submits
+    UI->>CC: POST /conventions (ConventionRequestDTO)
+
+    CC->>CS: createConvention(requestDTO)
+    CS->>CV: validate(requestDTO)
+
+    alt Data is invalid or insufficient
+        CV-->>CS: throws InvalidConventionDataException
+        CS-->>CC: throws InvalidConventionDataException
+        CC-->>UI: 400 Bad Request (Error Message)
+        UI->>Operator: 4. Displays error, activates 'Errored' use case
+        Operator->>UI: Corrects data or cancels
+    else Data is valid
+        CV-->>CS: Validation successful
+        CS->>CR: save(new Convention(requestDTO))
+        CR-->>CS: Returns saved Convention object (with ID)
+        CS-->>CC: Returns Convention object
+        CC-->>UI: 202 Accepted (Convention object)
+        UI->>Operator: 4. Asks for confirmation (displays summary)
+
+        Operator->>UI: 5. Confirms operation
+        UI->>CC: POST /conventions/{id}/confirm
+        CC->>CS: confirmConvention(conventionId)
+        CS->>AS: sendRequest(convention)
+
+        alt ETOUR Server connection interrupted
+            AS-->>CS: throws AgencyCommunicationException
+            CS-->>CC: throws AgencyCommunicationException
+            CC-->>UI: 503 Service Unavailable (Error Message)
+            UI->>Operator: Notifies about connection interruption
+            Operator->>UI: Retries or cancels
+        else ETOUR Server responds
+            AS->>ETOUR: Send Convention Request
+            ETOUR-->>AS: AgencyResponseDTO
+            AS-->>CS: Returns AgencyResponseDTO
+            CS->>CR: updateStatus(conventionId, PENDING)
+            CR-->>CS: Convention updated
+            CS-->>CC: Returns updated Convention
+            CC-->>UI: 200 OK (Convention object)
+            UI->>Operator: 6. Notification about call for Convention to Agency
+        end
+    end
+
+    Operator->>UI: Operator cancels operation (any point before confirmation)
+    UI->>CC: DELETE /conventions/{id} (or similar cancel endpoint)
+    CC->>CS: cancelConvention(conventionId)
+    CS->>CR: updateStatus(conventionId, CANCELLED)
+    CR-->>CS: Convention updated
+    CS-->>CC: Returns updated Convention
+    CC-->>UI: 200 OK (Convention object)
+    UI->>Operator: Notification: Operation cancelled

@@ -1,0 +1,4 @@
+# This is a Java project using Swing for GUI.
+# No external dependencies beyond standard Java SE libraries.
+# Ensure Java Development Kit (JDK) 8 or higher is installed.
+# Built-in libraries used: java.awt, javax.swing, java.util

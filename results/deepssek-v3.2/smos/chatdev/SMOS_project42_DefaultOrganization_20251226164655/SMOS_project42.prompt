@@ -1,0 +1,30 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: EliminateJustification
+Actors: Administrator
+Description: Eliminate Justification
+Preconditions:
+â¢ The user must be logged in to the system as an administrator â¢ the user has held the case of use "viewdetalticaustifica" and the
+System is viewing the details of a justification.â¢ Click on "Delete"
+Events sequence
+User
+System
+1. Eliminate justification.
+Postconditions:
+â¢ The justification was eliminated by the system. The system returns to the registry screen.
+â¢ The administrator interrupts the operation â¢ Connection to the SMOS server interrupted
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

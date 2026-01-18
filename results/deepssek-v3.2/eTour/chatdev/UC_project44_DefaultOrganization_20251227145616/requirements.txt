@@ -1,0 +1,16 @@
+# Java Development Kit (JDK) Requirements
+# This project requires JDK 8 or higher for LocalDate and other Java 8+ features
+# Minimum Java Version: JDK 8
+
+# Required Java Packages (all included in standard JDK):
+# - java.util.Scanner
+# - java.time.LocalDate
+# - java.time.format.DateTimeFormatter
+# - java.time.format.DateTimeParseException
+# - java.time.format.ResolverStyle
+
+# Build System: None specified (could use javac directly)
+# Compilation command: javac *.java
+# Execution command: java Main
+
+# This project has no external library dependencies beyond standard Java

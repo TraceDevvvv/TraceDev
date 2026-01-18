@@ -1,0 +1,25 @@
+# Digital Register Java Application Requirements
+# This file documents the dependencies for the Java Swing application
+
+java==11   # Java Development Kit (JDK) 11 or higher is recommended
+
+# Application Specifications:
+# - Java Swing (included in standard JDK)
+# - AWT (included in standard JDK)
+# - No external Java libraries required beyond standard JDK
+
+# Build and Runtime Instructions:
+# 1. Install JDK 8 or higher (Oracle JDK or OpenJDK)
+# 2. Compile all Java files: javac *.java
+# 3. Run the application: java Main
+#    or
+#    java DigitalRegisterApp
+
+# Alternative: Using Java IDE (IntelliJ IDEA, Eclipse, NetBeans):
+# - Create a new Java project
+# - Add the Java files to source folder
+# - Set the main class to "Main" or "DigitalRegisterApp"
+# - Run the project
+
+# Note: This is a standalone Java Swing application
+# All required GUI libraries are included in standard Java SE

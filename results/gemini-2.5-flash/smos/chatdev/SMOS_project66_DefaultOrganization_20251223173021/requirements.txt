@@ -1,0 +1,4 @@
+# This is a Java project and typically does not use a requirements.txt file for dependency management.
+# Java projects typically use build tools like Maven (pom.xml) or Gradle (build.gradle) to declare dependencies.
+# This project uses only standard Java libraries (javax.swing, java.awt, etc.) which are included in the Java Development Kit (JDK) itself.
+# Therefore, there are no external dependencies to list here.

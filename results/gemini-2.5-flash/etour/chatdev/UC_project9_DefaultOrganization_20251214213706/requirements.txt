@@ -1,0 +1,13 @@
+# This project is a Java application.
+# Unlike Python projects that use a requirements.txt file, Java projects typically manage dependencies
+# using build tools like Maven (pom.xml) or Gradle (build.gradle).
+#
+# The provided Java code uses only standard Java Development Kit (JDK) libraries,
+# primarily for GUI (Swing) and core utilities.
+# There are no external third-party libraries or frameworks explicitly used that would
+# necessitate listing them as dependencies in a file like requirements.txt.
+#
+# To run this project, you only need a compatible Java Development Kit (JDK) installed (e.g., JDK 8 or newer).
+#
+# If this were a project with external dependencies (e.g., Spring Boot, Hibernate, Apache Commons),
+# a Maven `pom.xml` or Gradle `build.gradle` file would contain those dependency declarations.

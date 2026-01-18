@@ -1,0 +1,79 @@
+classDiagram
+    class InsertNewClassApplication {
+        +main(String[] args)
+    }
+
+    class ClassEntity {
+        -Long id
+        -String name
+        -String address
+        -String academicYear
+        +getId(): Long
+        +getName(): String
+        +getAddress(): String
+        +getAcademicYear(): String
+        +setName(String name): void
+        +setAddress(String address): void
+        +setAcademicYear(String academicYear): void
+    }
+
+    class ClassRepository {
+        <<interface>>
+        +save(ClassEntity classEntity): ClassEntity
+        +findById(Long id): Optional<ClassEntity>
+    }
+
+    class ClassCreateRequest {
+        +String name
+        +String address
+        +String academicYear
+        +getName(): String
+        +getAddress(): String
+        +getAcademicYear(): String
+        +setName(String name): void
+        +setAddress(String address): void
+        +setAcademicYear(String academicYear): void
+    }
+
+    class ClassResponse {
+        +Long id
+        +String name
+        +String address
+        +String academicYear
+        +getId(): Long
+        +getName(): String
+        +getAddress(): String
+        +getAcademicYear(): String
+    }
+
+    class ClassService {
+        -ClassRepository classRepository
+        +createClass(ClassCreateRequest request): ClassResponse
+        -validateClassData(ClassCreateRequest request): void
+    }
+
+    class ClassController {
+        -ClassService classService
+        +createClass(@RequestBody ClassCreateRequest request): ResponseEntity<ClassResponse>
+    }
+
+    class GlobalExceptionHandler {
+        +handleInvalidClassDataException(InvalidClassDataException ex): ResponseEntity<Map<String, String>>
+        +handleMethodArgumentNotValid(MethodArgumentNotValidException ex): ResponseEntity<Map<String, String>>
+        +handleException(Exception ex): ResponseEntity<Map<String, String>>
+    }
+
+    class InvalidClassDataException {
+        +InvalidClassDataException(String message)
+    }
+
+    InsertNewClassApplication -- ClassController
+    ClassController --> ClassService
+    ClassService --> ClassRepository
+    ClassService ..> ClassEntity : converts to
+    ClassRepository ..> ClassEntity : manages
+    ClassController ..> ClassCreateRequest : accepts
+    ClassController ..> ClassResponse : returns
+    ClassService ..> ClassCreateRequest : accepts
+    ClassService ..> ClassResponse : returns
+    GlobalExceptionHandler ..> InvalidClassDataException : handles

@@ -1,0 +1,9 @@
+# Requirements for ViewUserDetails Java Application
+# This is a standard Java Swing application with no external dependencies
+# Required: Java Runtime Environment (JRE) / Java Development Kit (JDK)
+# Minimum Java Version: Java SE 8 or higher
+# Standard libraries used: java.awt, javax.swing, java.util, java.awt.event
+# No Maven/Gradle dependencies or external libraries needed
+# Build and run using standard Java tools:
+# Compile: javac *.java
+# Run: java Main

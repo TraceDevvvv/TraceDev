@@ -1,0 +1,32 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: ViewRegistersList
+Actors: Administrator
+Description: View the list of registers for an academic year
+Preconditions:
+â¢ The user must be logged in to the system as an administrator â¢ Click on the "Digital Register" button
+Events sequence
+User
+System
+2. Select the school year
+1. Shows a screen for the selection of the academic year of interest.
+3. Search in the archive all the digital records of that year and displays them associated with the class to which they belong.
+Postconditions:
+â¢
+â¢
+The system is displaying the list of registers related to a particular academic year the administrator interrupts the connection to the SMOS server interrupted
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

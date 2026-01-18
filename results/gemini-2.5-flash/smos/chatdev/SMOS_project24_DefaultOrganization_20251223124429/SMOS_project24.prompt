@@ -1,0 +1,29 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: ViewTeachingDetails
+Actors: Administrator
+Description: allows you to view the details of a teaching
+Preconditions:
+â¢ The user has already logged in.
+System is viewing the list of teachings â¢ The user click on the "Teaching details" button
+Events sequence
+User
+System
+1. Displays the screen with the details of a single teaching.
+Postconditions:
+â¢ The user displays the detailed information of a single teaching â¢ Connection to the interrupted SMOS server
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

@@ -1,0 +1,24 @@
+# Java Swing Application for ViewRefreshmentPointCard Use Case
+# -----------------------------------------------------------------
+# This is a Java application, not Python. The project relies on 
+# standard Java libraries included in the Java SE Runtime Environment.
+# No external dependencies (Maven/Gradle) are required.
+
+# Minimum Java Version
+Java Runtime Environment (JRE) >= 8
+
+# Core Java Libraries Used (automatically available with JRE/JDK)
+# - javax.swing.*
+# - java.awt.*
+# - java.util.*
+# - java.lang.*
+# - java.net.*
+# - javax.swing.border.*
+
+# Build/Compilation
+# javac ViewRefreshmentPointCard.java
+
+# Run
+# java ViewRefreshmentPointCard
+
+# No additional .jar files or external packages are needed.

@@ -1,0 +1,28 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: Logout
+Actors: registered user
+Description: allows a user to exit the system
+Preconditions:
+â¢ The user is logged in to the system â¢ Click on the logout button
+Events sequence
+User
+System
+1. Displays the login form
+Postconditions:
+â¢ The user can re-log in to the system
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

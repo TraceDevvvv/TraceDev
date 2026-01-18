@@ -1,0 +1,38 @@
+# Justice Management System - Java Application Dependencies
+# Java Development Kit (JDK) - Required version
+Java SE Development Kit >= 11.0.0
+
+# Java Runtime Environment (JRE) - Required for execution
+Java Runtime Environment >= 11.0.0
+
+# Standard Java Libraries (included in JDK)
+javax.swing
+java.awt
+java.util
+java.io
+java.lang
+
+# No external libraries required
+# This application uses only standard Java SE libraries
+
+# Build/Compilation Requirements
+# 1. Java Compiler (javac)
+# 2. Java Virtual Machine (JVM)
+
+# Development Environment Suggestions
+# - IntelliJ IDEA, Eclipse, or NetBeans for development
+# - Command line: javac and java commands
+
+# System Requirements
+# - Operating System: Windows, macOS, or Linux
+# - Minimum RAM: 512 MB
+# - Disk Space: 50 MB
+
+# Compilation and Execution Instructions:
+# 1. Save all .java files in the same directory
+# 2. Compile: javac *.java
+# 3. Run: java MainApplication
+
+# Dependencies Summary:
+# This is a standalone Java Swing application
+# No external libraries or Maven/Gradle dependencies required

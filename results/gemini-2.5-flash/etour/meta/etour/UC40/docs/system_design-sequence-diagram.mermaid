@@ -1,0 +1,47 @@
+sequenceDiagram
+    participant UI as User Interface
+    participant BC as BannerController
+    participant BS as BannerService
+    participant BR as BannerRepository
+    participant DB as Database
+
+    UI->>BC: DELETE /api/banners/{bannerId}?restaurantId={restaurantId}
+    activate BC
+
+    BC->>BS: deleteBanner(bannerId, restaurantId)
+    activate BS
+
+    BS->>BR: findById(bannerId)
+    activate BR
+    BR->>DB: SELECT * FROM banners WHERE id = bannerId
+    activate DB
+    DB-->>BR: Banner object or null
+    deactivate DB
+    BR-->>BS: Optional<Banner>
+    deactivate BR
+
+    alt Banner found and belongs to restaurant
+        BS->>BS: Perform business logic checks (e.g., banner status)
+        BS->>BR: deleteById(bannerId)
+        activate BR
+        BR->>DB: DELETE FROM banners WHERE id = bannerId
+        activate DB
+        DB-->>BR: Deletion successful
+        deactivate DB
+        BR-->>BS: void
+        deactivate BR
+        BS-->>BC: true (deletion successful)
+    else Banner not found or does not belong to restaurant
+        BS-->>BC: false (deletion failed or unauthorized)
+    end
+    deactivate BS
+
+    alt Deletion successful
+        BC-->>UI: HTTP 200 OK (Banner successfully deleted)
+    else Deletion failed or unauthorized
+        BC-->>UI: HTTP 404 Not Found or HTTP 403 Forbidden (Error message)
+    end
+    deactivate BC
+
+    UI->>UI: Display success/error message to user
+    UI->>UI: Refresh banner list

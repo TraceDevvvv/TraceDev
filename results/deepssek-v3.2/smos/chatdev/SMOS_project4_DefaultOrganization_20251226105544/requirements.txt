@@ -1,0 +1,6 @@
+# This project is a Java Swing application for changing passwords.
+# No external dependencies beyond the standard Java SE libraries are required.
+# The code uses built-in Java Swing and AWT libraries, which are included in Java SE 11+.
+# Ensure Java version 11 or higher is installed to run the application.
+java>=11
+# Note: javax.swing and java.awt are part of Java SE core libraries and do not need to be listed separately.

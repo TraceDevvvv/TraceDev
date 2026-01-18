@@ -1,0 +1,58 @@
+classDiagram
+    class Tourist {
+        -String userId
+        -String username
+        -String email
+        +authenticate(password: String): boolean
+    }
+
+    class Preference {
+        -String preferenceId
+        -String userId
+        -Map<String, String> settings
+        +getPreferenceId(): String
+        +getUserId(): String
+        +getSettings(): Map<String, String>
+        +setSettings(settings: Map<String, String>): void
+    }
+
+    class PreferenceDTO {
+        -String preferenceId
+        -Map<String, String> settings
+        +getPreferenceId(): String
+        +getSettings(): Map<String, String>
+        +setSettings(settings: Map<String, String>): void
+    }
+
+    interface PreferenceRepository {
+        +Optional<Preference> findByUserId(userId: String)
+        +Preference save(preference: Preference)
+    }
+
+    class PreferenceService {
+        -PreferenceRepository preferenceRepository
+        +getPreferences(userId: String): PreferenceDTO
+        +updatePreferences(userId: String, preferenceDTO: PreferenceDTO): PreferenceDTO
+        -validatePreferences(preferenceDTO: PreferenceDTO): void
+    }
+
+    class PreferenceController {
+        -PreferenceService preferenceService
+        +getPreferences(userId: String): ResponseEntity<PreferenceDTO>
+        +updatePreferences(userId: String, preferenceDTO: PreferenceDTO): ResponseEntity<PreferenceDTO>
+    }
+
+    class PreferenceNotFoundException {
+        +PreferenceNotFoundException(message: String)
+    }
+
+    class InvalidPreferenceDataException {
+        +InvalidPreferenceDataException(message: String)
+    }
+
+    Tourist "1" -- "1" Preference : has
+    PreferenceService "1" -- "1" PreferenceRepository : uses
+    PreferenceController "1" -- "1" PreferenceService : uses
+    PreferenceDTO ..> Preference : maps to/from
+    PreferenceService ..> PreferenceNotFoundException : throws
+    PreferenceService ..> InvalidPreferenceDataException : throws

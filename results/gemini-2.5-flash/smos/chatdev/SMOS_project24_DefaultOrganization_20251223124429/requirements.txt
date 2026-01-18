@@ -1,0 +1,12 @@
+# This project is a pure Java Swing application.
+# It uses only standard Java Development Kit (JDK) libraries and does not
+# require any external third-party JAR dependencies.
+#
+# Dependencies for Java projects are typically managed with build tools like Maven (pom.xml)
+# or Gradle (build.gradle). Since no external libraries are utilized, neither is strictly
+# necessary for dependency management, but a build tool could be used for project setup.
+#
+# The primary runtime requirement is a Java Development Kit (JDK) or Java Runtime Environment (JRE).
+# A minimum version is specified below, similar to how Python packages list versions.
+#
+# java-runtime>=1.8

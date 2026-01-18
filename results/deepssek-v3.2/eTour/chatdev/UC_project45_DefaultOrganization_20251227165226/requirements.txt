@@ -1,0 +1,43 @@
+# Java Swing application requirements
+# Core Java version requirement
+jdk>=1.8
+
+# Application dependencies:
+# All required libraries are included in standard Java distributions
+# Required Java packages/modules:
+# - java.base
+# - java.desktop (for AWT and Swing)
+# - java.sql (if database connectivity added in future)
+
+# Build and compilation requirements:
+# - Java Compiler (javac) version 8 or higher
+# - Minimum Java heap space: 256MB recommended
+
+# Runtime environment requirements:
+# - Java Runtime Environment (JRE) 8 or higher
+# - Graphical display environment (for Swing GUI)
+# - Minimum screen resolution: 800x600 pixels
+
+# Optional (for production deployment):
+# - Java Web Start (JNLP) for web deployment
+# - Anti-aliasing enabled for better font rendering
+
+# Testing requirements:
+# - JUnit 4.x or 5.x (if unit tests are added)
+
+# Development tools (recommended):
+# - IDE: IntelliJ IDEA, Eclipse, or NetBeans
+# - Build tool: Maven or Gradle (if project structure expanded)
+
+# System requirements:
+# - Operating System: Windows, macOS, Linux, or any Java-supported platform
+# - Memory: Minimum 512MB RAM, 1GB recommended
+# - Disk space: 10MB for application files
+
+# Security requirements:
+# - Java Security Manager configuration (if deployed in restricted environments)
+# - Network access for server connectivity simulation
+
+# Compatibility notes:
+# - Compatible with Java 8 through Java 21
+# - Swing is deprecated in newer JavaFX-focused distributions but still functional

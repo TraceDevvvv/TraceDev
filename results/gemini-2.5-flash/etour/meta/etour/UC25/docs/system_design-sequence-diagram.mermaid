@@ -1,0 +1,49 @@
+sequenceDiagram
+    participant A as Agency Operator
+    participant UI as User Interface
+    participant C as ReportController
+    participant LS as LocationService
+    participant LR as LocationRepository
+    participant RS as ReportService
+    participant SSIS as SearchSiteIntegrationService
+    participant RG as ReportGenerator
+    participant DB as Database
+    participant SSS as SearchSite Service
+
+    A->>UI: 1. Activates statistical report feature
+    UI->>C: Request GET /api/locations
+    C->>LS: getAllLocations()
+    LS->>LR: findAll()
+    LR->>DB: SELECT * FROM locations
+    DB-->>LR: List<Location>
+    LR-->>LS: List<Location>
+    LS-->>C: List<Location>
+    C-->>UI: 2. Displays list of locations (JSON)
+    UI->>A: Displays form with locations
+
+    A->>UI: 3. Selects a location (e.g., Location A) and submits form
+    UI->>C: Request GET /api/reports/{locationId} (e.g., /api/reports/loc-A)
+    C->>RS: generateReport(locationId)
+
+    RS->>LS: getLocationById(locationId)
+    LS->>LR: findById(locationId)
+    LR->>DB: SELECT * FROM locations WHERE id = {locationId}
+    DB-->>LR: Optional<Location>
+    LR-->>LS: Optional<Location>
+    LS-->>RS: Location (e.g., Location A object)
+
+    RS->>SSIS: getSiteFeedback(locationId)
+    SSIS->>SSS: API Call: GET /feedback?locationId={locationId}
+    SSS-->>SSIS: List<SiteFeedback> (e.g., feedback for Location A)
+    SSIS-->>RS: List<SiteFeedback>
+
+    RS->>RG: generate(feedbackList, location)
+    RG-->>RS: StatisticalReport
+
+    RS-->>C: StatisticalReport
+    C-->>UI: 4. Displays statistical report (JSON)
+    UI->>A: Displays statistical report for selected location
+
+    alt Server Connection Interruption
+        UI--x A: Displays error message (e.g., "Connection lost, please try again")
+    end

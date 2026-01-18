@@ -1,0 +1,5 @@
+# This project is written in Java and uses only standard Java libraries.
+# It does not have external third-party dependencies that would typically be listed in a requirements.txt file
+# used for Python projects or managed by tools like Maven/Gradle for Java.
+# The primary requirement to run this project is a Java Development Kit (JDK) or Java Runtime Environment (JRE).
+# For example, Java 8 or higher.

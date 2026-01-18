@@ -1,0 +1,4 @@
+# This project is a pure Java application and uses only standard Java Development Kit (JDK) libraries.
+# Therefore, it does not have external Python-style package dependencies typically listed in a requirements.txt file.
+# The primary requirement to run this application is a compatible Java Development Kit (JDK) installed on the system.
+# Specifically, Java 8 or newer is required due to the use of java.time APIs.

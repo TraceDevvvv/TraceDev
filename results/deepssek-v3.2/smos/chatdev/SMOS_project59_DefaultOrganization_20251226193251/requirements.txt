@@ -1,0 +1,14 @@
+# The project is a Java Swing GUI application that uses only standard Java libraries.
+# No external dependencies are required.
+# To run this application, you need:
+#   - Java Runtime Environment (JRE) 8 or later
+#   - Java Development Kit (JDK) 8 or later for compilation
+
+# The application uses:
+#   - javax.swing.*
+#   - java.awt.*
+#   - java.awt.event.*
+#   - java.util.*
+# These are all part of the standard Java SE platform.
+
+# Ensure your Java environment is properly installed and configured.

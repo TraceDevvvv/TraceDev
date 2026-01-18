@@ -1,0 +1,64 @@
+sequenceDiagram
+    participant UI as Administrator UI
+    participant AC as AdminController
+    participant AS as AuthService
+    participant DS as DelayService
+    participant DR as DelayRecordRepository
+    participant SR as StudentRepository
+    participant NS as NotificationService
+    participant AR as AdministratorRepository
+    participant DB as Database
+
+    %% 1. Administrator Login
+    UI->>AC: POST /api/auth/login (LoginRequest)
+    AC->>AS: login(LoginRequest)
+    AS->>AR: findByUsername(username)
+    AR-->>AS: Administrator
+    AS->>AS: validatePassword(password, storedHash)
+    AS-->>AC: LoginResponse (token)
+    AC-->>UI: 200 OK (LoginResponse)
+    UI->>UI: Store JWT Token
+
+    %% 2. Administrator Selects Date (UI Action - no backend call for selection)
+    UI->>UI: Selects date (e.g., YYYY-MM-DD)
+
+    %% 3. Administrator Fills Form and Clicks Save
+    UI->>AC: POST /api/delays (DelayEntryRequest, Authorization: Bearer <token>)
+    AC->>AC: Validate JWT Token (Spring Security)
+    AC->>DS: createDelayRecord(DelayEntryRequest, adminId)
+
+    DS->>SR: findById(studentId)
+    SR-->>DS: Student (or null)
+    alt Student Not Found
+        DS-->>AC: throws StudentNotFoundException
+        AC-->>UI: 404 Not Found
+    else Student Found
+        DS->>DS: Map DelayEntryRequest to DelayRecord
+        DS->>DR: save(DelayRecord)
+        DR-->>DS: Saved DelayRecord
+        DS->>NS: sendParentNotification(Saved DelayRecord)
+        NS->>DB: Save Notification record
+        NS-->>DS: Notification sent status
+        DS-->>AC: Saved DelayRecord
+        AC-->>UI: 201 Created (DelayRecordDTO)
+    end
+
+    %% 4. System Displays Updated Log Data
+    UI->>AC: GET /api/delays?date=YYYY-MM-DD (Authorization: Bearer <token>)
+    AC->>AC: Validate JWT Token (Spring Security)
+    AC->>DS: getDelayRecordsForDate(date, adminId)
+    DS->>DR: findByDateAndEnteredByAdminId(date, adminId)
+    DR-->>DS: List<DelayRecord>
+    DS->>DS: Map List<DelayRecord> to List<DelayRecordDTO>
+    DS-->>AC: List<DelayRecordDTO>
+    AC-->>UI: 200 OK (List<DelayRecordDTO>)
+    UI->>UI: Update Recent Delay Log section
+
+    %% 5. Administrator Interrupts Operation (Example: Cancel button)
+    UI->>UI: Administrator clicks 'Cancel'
+    UI->>UI: Discard unsaved form data (client-side)
+    Note over UI: No backend interaction for simple interruption
+
+    %% 6. Connection to SMOS Server Interrupted (Hypothetical, as SMOS is unclear)
+    Note over AC,DS,NS: If SMOS integration existed, this would involve retry mechanisms, circuit breakers, or fallback logic within the respective serv.
+    Note over UI: UI might display a warning/error message about SMOS connection status.

@@ -1,0 +1,8 @@
+# Java SE (JDK) requirement for running the Swing-based login application
+jdk>=11.0.0
+
+# No external libraries are required as the application uses standard Java libraries (javax.swing, java.awt)
+# To compile and run:
+# 1. Ensure JDK is installed and JAVA_HOME environment variable is set.
+# 2. Compile: javac LoginErrorApp.java
+# 3. Run: java LoginErrorApp

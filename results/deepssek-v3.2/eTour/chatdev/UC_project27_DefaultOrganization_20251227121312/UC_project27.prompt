@@ -1,0 +1,30 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Use case name: SearchSite 
+Description: Searching for a specific site on the computer. 
+Participating Actor: 
+Entry conditions: 
+Flow of events User System: 
+1. Activate the search functionality of a site. 
+2 Show the form for research 
+3 Fill in the form of research and submit 
+4 Processing the request 
+Exit conditions: The system returns a list of sites found 
+Interruption of the connection to the server ETOUR. 
+Quality requirements:
+The system requirements should return the results within a time limit set
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

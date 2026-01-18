@@ -1,0 +1,93 @@
+classDiagram
+    class Convention {
+        +String conventionId
+        +String agencyName
+        +String conventionType
+        +LocalDate startDate
+        +LocalDate endDate
+        +String description
+        +String contactPerson
+        +String contactEmail
+        +List<String> requiredDocuments
+        +ConventionStatus status
+        +LocalDateTime createdAt
+        +LocalDateTime updatedAt
+    }
+
+    class ConventionRequestDTO {
+        +String agencyName
+        +String conventionType
+        +LocalDate startDate
+        +LocalDate endDate
+        +String description
+        +String contactPerson
+        +String contactEmail
+        +List<String> requiredDocuments
+        +validate() void
+    }
+
+    class AgencyResponseDTO {
+        +String conventionId
+        +String status
+        +String message
+    }
+
+    class ConventionStatus {
+        <<enum>>
+        PENDING
+        APPROVED
+        REJECTED
+        CANCELLED
+        ERROR
+    }
+
+    class ConventionController {
+        +ConventionService conventionService
+        +requestConvention(ConventionRequestDTO request) Convention
+        +getConvention(String conventionId) Convention
+        +cancelConvention(String conventionId) Convention
+    }
+
+    class ConventionService {
+        +ConventionRepository conventionRepository
+        +AgencyService agencyService
+        +createConvention(ConventionRequestDTO request) Convention
+        +getConventionById(String conventionId) Convention
+        +updateConventionStatus(String conventionId, ConventionStatus status) Convention
+        +sendConventionToAgency(Convention convention) AgencyResponseDTO
+        +cancelConvention(String conventionId) Convention
+    }
+
+    class AgencyService {
+        +sendRequest(Convention convention) AgencyResponseDTO
+        +handleAgencyResponse(AgencyResponseDTO response) void
+    }
+
+    class ConventionRepository {
+        <<interface>>
+        +save(Convention convention) Convention
+        +findById(String conventionId) Optional<Convention>
+        +updateStatus(String conventionId, ConventionStatus status) int
+    }
+
+    class ConventionValidator {
+        +validate(ConventionRequestDTO dto) void
+    }
+
+    class InvalidConventionDataException {
+        +InvalidConventionDataException(String message)
+    }
+
+    class AgencyCommunicationException {
+        +AgencyCommunicationException(String message, Throwable cause)
+    }
+
+    ConventionRequestDTO "1" -- "1" ConventionValidator : uses
+    ConventionController "1" -- "1" ConventionService : uses
+    ConventionService "1" -- "1" ConventionRepository : uses
+    ConventionService "1" -- "1" AgencyService : uses
+    ConventionService "1" -- "1" ConventionValidator : uses
+    Convention "1" -- "1" ConventionStatus : has
+    AgencyService "1" -- "1" AgencyResponseDTO : returns
+    ConventionService "1" -- "1" InvalidConventionDataException : throws
+    ConventionService "1" -- "1" AgencyCommunicationException : throws

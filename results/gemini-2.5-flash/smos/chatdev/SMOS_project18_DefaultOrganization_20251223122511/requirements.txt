@@ -1,0 +1,4 @@
+# This Java project uses only standard Java Development Kit (JDK) libraries (e.g., Swing, AWT, java.util).
+# It does not have external third-party dependencies that would typically be listed in a Python-style requirements.txt.
+# To compile and run this project, ensure you have a Java Development Kit (JDK) version 8 or higher installed.
+# No additional third-party JARs or libraries are required beyond the standard JDK.

@@ -1,0 +1,53 @@
+classDiagram
+    class Banner {
+        +String id
+        +String name
+        +String imageUrl
+        +Date startDate
+        +Date endDate
+        +String status
+        +String restaurantId
+        +Banner(id: String, name: String, imageUrl: String, startDate: Date, endDate: Date, status: String, restaurantId: String)
+        +getId(): String
+        +getName(): String
+        +getImageUrl(): String
+        +getStartDate(): Date
+        +getEndDate(): Date
+        +getStatus(): String
+        +getRestaurantId(): String
+        +setId(id: String): void
+        +setName(name: String): void
+        +setImageUrl(imageUrl: String): void
+        +setStartDate(startDate: Date): void
+        +setEndDate(endDate: Date): void
+        +setStatus(status: String): void
+        +setRestaurantId(restaurantId: String): void
+    }
+
+    interface BannerRepository {
+        +List<Banner> findByRestaurantId(restaurantId: String)
+        +Optional<Banner> findById(id: String)
+        +void deleteById(id: String)
+        +Banner save(banner: Banner)
+    }
+
+    class BannerService {
+        -BannerRepository bannerRepository
+        +BannerService(bannerRepository: BannerRepository)
+        +List<Banner> getBannersForRestaurant(restaurantId: String)
+        +boolean deleteBanner(bannerId: String, restaurantId: String)
+        +Banner createBanner(banner: Banner): Banner
+        +Banner updateBanner(banner: Banner): Banner
+    }
+
+    class BannerController {
+        -BannerService bannerService
+        +BannerController(bannerService: BannerService)
+        +ResponseEntity<List<Banner>> getBanners(restaurantId: String)
+        +ResponseEntity<String> deleteBanner(bannerId: String, restaurantId: String)
+        +ResponseEntity<Banner> createBanner(banner: Banner): ResponseEntity<Banner>
+        +ResponseEntity<Banner> updateBanner(banner: Banner): ResponseEntity<Banner>
+    }
+
+    BannerService "1" -- "1" BannerRepository : uses
+    BannerController "1" -- "1" BannerService : uses

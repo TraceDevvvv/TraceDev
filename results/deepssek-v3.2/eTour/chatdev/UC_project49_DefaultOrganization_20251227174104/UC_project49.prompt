@@ -1,0 +1,27 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Use case name: ViewPreferredSite 
+Description: View the list of personal favorites. 
+Participating Actor: initialized by Tourist 
+Entry conditions: The Tourist has successfully authenticated to the system. 
+Flow of events User System: 
+1. Select the feature to display the list of personal favorites. 
+2 Upload the list of bookmarks. 
+Exit conditions: The system displays the list of bookmarks. 
+Interruption of the connection to the server ETOUR. 
+Quality requirements:
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

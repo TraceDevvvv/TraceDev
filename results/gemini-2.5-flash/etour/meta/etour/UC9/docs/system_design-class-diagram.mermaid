@@ -1,0 +1,62 @@
+classDiagram
+    class SearchRefreshmentPointApplication {
+        +main(String[] args)
+    }
+
+    class RefreshmentPointController {
+        +searchRefreshmentPoints(SearchCriteria criteria): List<RefreshmentPoint>
+    }
+
+    class RefreshmentPointService {
+        -RefreshmentPointRepository repository
+        +searchPoints(SearchCriteria criteria): List<RefreshmentPoint>
+    }
+
+    class RefreshmentPointRepository {
+        +findByCriteria(SearchCriteria criteria): List<RefreshmentPoint>
+    }
+
+    class RefreshmentPoint {
+        -String id
+        -String name
+        -String address
+        -double latitude
+        -double longitude
+        -String type
+        -List<String> amenities
+        -double rating
+        -double distance
+        +getId(): String
+        +getName(): String
+        +getAddress(): String
+        +getLatitude(): double
+        +getLongitude(): double
+        +getType(): String
+        +getAmenities(): List<String>
+        +getRating(): double
+        +getDistance(): double
+    }
+
+    class SearchCriteria {
+        -String location
+        -double radius
+        -List<String> types
+        -List<String> amenities
+        -double minRating
+        +getLocation(): String
+        +getRadius(): double
+        +getTypes(): List<String>
+        +getAmenities(): List<String>
+        +getMinRating(): double
+    }
+
+    class ExternalServiceException {
+        +ExternalServiceException(String message, Throwable cause)
+    }
+
+    SearchRefreshmentPointApplication --> RefreshmentPointController
+    RefreshmentPointController --> RefreshmentPointService
+    RefreshmentPointService --> RefreshmentPointRepository
+    RefreshmentPointService --> ExternalServiceException
+    RefreshmentPointRepository --> RefreshmentPoint
+    RefreshmentPointRepository --> SearchCriteria

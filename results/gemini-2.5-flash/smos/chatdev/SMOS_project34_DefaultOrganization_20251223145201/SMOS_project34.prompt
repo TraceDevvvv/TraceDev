@@ -1,0 +1,33 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: ViewListofJustifications
+Actors: Administrator
+Description: View the list of justifications
+Preconditions:
+â¢ â¢ â¢
+The user must be logged in to the system as an administrator, the user has carried out the case of use "SplitTaTtAlTeloregistration" click the "justification" button related to a student
+Events sequence
+User
+System
+1. Show all the assences of the student
+School recorded selected the absences already justified come
+displayed in green, those to justify in red
+during the year
+Postconditions:
+â¢ â¢ â¢
+The system is displaying the list of justifications inherent to the student The administrator interrupts the connection to the SMOS server interrupted
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

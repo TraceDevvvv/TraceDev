@@ -1,0 +1,79 @@
+sequenceDiagram
+    participant FE as Frontend (Agency Operator)
+    participant BC as BannerController
+    participant BS as BannerService
+    participant IS as ImageService
+    participant RPRepo as RefreshmentPointRepository
+    participant BRepo as BannerRepository
+    participant EC as EtourClient
+    participant DB as Database
+    participant FS as File Storage
+    participant ES as ETOUR Server
+
+    FE->>BC: POST /api/banners (image, refreshmentPointId)
+    activate BC
+
+    BC->>BS: insertBanner(image, refreshmentPointId)
+    activate BS
+
+    BS->>RPRepo: findById(refreshmentPointId)
+    activate RPRepo
+    RPRepo-->>BS: RefreshmentPoint (or null)
+    deactivate RPRepo
+
+    alt RefreshmentPoint not found
+        BS-->>BC: ResourceNotFoundException
+        BC-->>FE: 404 Not Found
+    else RefreshmentPoint found
+        BS->>IS: validateImage(image)
+        activate IS
+        alt Image invalid
+            IS-->>BS: ImageValidationException
+            deactivate IS
+            BS-->>BC: ImageValidationException
+            BC-->>FE: 400 Bad Request (Invalid Image)
+        else Image valid
+            IS-->>BS: Image valid
+            deactivate IS
+
+            BS->>BRepo: findByRefreshmentPointId(refreshmentPointId)
+            activate BRepo
+            BRepo-->>BS: List<Banner>
+            deactivate BRepo
+
+            alt Banner limit exceeded
+                BS-->>BC: BannerLimitExceededException
+                BC-->>FE: 400 Bad Request (Banner Limit Exceeded)
+            else Banner limit not exceeded
+                FE->>FE: Operator confirms insertion
+
+                BS->>IS: storeImage(image)
+                activate IS
+                IS->>FS: Save image file
+                FS-->>IS: Image URL/Path
+                IS-->>BS: imageUrl
+                deactivate IS
+
+                BS->>DB: Create new Banner object
+                BS->>BRepo: save(banner)
+                activate BRepo
+                BRepo->>DB: Persist Banner
+                DB-->>BRepo: Persisted Banner
+                BRepo-->>BS: Saved Banner
+                deactivate BRepo
+
+                BS->>EC: notifyBannerInsertion(banner, refreshmentPoint)
+                activate EC
+                EC->>ES: Send notification
+                ES-->>EC: Notification status
+                EC-->>BS: Notification successful
+                deactivate EC
+
+                BS-->>BC: Saved Banner
+                deactivate BS
+
+                BC-->>FE: 201 Created (UploadResponseDTO)
+                deactivate BC
+            end
+        end
+    end

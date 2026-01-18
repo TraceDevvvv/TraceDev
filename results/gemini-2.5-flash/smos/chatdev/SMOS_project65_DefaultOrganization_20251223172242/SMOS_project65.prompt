@@ -1,0 +1,30 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: ViewRegister
+Actors: Direction
+Description: Details for the registry of a class
+Preconditions:
+â¢
+â¢
+The user is logged in to the system direction the user took the case "viewelcoregistri" and the system is displaying the list of all the registers of a particular academic year the user clicks the "Register" button associated with oneclasses
+Events sequence
+User
+System
+1. Review the information contained in the registry organized by date. In particular, for the selected date the list of students, specifying: absent / present, delayed and a form from which it is possible to manage justifications and disciplinary notes.
+Postconditions:
+â¢ The class registry information â¢ Connection to the SMOS server interrupted were shown
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

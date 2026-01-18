@@ -1,0 +1,31 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: ChangePassword
+Actors: registered user
+Description: Allows a user to change your password
+Preconditions:
+â¢ The user is logged in to the system â¢ Click on the "Change password" button
+Events sequence
+User
+2. Fill out the form and submits;
+System
+1. View the form with the fields: Old password, new password, confirms new password.
+3. Confirm the password change
+Postconditions:
+â¢ â¢ â¢
+The user password has been changed the user cancels the connection interruption to the smos server
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

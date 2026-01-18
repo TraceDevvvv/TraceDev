@@ -1,0 +1,10 @@
+You are an expert software evaluator.
+Determine whether the following two code components implement the SAME FUNCTIONALITY.
+
+Return ONLY "YES" or "NO".
+
+==== Truth Component ====
+{truth_code}
+
+==== Generated Component ====
+{gen_code}

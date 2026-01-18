@@ -1,0 +1,2 @@
+javafx-controls==21.0.1
+javafx-fxml==21.0.1

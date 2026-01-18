@@ -1,0 +1,31 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Use case name: DeleteBanner 
+Description: Delete a banner ad associated with a refreshment bar on the computer. 
+Participating Actor: initialization Agency Operator 
+Entry Operator conditions: The agency has logged. 
+Flow of events User System: 
+1. Receives a list of turning points of the rest use case SearchRefreshmentPoint and select one from accessing the function of removal of the banner. 
+2 View the list of banner associated with the point of rest. 
+3 Select a banner from the list and enter the function of elimination. 
+4 Displays a message confirming the deletion. 
+5 Confirm the operation. 
+6. Removes the banner. 
+Exit conditions: The system shall notify the successful elimination of the selected banner. 
+Interruption of the connection to the server ETOUR. 
+Quality requirements:
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

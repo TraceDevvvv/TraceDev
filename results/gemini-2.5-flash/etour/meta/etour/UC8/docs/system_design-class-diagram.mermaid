@@ -1,0 +1,101 @@
+classDiagram
+    class RefreshmentPoint {
+        -String id
+        -String name
+        -String address
+        -String contactInfo
+        -int capacity
+        -List<String> servOffered
+        -String status
+        +RefreshmentPoint(id: String, name: String, address: String, contactInfo: String, capacity: int, servOffered: List<String>, status: String)
+        +getId(): String
+        +getName(): String
+        +setName(name: String): void
+        +getAddress(): String
+        +setAddress(address: String): void
+        +getContactInfo(): String
+        +setContactInfo(contactInfo: String): void
+        +getCapacity(): int
+        +setCapacity(capacity: int): void
+        +getServOffered(): List<String>
+        +setServOffered(servOffered: List<String>): void
+        +getStatus(): String
+        +setStatus(status: String): void
+        +toString(): String
+    }
+
+    class RefreshmentPointRepository {
+        <<interface>>
+        +findById(id: String): Optional<RefreshmentPoint>
+        +save(point: RefreshmentPoint): RefreshmentPoint
+        +findAll(): List<RefreshmentPoint>
+    }
+
+    class InMemoryRefreshmentPointRepository {
+        -Map<String, RefreshmentPoint> dataStore
+        +InMemoryRefreshmentPointRepository()
+        +findById(id: String): Optional<RefreshmentPoint>
+        +save(point: RefreshmentPoint): RefreshmentPoint
+        +findAll(): List<RefreshmentPoint>
+    }
+
+    class ValidationService {
+        +validateRefreshmentPoint(point: RefreshmentPoint): void
+        +isValidName(name: String): boolean
+        +isValidAddress(address: String): boolean
+        +isValidContactInfo(contactInfo: String): boolean
+        +isValidCapacity(capacity: int): boolean
+        +isValidStatus(status: String): boolean
+    }
+
+    class RefreshmentPointService {
+        -RefreshmentPointRepository repository
+        -ValidationService validationService
+        +RefreshmentPointService(repository: RefreshmentPointRepository, validationService: ValidationService)
+        +getRefreshmentPoints(): List<RefreshmentPoint>
+        +getRefreshmentPointById(id: String): RefreshmentPoint
+        +updateRefreshmentPoint(id: String, updatedPoint: RefreshmentPoint): RefreshmentPoint
+        +cancelOperation(): void
+    }
+
+    class RefreshmentPointController {
+        -RefreshmentPointService service
+        -InputReader inputReader
+        +RefreshmentPointController(service: RefreshmentPointService, inputReader: InputReader)
+        +displayRefreshmentPoints(): void
+        +selectRefreshmentPoint(): String
+        +displayEditForm(point: RefreshmentPoint): RefreshmentPoint
+        +getConfirmation(): boolean
+        +handleModification(): void
+        +displayMessage(message: String): void
+        +displayError(errorMessage: String): void
+    }
+
+    class InputReader {
+        -Scanner scanner
+        +InputReader()
+        +readLine(prompt: String): String
+        +readInt(prompt: String): int
+        +close(): void
+    }
+
+    class MainApplication {
+        +main(args: String[]): void
+    }
+
+    class InvalidDataException {
+        +InvalidDataException(message: String)
+    }
+
+    class RefreshmentPointNotFoundException {
+        +RefreshmentPointNotFoundException(message: String)
+    }
+
+    RefreshmentPointRepository <|.. InMemoryRefreshmentPointRepository
+    RefreshmentPointService "1" --> "1" RefreshmentPointRepository : uses
+    RefreshmentPointService "1" --> "1" ValidationService : uses
+    RefreshmentPointController "1" --> "1" RefreshmentPointService : uses
+    RefreshmentPointController "1" --> "1" InputReader : uses
+    MainApplication --> RefreshmentPointController : creates and uses
+    RefreshmentPointService ..> InvalidDataException : throws
+    RefreshmentPointService ..> RefreshmentPointNotFoundException : throws

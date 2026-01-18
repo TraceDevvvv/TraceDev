@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+FXML file for the 'Edit Personal Search Preferences' user interface.
+This defines the layout and components for a form where a user can
+view and modify their search preferences.
+It includes fields for destination, price range, and categories,
+along with buttons to save or cancel the changes.
+-->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PreferencesController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="Edit Personal Search Preferences">
+        <font>
+            <Font name="System Bold" size="20.0" />
+        </font>
+    </Label>
+    <GridPane hgap="10.0" vgap="10.0" alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+        </columnConstraints>
+        <!-- Destination -->
+        <Label text="Destination:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="destinationField" promptText="e.g., Paris, Rome" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <!-- Price Range -->
+        <Label text="Min Price:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="minPriceField" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Max Price:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="maxPriceField" promptText="1000.00" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <!-- Categories -->
+        <Label text="Categories:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <VBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <CheckBox fx:id="categoryCulture" text="Culture" />
+            <CheckBox fx:id="categoryAdventure" text="Adventure" />
+            <CheckBox fx:id="categoryFood" text="Food" />
+            <CheckBox fx:id="categoryRelaxation" text="Relaxation" />
+            <CheckBox fx:id="categoryHistory" text="History" />
+            <!-- Add more categories as needed -->
+        </VBox>
+    </GridPane>
+    <!-- Action Buttons -->
+    <HBox alignment="CENTER" spacing="10.0">
+        <Button onAction="#handleSave" prefWidth="100.0" text="Save Preferences" />
+        <Button onAction="#handleCancel" prefWidth="100.0" text="Cancel" />
+    </HBox>
+    <!-- Error/Status Message -->
+    <Label fx:id="statusLabel" textFill="RED" />
+</VBox>

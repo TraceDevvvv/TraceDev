@@ -1,0 +1,23 @@
+# Java Swing GUI Application Dependencies
+# --------------------------------------
+
+# Runtime Requirements:
+# Java Development Kit (JDK) version 8 or later
+# Standard Java libraries included with JDK:
+# - java.awt
+# - java.awt.event
+# - java.util
+# - javax.swing
+
+# Minimum JDK version: 8
+# Recommended JDK version: 11 or later
+
+# For building and packaging (optional):
+# Apache Maven 3.6+ or Gradle 6.7+ (if using build tools)
+
+# Testing dependencies (optional, for development):
+# JUnit 4.13.2+ or JUnit Jupiter 5.7+
+# Mockito 3.12.4+ (for unit testing)
+
+# Note: Java Swing is part of the standard Java Platform (JRE/JDK)
+# No external libraries or frameworks are required for this application to run.

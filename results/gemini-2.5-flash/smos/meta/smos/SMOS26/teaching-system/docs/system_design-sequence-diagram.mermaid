@@ -1,0 +1,63 @@
+sequenceDiagram
+    participant Admin as Administrator (UI)
+    participant TC as TeachingController
+    participant TS as TeachingService
+    participant TR as TeachingRepository
+    participant SIS as SMOSIntegrationService
+    participant DB as Database (Archive)
+    participant SMOS as SMOS Server
+
+    Admin->>TC: DELETE /api/teachings/{id} (Click 'Delete' button)
+    activate TC
+    TC->>TS: deleteTeaching(id)
+    activate TS
+
+    TS->>TR: findById(id)
+    activate TR
+    TR->>DB: SELECT * FROM Teaching WHERE id = {id}
+    activate DB
+    DB-->>TR: Teaching object or empty
+    deactivate DB
+    TR-->>TS: Optional~Teaching~
+    deactivate TR
+
+    alt Teaching Not Found
+        TS-->>TC: TeachingNotFoundException
+        deactivate TS
+        TC-->>Admin: HTTP 404 Not Found
+    else Teaching Found
+        TS->>TR: delete(teaching)
+        activate TR
+        TR->>DB: DELETE FROM Teaching WHERE id = {id}
+        activate DB
+        DB-->>TR: Deletion successful
+        deactivate DB
+        TR-->>TS: 
+        deactivate TR
+        Note over TS,TR: Teaching eliminated from archive (Event 1)
+
+        TS->>SIS: disconnect()
+        activate SIS
+        SIS->>SMOS: (Simulated) Close connection/release resources
+        activate SMOS
+        SMOS-->>SIS: Connection closed confirmation
+        deactivate SMOS
+        SIS-->>TS: 
+        deactivate SIS
+        Note over TS,SIS: SMOS server connection interrupted (Postcondition)
+
+        TS->>TR: findAll()
+        activate TR
+        TR->>DB: SELECT * FROM Teaching
+        activate DB
+        DB-->>TR: List~Teaching~
+        deactivate DB
+        TR-->>TS: List~Teaching~
+        deactivate TR
+        Note over TS,TR: Retrieves updated list of teachings
+
+        TS-->>TC: HTTP 200 OK with updated List~Teaching~
+        deactivate TS
+        TC-->>Admin: HTTP 200 OK with updated List~Teaching~ (Event 2)
+        deactivate TC
+    end

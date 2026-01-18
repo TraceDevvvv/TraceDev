@@ -1,0 +1,29 @@
+sequenceDiagram
+    participant User as User Interface
+    participant C as RefreshmentPointController
+    participant S as RefreshmentPointService
+    participant R as RefreshmentPointRepository
+    participant ETOUR as ETOUR Server
+
+    User->>C: activateSearch()
+    User->>C: showSearchForm()
+    User->>C: submitSearch(SearchCriteria criteria)
+
+    C->>S: searchPoints(criteria)
+
+    S->>R: findByCriteria(criteria)
+
+    alt ETOUR Server Connection Successful
+        R->>ETOUR: queryPoints(criteria)
+        ETOUR-->>R: return List<RawPointData>
+        R->>R: mapRawDataToRefreshmentPoints()
+        R-->>S: return List<RefreshmentPoint>
+    else ETOUR Server Connection Interrupted
+        R->>S: throw ExternalServiceException
+        S->>C: catch ExternalServiceException
+        C-->>User: return ErrorMessage (e.g., "ETOUR server unavailable, please try again later")
+    end
+
+    S-->>C: return List<RefreshmentPoint>
+    C-->>User: return List<RefreshmentPoint>
+    User->>User: displayResults(List<RefreshmentPoint>)

@@ -1,0 +1,67 @@
+classDiagram
+    class Main {
+        +main(String[] args)
+    }
+
+    class MenuItem {
+        -String name
+        -double price
+        -String description
+        +MenuItem(String name, double price, String description)
+        +getName(): String
+        +getPrice(): double
+        +getDescription(): String
+        +setName(String name): void
+        +setPrice(double price): void
+        +setDescription(String description): void
+        +toString(): String
+    }
+
+    class Menu {
+        -String dayOfWeek
+        -List<MenuItem> items
+        +Menu(String dayOfWeek)
+        +getDayOfWeek(): String
+        +getItems(): List<MenuItem>
+        +addItem(MenuItem item): void
+        +removeItem(MenuItem item): void
+        +updateItem(int index, MenuItem newItem): void
+        +toString(): String
+    }
+
+    class MenuRepository {
+        +saveMenu(String dayOfWeek, Menu menu): boolean
+        +loadMenu(String dayOfWeek): Menu
+        +getAvailableDays(): List<String>
+    }
+
+    class MenuService {
+        -MenuRepository menuRepository
+        +MenuService(MenuRepository menuRepository)
+        +getMenuForDay(String dayOfWeek): Menu
+        +updateMenu(String dayOfWeek, Menu updatedMenu): boolean
+        +getAllDaysOfWeek(): List<String>
+        +initializeDailyMenus(): void
+    }
+
+    class InputValidator {
+        +isValidDayOfWeek(String day): boolean
+        +isValidMenuItemName(String name): boolean
+        +isValidMenuItemPrice(String price): boolean
+        +getValidIntegerInput(String prompt): int
+        +getValidDoubleInput(String prompt): double
+        +getValidStringInput(String prompt): String
+    }
+
+    class MenuSerializer {
+        +serialize(Menu menu): String
+        +deserialize(String jsonString): Menu
+    }
+
+    Main --> MenuService : uses
+    Main --> InputValidator : uses
+    MenuService --> MenuRepository : uses
+    MenuService --> Menu : manages
+    MenuRepository --> Menu : stores/loads
+    MenuRepository --> MenuSerializer : uses
+    Menu --> MenuItem : contains

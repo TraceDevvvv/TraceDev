@@ -1,0 +1,18 @@
+# Required dependencies for the Cultural Heritage Management System project
+
+# Java Development Kit (JDK) - Must be installed separately
+# Version: JDK 8 or higher
+# Java Standard Edition (Java SE) libraries - Included with JDK
+
+# Additional notes for project setup:
+# 1. This is a Java Swing application, so no external dependencies are required beyond the JDK
+# 2. The code uses standard Java libraries that come with the JDK
+# 3. The project structure should include these files in the same directory or package:
+#    - CulturalHeritage.java
+#    - CulturalHeritageDatabase.java
+#    - DeleteCulturalHeritageController.java
+#    - ServerConnection.java
+#    - DeleteCulturalHeritageGUI.java
+#    - MainApp.java
+# 4. Compile and run using: javac *.java && java MainApp
+

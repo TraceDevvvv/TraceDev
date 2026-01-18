@@ -1,0 +1,106 @@
+classDiagram
+    class CulturalHeritage {
+        -String id
+        -String name
+        -String type
+        -String location
+        -String era
+        -String description
+        -String agencyCode
+        -Date registrationDate
+        +CulturalHeritage()
+        +CulturalHeritage(String name, String type, String location, String era, String description, String agencyCode)
+        +getId() String
+        +setId(String id) void
+        +getName() String
+        +setName(String name) void
+        +getType() String
+        +setType(String type) void
+        +getLocation() String
+        +setLocation(String location) void
+        +getEra() String
+        +setEra(String era) void
+        +getDescription() String
+        +setDescription(String description) void
+        +getAgencyCode() String
+        +setAgencyCode(String agencyCode) void
+        +getRegistrationDate() Date
+        +setRegistrationDate(Date registrationDate) void
+        +toString() String
+        +equals(Object obj) boolean
+        +hashCode() int
+    }
+    
+    class CulturalHeritageService {
+        -CulturalHeritageRepository repository
+        +CulturalHeritageService(CulturalHeritageRepository repository)
+        +insertCulturalHeritage(CulturalHeritage heritage) CulturalHeritage
+        +validateCulturalHeritage(CulturalHeritage heritage) void
+        +checkForDuplicates(CulturalHeritage heritage) boolean
+        +confirmTransaction(CulturalHeritage heritage) boolean
+    }
+    
+    class CulturalHeritageRepository {
+        -Connection connection
+        +CulturalHeritageRepository(Connection connection)
+        +save(CulturalHeritage heritage) CulturalHeritage
+        +findById(String id) CulturalHeritage
+        +findByNameAndLocation(String name, String location) CulturalHeritage
+        +findAll() List~CulturalHeritage~
+        +delete(String id) boolean
+        +createTable() void
+    }
+    
+    class CulturalHeritageController {
+        -CulturalHeritageService service
+        +CulturalHeritageController(CulturalHeritageService service)
+        +insertCulturalHeritage(CulturalHeritage heritage) CulturalHeritage
+        +handleInsertionForm() CulturalHeritage
+        +displayForm() CulturalHeritage
+        +verifyData(CulturalHeritage heritage) boolean
+        +memorizeCulturalHeritage(CulturalHeritage heritage) CulturalHeritage
+        +notifyInclusion(CulturalHeritage heritage) void
+    }
+    
+    class ConsoleUI {
+        -CulturalHeritageController controller
+        -Scanner scanner
+        +ConsoleUI(CulturalHeritageController controller)
+        +start() void
+        +displayMenu() void
+        +activateInsertionFeature() void
+        +displayForm() CulturalHeritage
+        +fillForm() CulturalHeritage
+        +askForConfirmation(CulturalHeritage heritage) boolean
+        +handleError(String message) void
+        +displaySuccess(CulturalHeritage heritage) void
+    }
+    
+    class DatabaseConnection {
+        +getConnection() Connection
+        +closeConnection() void
+    }
+    
+    class ValidationUtil {
+        +validateString(String value, String fieldName, int maxLength) void
+        +validateRequiredFields(CulturalHeritage heritage) void
+        +isValidEra(String era) boolean
+    }
+    
+    class DuplicateHeritageException {
+        -String message
+        +DuplicateHeritageException(String message)
+    }
+    
+    class ValidationException {
+        -String message
+        +ValidationException(String message)
+    }
+    
+    CulturalHeritageController --> CulturalHeritageService : uses
+    CulturalHeritageService --> CulturalHeritageRepository : uses
+    CulturalHeritageService --> ValidationUtil : uses
+    ConsoleUI --> CulturalHeritageController : uses
+    CulturalHeritageRepository --> DatabaseConnection : uses
+    CulturalHeritageService ..> DuplicateHeritageException : throws
+    CulturalHeritageService ..> ValidationException : throws

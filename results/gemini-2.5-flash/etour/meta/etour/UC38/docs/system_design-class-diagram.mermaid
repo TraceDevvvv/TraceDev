@@ -1,0 +1,87 @@
+classDiagram
+    direction LR
+
+    class BannerController {
+        +insertBanner(request: BannerUploadRequest): ResponseEntity<BannerResponse>
+    }
+
+    class BannerService {
+        +insertBanner(request: BannerUploadRequest): Banner
+        -validateImage(image: MultipartFile): void
+        -checkMaxBanners(pointOfRestId: String): void
+        -saveBanner(banner: Banner): Banner
+        -notifyEtourServer(banner: Banner): void
+    }
+
+    class BannerRepository {
+        <<interface>>
+        +save(banner: Banner): Banner
+        +countByPointOfRestId(pointOfRestId: String): long
+        +findByPointOfRestId(pointOfRestId: String): List<Banner>
+    }
+
+    class Banner {
+        -String id
+        -String pointOfRestId
+        -String imageUrl
+        -String originalFileName
+        -String fileType
+        -long fileSize
+        -LocalDateTime uploadDate
+    }
+
+    class PointOfRest {
+        -String id
+        -String name
+        -int maxBanners
+    }
+
+    class BannerUploadRequest {
+        -String pointOfRestId
+        -MultipartFile imageFile
+    }
+
+    class BannerResponse {
+        -String bannerId
+        -String message
+        -String imageUrl
+    }
+
+    class ImageValidator {
+        +validate(image: MultipartFile): void
+        -isValidFileType(fileType: String): boolean
+        -isValidDimensions(image: MultipartFile): boolean
+        -isValidSize(fileSize: long): boolean
+    }
+
+    class InvalidImageException {
+        +InvalidImageException(message: String)
+    }
+
+    class MaxBannersExceededException {
+        +MaxBannersExceededException(message: String)
+    }
+
+    class EtourServiceException {
+        +EtourServiceException(message: String, cause: Throwable)
+    }
+
+    BannerController --> BannerService : uses
+    BannerService --> BannerRepository : uses
+    BannerService --> ImageValidator : uses
+    BannerService --> PointOfRest : interacts with (conceptually)
+    BannerService --> EtourServiceException : throws
+    BannerService --> InvalidImageException : throws
+    BannerService --> MaxBannersExceededException : throws
+    BannerRepository ..|> JpaRepository : extends
+    Banner *-- PointOfRest : associated with
+    BannerUploadRequest --> MultipartFile : contains
+    BannerResponse <-- Banner : maps from
+    ImageValidator ..> MultipartFile : validates
+    InvalidImageException --|> RuntimeException
+    MaxBannersExceededException --|> RuntimeException
+    EtourServiceException --|> RuntimeException
+
+    class JpaRepository {
+        <<interface>>
+    }

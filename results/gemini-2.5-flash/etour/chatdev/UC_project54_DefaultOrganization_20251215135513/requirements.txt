@@ -1,0 +1,4 @@
+# This Java project uses only standard Java SE libraries (javax.swing, java.awt, java.util).
+# It does not have external third-party dependencies or packages that would typically be listed
+# in a Python requirements.txt file or managed by a Java build tool like Maven/Gradle.
+# Therefore, this file is empty as no additional dependencies are needed beyond a standard Java Development Kit (JDK).

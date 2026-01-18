@@ -1,0 +1,53 @@
+sequenceDiagram
+    participant Operator as Agency Operator
+    participant App as MainApplication
+    participant Ctrl as CulturalHeritageController
+    participant Svc as CulturalHeritageService
+    participant Repo as CulturalHeritageRepository
+    participant Validator as CulturalHeritageValidator
+
+    Operator->>App: Starts application
+    App->>Ctrl: Initializes and calls start()
+
+    Ctrl->>Operator: Displays list of cultural objects (from SearchCulturalHeritage use case)
+    Ctrl->>Operator: Prompts to select object for modification
+    Operator->>Ctrl: Selects object ID (e.g., "CH001")
+
+    Ctrl->>Svc: getCulturalHeritageObject("CH001")
+    Svc->>Repo: findById("CH001")
+    Repo-->>Svc: Returns Optional<CulturalHeritageObject>
+    Svc-->>Ctrl: Returns CulturalHeritageObject (chObject)
+
+    Ctrl->>Operator: Displays editing form with chObject data
+    Operator->>Ctrl: Modifies data and submits
+
+    Ctrl->>Ctrl: Creates new CulturalHeritageObject (modifiedChObject) with updated data
+    Ctrl->>Operator: Asks for confirmation of transaction
+    Operator->>Ctrl: Confirms (e.g., 'Y')
+
+    alt Data is valid
+        Ctrl->>Svc: updateCulturalHeritageObject(modifiedChObject)
+        Svc->>Validator: validate(modifiedChObject)
+        Validator-->>Svc: Validation successful
+        Svc->>Repo: save(modifiedChObject)
+        Repo-->>Svc: Data saved
+        Svc-->>Ctrl: Success
+        Ctrl->>Operator: Notifies: "Cultural heritage data changed successfully."
+    else Data is invalid (InvalidCulturalHeritageDataException)
+        Svc-->>Ctrl: Throws InvalidCulturalHeritageDataException
+        Ctrl->>Operator: Displays error message (activates use case Errored)
+        Ctrl->>Operator: Allows re-editing or cancellation
+    end
+
+    alt Operator cancels
+        Operator->>Ctrl: Cancels operation
+        Ctrl->>Operator: Notifies: "Operation cancelled."
+    end
+
+    alt Connection interruption (simulated)
+        Note over Svc,Repo: ETOUR server connection interrupted
+        Svc--x Ctrl: Throws IOException or similar
+        Ctrl->>Operator: Displays error message: "Connection to server interrupted."
+    end
+
+    Operator->>App: Exits application

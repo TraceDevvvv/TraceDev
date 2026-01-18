@@ -1,0 +1,33 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: Assign/RemoveRolesToAUser
+Actors: Administrator
+Description: Allows you to assign or remove roles to a user
+Preconditions:
+â¢ The user is logged in as an administrator â¢ The user has carried out the case of use "viewdetTailsente" and the system is
+Viewing the details of a user â¢ The user click on the "User Roles" button
+Events sequence
+User
+2. Select the roles to be assigned or removed to the user
+3. Click on the "Send" button
+System
+1. Displays the role management form
+4. Assign or remove the user's roles as indicated by the administrator
+Postconditions:
+â¢ â¢ â¢
+User roles are modified The administrator interrupts the connection to the SMOS server interrupted
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

@@ -1,0 +1,7 @@
+# Java version requirement
+java>=1.8
+
+# This is a standard Java Swing application with no external dependencies
+# All required libraries are included in the Java SE Runtime Environment
+
+# For IDE setup directives, see README.md

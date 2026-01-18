@@ -1,0 +1,90 @@
+classDiagram
+    class Banner {
+        +String id
+        +String name
+        +String imageUrl
+        +String restaurantId
+        +Date createdAt
+        +Date updatedAt
+    }
+
+    class BannerUpdateRequest {
+        +String newImageUrl
+    }
+
+    class BannerResponse {
+        +String id
+        +String name
+        +String imageUrl
+    }
+
+    class ImageValidationResult {
+        +boolean isValid
+        +String errorMessage
+    }
+
+    class BannerRepository {
+        <<interface>>
+        +Optional~Banner~ findById(String id)
+        +List~Banner~ findByRestaurantId(String restaurantId)
+        +Banner save(Banner banner)
+    }
+
+    class ImageStorageService {
+        <<interface>>
+        +String uploadImage(byte[] imageData, String fileName)
+        +void deleteImage(String imageUrl)
+    }
+
+    class LocalFileImageStorageService {
+        +String uploadImage(byte[] imageData, String fileName)
+        +void deleteImage(String imageUrl)
+    }
+
+    class ImageValidator {
+        +ImageValidationResult validateImage(byte[] imageData, String fileName)
+    }
+
+    class BannerService {
+        -BannerRepository bannerRepository
+        -ImageStorageService imageStorageService
+        -ImageValidator imageValidator
+        +List~BannerResponse~ getBannersByRestaurant(String restaurantId)
+        +BannerResponse updateBannerImage(String bannerId, BannerUpdateRequest request)
+    }
+
+    class BannerController {
+        -BannerService bannerService
+        +ResponseEntity~List~BannerResponse~~ getBanners(String restaurantId)
+        +ResponseEntity~BannerResponse~ updateBannerImage(String bannerId, BannerUpdateRequest request)
+    }
+
+    class ModifyBannerApplication {
+        +main(String[] args)
+    }
+
+    class InvalidImageException {
+        +InvalidImageException(String message)
+    }
+
+    class BannerNotFoundException {
+        +BannerNotFoundException(String message)
+    }
+
+    class GlobalExceptionHandler {
+        +ResponseEntity~String~ handleInvalidImageException(InvalidImageException ex)
+        +ResponseEntity~String~ handleBannerNotFoundException(BannerNotFoundException ex)
+        +ResponseEntity~String~ handleException(Exception ex)
+    }
+
+    BannerRepository <|.. BannerService : uses
+    ImageStorageService <|.. BannerService : uses
+    ImageValidator <|.. BannerService : uses
+    BannerService <|.. BannerController : uses
+    Banner --o BannerRepository : manages
+    BannerUpdateRequest -- BannerService : passes
+    BannerResponse -- BannerController : returns
+    ImageValidationResult -- ImageValidator : returns
+    LocalFileImageStorageService .up.| ImageStorageService
+    InvalidImageException -- GlobalExceptionHandler : handles
+    BannerNotFoundException -- GlobalExceptionHandler : handles

@@ -1,0 +1,31 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: DeleteOfOnePage
+Actors: Administrator
+Description: The administrator eliminates a report card from the system
+Preconditions:
+â¢ â¢ â¢
+The user has been logged in to the system as an administrator, the user took the case of use "Displaying a report card" the user click on the "Delete" button
+Events sequence
+User
+2. The user accepts the cancellation by pressing the confirmation key
+System
+1. The system displays a form to confirm the cancellation
+3. Displays a message of correct deletion and displays the form with the list of classes
+Postconditions:
+â¢ A report relative to a student is canceled â¢ Connection to the interrupted SMOS server
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

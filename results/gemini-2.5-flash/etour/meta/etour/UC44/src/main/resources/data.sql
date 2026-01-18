@@ -1,0 +1,10 @@
+-- This file can be used to pre-populate the H2 database with test data.
+-- For this application, we will leave it empty as conventions are created via the API.
+-- Example:
+-- INSERT INTO conventions (convention_id, agency_name, convention_type, start_date, end_date, description, contact_person, contact_email, status, created_at, updated_at)
+-- VALUES ('1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'Example Agency', 'Partnership', '2023-01-01', '2023-12-31', 'Annual partnership agreement', 'John Doe', 'john.doe@example.com', 'PENDING', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+--
+-- INSERT INTO convention_required_documents (convention_id, document_name)
+-- VALUES ('1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'Signed Contract');
+-- INSERT INTO convention_required_documents (convention_id, document_name)
+-- VALUES ('1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p', 'Company Bylaws');

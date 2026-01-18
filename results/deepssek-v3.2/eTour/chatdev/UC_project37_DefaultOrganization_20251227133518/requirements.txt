@@ -1,0 +1,2 @@
+
+**Simple build script (build.sh for Linux/Mac or build.bat for Windows):**

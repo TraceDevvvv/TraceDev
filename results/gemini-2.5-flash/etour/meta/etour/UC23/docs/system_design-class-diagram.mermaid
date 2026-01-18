@@ -1,0 +1,78 @@
+classDiagram
+    class Main {
+        +main(String[] args)
+    }
+
+    class News {
+        -String id
+        -String title
+        -String content
+        -String author
+        -LocalDate publicationDate
+        -NewsStatus status
+        +News(String id, String title, String content, String author, LocalDate publicationDate, NewsStatus status)
+        +String getId()
+        +void setId(String id)
+        +String getTitle()
+        +void setTitle(String title)
+        +String getContent()
+        +void setContent(String content)
+        +String getAuthor()
+        +void setAuthor(String author)
+        +LocalDate getPublicationDate()
+        +void setPublicationDate(LocalDate publicationDate)
+        +NewsStatus getStatus()
+        +void setStatus(NewsStatus status)
+        +String toString()
+    }
+
+    enum NewsStatus {
+        DRAFT
+        PUBLISHED
+        ARCHIVED
+    }
+
+    class NewsRepository {
+        -Map<String, News> newsStore
+        +NewsRepository()
+        +List<News> findAll()
+        +Optional<News> findById(String id)
+        +void save(News news)
+        +void update(News news)
+        +void delete(String id)
+    }
+
+    class NewsService {
+        -NewsRepository newsRepository
+        +NewsService(NewsRepository newsRepository)
+        +List<News> getAllNews()
+        +Optional<News> getNewsById(String id)
+        +boolean updateNews(News updatedNews)
+        +boolean validateNews(News news)
+    }
+
+    class InputValidator {
+        +static boolean isValidString(String str, int minLength, int maxLength)
+        +static boolean isValidDate(String dateStr)
+        +static boolean isValidNewsStatus(String statusStr)
+    }
+
+    class NewsView {
+        +void displayNewsList(List<News> newsList)
+        +String getNewsSelection()
+        +News getNewsDetailsFromUser(News existingNews)
+        +void displayNews(News news)
+        +boolean confirmChanges()
+        +void displaySuccessMessage(String message)
+        +void displayErrorMessage(String message)
+        +void displayValidationErrors(List<String> errors)
+        +void displayCancellationMessage()
+        +void displayConnectionErrorMessage()
+    }
+
+    Main --> NewsService : uses
+    Main --> NewsView : uses
+    NewsService --> NewsRepository : uses
+    NewsService --> InputValidator : uses
+    NewsRepository ..> News : manages
+    NewsView ..> News : displays

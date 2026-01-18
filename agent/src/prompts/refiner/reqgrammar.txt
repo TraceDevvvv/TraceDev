@@ -1,0 +1,20 @@
+<UseCaseFile> ::= <Header> <EntryBlock> <MainFlowBlock> <ExitBlock> <QualityBlock>
+
+<Header>      ::= "UsecaseName:" <Verb> <NounPhrase> <NewLine>
+                  "Description: The goal of this use case is to allow" <ActorName> "to" <Action> <Entity> "in order to" <BusinessValue> <NewLine>
+                  "Actors:" <ActorName> <NewLine>
+
+<EntryBlock>  ::= "Entry Conditions:" <NewLine> <StateList>
+<StateList>   ::= <StateCondition> { <NewLine> <StateCondition> }
+
+<StateCondition> ::= <Entity> "IS" <State> 
+                   | <Entity> "HAS" <Attribute>
+
+<MainFlowBlock> ::= "Flow of Events:" <NewLine> <InteractionSequence>
+<InteractionSequence> ::= <InteractionStep>+
+<InteractionStep> ::= <StepID> "." <Description>
+
+<ExitBlock>   ::= "Exit Conditions:" <NewLine> <ExitList>
+<ExitList>    ::= <Description> { <NewLine> <Description> }
+
+<QualityBlock>::= "Quality Requirement:" <NewLine> <Description>

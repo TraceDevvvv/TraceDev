@@ -1,0 +1,32 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: EditOfOnePage
+Actors: Administrator
+Description: Use case to change the report card of a student
+Preconditions:
+â¢ â¢ â¢
+The user has been logged in to the system as an administrator, the user has carried out the case of use "DisplayedUnapagella" the user click on the edit button
+Events sequence
+User
+2. Enter the new data and click the confirmation key
+System
+1. Displays the form with the fields to be modified including the votes of the different subjects
+3. The system displays a confirmation message and displays the form with the list of students
+Postconditions:
+â¢ â¢ â¢
+A report relative to a student modified the user interrupts the connection to the SMOS server interrupted
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

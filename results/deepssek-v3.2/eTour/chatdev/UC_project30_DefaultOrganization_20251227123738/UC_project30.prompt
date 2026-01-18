@@ -1,0 +1,29 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Use case name: InsertTag 
+Description: Inserts a new tag search. 
+Participating Actor: initialization Agency Operator 
+Entry Operator conditions: The agency has logged. 
+Flow of events User System: 
+1. Access the functionality of inserting new tag search. 
+2 Show the form for entering a tag. 
+3 Fill out the form with the required information and submit. 
+4 Verify the data entered and check if the tag is already present in the system. In the latter case the active use case ExistingErrorTag. Instead, if the data is invalid or insufficient, the system activates the use case Errored. 
+Exit conditions: The notification about the inclusion of the tag. 
+Interruption of the connection to the server ETOUR. 
+Quality requirements:
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

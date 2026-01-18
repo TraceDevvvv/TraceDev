@@ -1,0 +1,108 @@
+classDiagram
+    direction LR
+
+    class InsertAbsencesSystemApplication {
+        +main(String[] args)
+    }
+
+    class SecurityConfig {
+        +filterChain(HttpSecurity http) SecurityFilterChain
+        +userDetailsService() UserDetailsService
+        +passwordEncoder() PasswordEncoder
+    }
+
+    class MailConfig {
+        +javaMailSender() JavaMailSender
+    }
+
+    class AbsenceController {
+        +getStudentsForClass(String classId) List<StudentAttendanceDTO>
+        +saveAbsences(AbsenceRequest request) ResponseEntity<String>
+    }
+
+    class ClassController {
+        +getClasses() List<Class>
+        +getClassById(String classId) Class
+    }
+
+    class StudentController {
+        +getStudentsByClassId(String classId) List<Student>
+    }
+
+    class AbsenceService {
+        +processAbsences(AbsenceRequest request) void
+    }
+
+    class NotificationService {
+        +sendAbsenceNotification(Student student, Class class, LocalDate absenceDate) void
+    }
+
+    class SmosIntegrationService {
+        +sendAbsenceDataToSmos(List<Absence> absences) boolean
+    }
+
+    class Student {
+        -String studentId
+        -String firstName
+        -String lastName
+        -String parentEmail
+        -Class currentClass
+    }
+
+    class Class {
+        -String classId
+        -String className
+        -List<Student> students
+    }
+
+    class Absence {
+        -String absenceId
+        -Student student
+        -Class class
+        -LocalDate absenceDate
+        -boolean notifiedParent
+    }
+
+    class User {
+        -String username
+        -String password
+        -String role
+    }
+
+    class AbsenceRequest {
+        -String classId
+        -List<StudentAttendanceDTO> attendanceList
+    }
+
+    class StudentAttendanceDTO {
+        -String studentId
+        -boolean isAbsent
+    }
+
+    InsertAbsencesSystemApplication ..> SecurityConfig
+    InsertAbsencesSystemApplication ..> MailConfig
+
+    AbsenceController --> AbsenceService
+    AbsenceController --> StudentController
+    AbsenceController --> ClassController
+
+    AbsenceService --> AbsenceRepository
+    AbsenceService --> StudentRepository
+    AbsenceService --> ClassRepository
+    AbsenceService --> NotificationService
+    AbsenceService --> SmosIntegrationService
+
+    NotificationService --> JavaMailSender
+
+    SmosIntegrationService ..> RestTemplate : uses
+
+    Student *-- Class : currentClass
+    Class *-- Student : students
+    Absence *-- Student : student
+    Absence *-- Class : class
+
+    AbsenceRequest ..> StudentAttendanceDTO
+
+    StudentRepository ..|> JpaRepository
+    ClassRepository ..|> JpaRepository
+    AbsenceRepository ..|> JpaRepository

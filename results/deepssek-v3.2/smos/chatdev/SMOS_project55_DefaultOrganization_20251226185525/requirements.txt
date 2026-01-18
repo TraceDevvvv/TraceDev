@@ -1,0 +1,27 @@
+# Requirements for InsertDelayATA Java Application
+# This file documents the development and runtime environment
+
+# Java Development Kit (JDK) - required for compilation
+# Minimal version: Java 8 (1.8)
+# Tested with: Java 11+
+
+# The application uses only standard Java SE libraries:
+# - Swing (javax.swing.*)
+# - AWT (java.awt.*)
+# - Collections Framework (java.util.*)
+# - Event handling (java.awt.event.*)
+
+# Build and Execution:
+# 1. Compilation: javac InsertDelayAtaApp.java
+# 2. Execution: java InsertDelayAtaApp
+
+# Optional IDE recommendations:
+# - IntelliJ IDEA Community Edition
+# - Eclipse IDE for Java Developers
+# - NetBeans IDE
+
+# Alternative for packaging into JAR:
+# jar cvfm InsertDelayAtaApp.jar MANIFEST.MF InsertDelayAtaApp.class
+
+# Note: No external libraries or Maven/Gradle dependencies required
+# This is a self-contained Java Swing application

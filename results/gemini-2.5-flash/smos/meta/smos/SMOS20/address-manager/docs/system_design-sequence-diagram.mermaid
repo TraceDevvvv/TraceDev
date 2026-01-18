@@ -1,0 +1,87 @@
+sequenceDiagram
+    participant UI as User Interface
+    participant AC as AddressController
+    participant AS as AddressService
+    participant AR as AddressRepository
+    participant ACR as AssociatedClassRepository
+    participant SCM as SmosConnectionManager
+    participant DB as Database
+
+    UI->>AC: DELETE /api/addresses/{id} (click 'Delete' button)
+    activate AC
+    AC->>AS: deleteAddress(addressId)
+    activate AS
+
+    AS->>AR: findById(addressId)
+    activate AR
+    AR->>DB: SELECT * FROM addresses WHERE id = :addressId
+    activate DB
+    DB-->>AR: Address object or empty
+    deactivate DB
+    AR-->>AS: Optional<Address>
+    deactivate AR
+
+    alt Address not found
+        AS-->>AC: throws AddressNotFoundException
+        deactivate AS
+        AC-->>UI: HTTP 404 Not Found (Error message)
+    else Address found
+        AS->>ACR: countByAddressId(addressId)
+        activate ACR
+        ACR->>DB: SELECT COUNT(*) FROM associated_classes WHERE address_id = :addressId
+        activate DB
+        DB-->>ACR: count
+        deactivate DB
+        ACR-->>AS: long count
+        deactivate ACR
+
+        alt Associated classes exist (count > 0)
+            AS-->>AC: throws AddressDeletionForbiddenException
+            deactivate AS
+            AC-->>UI: HTTP 409 Conflict (Error message: "Unable to delete...")
+        else No associated classes (count == 0)
+            AS->>AR: delete(addressObject)
+            activate AR
+            AR->>DB: DELETE FROM addresses WHERE id = :addressId
+            activate DB
+            DB-->>AR: Deletion successful
+            deactivate DB
+            AR-->>AS: void
+            deactivate AR
+
+            AS->>SCM: isConnected()
+            activate SCM
+            SCM-->>AS: boolean isConnected
+            deactivate SCM
+
+            alt SMOS is connected
+                AS->>SCM: disconnect()
+                activate SCM
+                SCM-->>AS: void
+                deactivate SCM
+            end
+
+            AS-->>AC: void (deletion successful)
+            deactivate AS
+            AC-->>UI: HTTP 200 OK (Success message)
+            deactivate AC
+
+            Note right of UI: User Interface then typically
+            UI->>AC: GET /api/addresses (to display updated list)
+            activate AC
+            AC->>AS: getAllAddresses()
+            activate AS
+            AS->>AR: findAll()
+            activate AR
+            AR->>DB: SELECT * FROM addresses
+            activate DB
+            DB-->>AR: List<Address>
+            deactivate DB
+            AR-->>AS: List<Address>
+            deactivate AR
+            AS-->>AC: List<Address>
+            deactivate AS
+            AC-->>UI: HTTP 200 OK (List of updated addresses)
+            deactivate AC
+        end
+    end

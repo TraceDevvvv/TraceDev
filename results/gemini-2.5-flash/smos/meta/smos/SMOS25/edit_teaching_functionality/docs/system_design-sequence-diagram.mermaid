@@ -1,0 +1,59 @@
+sequenceDiagram
+    participant Admin as Administrator
+    participant UI as Web UI
+    participant TC as TeachingController
+    participant TS as TeachingService
+    participant TR as TeachingRepository
+    participant DB as Database
+    participant GEH as GlobalExceptionHandler
+
+    Admin->>UI: Displays teaching details (from 'displaydeddailsigning')
+    Admin->>UI: Edits information in form
+    Admin->>UI: Clicks "Save" button
+
+    UI->>TC: HTTP PUT /api/teachings/{id} (TeachingDTO)
+
+    TC->>TS: updateTeaching(id, teachingDTO)
+
+    TS->>TS: validateTeachingData(teachingDTO)
+    alt Data is valid
+        TS->>TR: findById(id)
+        TR->>DB: SELECT * FROM teachings WHERE id = :id
+        DB-->>TR: Teaching record (or null)
+        alt Teaching found
+            TR-->>TS: Optional~Teaching~
+            TS->>TS: Update Teaching object with DTO data
+            TS->>TR: save(updatedTeaching)
+            TR->>DB: UPDATE teachings SET ... WHERE id = :id
+            DB-->>TR: Updated Teaching record
+            TR-->>TS: Updated Teaching
+            TS-->>TC: Updated Teaching
+            TC-->>UI: HTTP 200 OK (Updated Teaching)
+            UI->>Admin: Displays success message
+            UI->>UI: Redirects to updated teachings list
+            UI->>Admin: Views updated list of teachings
+        else Teaching not found
+            TR-->>TS: Optional.empty()
+            TS--xGEH: throws TeachingNotFoundException
+            GEH-->>TC: HTTP 404 Not Found
+            TC-->>UI: HTTP 404 Not Found
+            UI->>Admin: Displays "Teaching not found" error
+        end
+    else Data is invalid
+        TS--xGEH: throws InvalidTeachingDataException (Errodati use case)
+        GEH-->>TC: HTTP 400 Bad Request (Error details)
+        TC-->>UI: HTTP 400 Bad Request (Error details)
+        UI->>Admin: Displays "Invalid data entered" error with specific field errors
+    end
+
+    alt Connection to SMOS server interrupted (e.g., DB connection issue)
+        DB--xTR: Connection error
+        TR--xTS: Exception
+        TS--xGEH: throws Exception (e.g., DataAccessException)
+        GEH-->>TC: HTTP 500 Internal Server Error
+        TC-->>UI: HTTP 500 Internal Server Error
+        UI->>Admin: Displays "Connection to SMOS server interrupted" warning
+    end
+
+    Admin->>UI: Administrator interrupts operation (e.g., closes browser, navigates away)
+    UI--xAdmin: Operation aborted (no save)

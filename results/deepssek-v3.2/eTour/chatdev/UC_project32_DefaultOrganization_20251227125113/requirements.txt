@@ -1,0 +1,3 @@
+
+**If you specifically need a plain text requirements file for Java, here's a requirements.md:**
+

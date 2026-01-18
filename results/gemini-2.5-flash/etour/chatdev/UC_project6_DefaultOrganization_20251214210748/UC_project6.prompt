@@ -1,0 +1,33 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Use case name ELIMINAPUNTODIRISTORO 
+Delete a refreshment from the system. 
+Partecipating 
+Actor initialization Operator Agency. 
+Entry 
+Operator conditions  The agency has logged. 
+Flow of events User System 
+1. View a list of points of rest as a result of the use case RicercaBeneCulturale, it selects and activates a function of elimination. 
+2 Asks for confirmation of the transaction. 
+3 Confirm the deletion. 
+4 Deletes the selected point of rest. 
+Exit conditions  The system shall notify the successful elimination of the point of rest. 
+ Operator Agency cancels the operation. 
+ Interruption ETOUR connection to the server. 
+Quality 
+requirements
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

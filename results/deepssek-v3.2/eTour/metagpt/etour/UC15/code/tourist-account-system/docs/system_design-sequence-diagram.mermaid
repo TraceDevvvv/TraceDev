@@ -1,0 +1,116 @@
+sequenceDiagram
+    participant FE as Frontend/Angular UI
+    participant TC as TouristController
+    participant TS as TouristServiceImpl
+    participant VS as ValidationServiceImpl
+    participant TV as TouristValidator
+    participant EV as EmailValidator
+    participant REPO as TouristRepository
+    participant AUDIT as AuditService
+    participant ECON as ETOURConnectionService
+    participant DTO as TouristDTO
+    participant EX as ExceptionHandler
+    
+    %% 步骤1：从SearchTourist结果中选择游客
+    Note over FE,EX: 步骤1：旅行社操作员从列表选择游客
+    FE->>TC: GET /api/tourists?searchTerm="..."
+    TC->>TS: searchTourists(searchTerm)
+    TS->>REPO: findBySearchTerm(searchTerm)
+    REPO-->>TS: List~Tourist~
+    TS->>DTO: TouristDTO.fromEntity(tourist)
+    DTO-->>TS: TouristDTO
+    TS-->>TC: List~TouristDTO~
+    TC-->>FE: JSON响应（游客列表）
+    
+    %% 步骤2：加载选中游客数据并显示在可编辑表单
+    Note over FE,EX: 步骤2：加载选中游客数据
+    FE->>TC: GET /api/tourists/{id}
+    TC->>TS: getTouristById(id)
+    TS->>REPO: findById(id)
+    alt 游客存在
+        REPO-->>TS: Optional~Tourist~
+        TS->>DTO: TouristDTO.fromEntity(tourist)
+        DTO-->>TS: TouristDTO
+        TS-->>TC: TouristDTO
+        TC-->>FE: 游客详细信息
+    else 游客不存在
+        REPO-->>TS: Optional.empty()
+        TS-->>EX: throw TouristNotFoundException
+        EX-->>FE: 404错误响应
+    end
+    
+    %% 步骤3：编辑表单字段并提交
+    Note over FE,EX: 步骤3：编辑并提交修改
+    FE->>TC: PUT /api/tourists/{id}
+    TC->>TS: updateTourist(id, request, operatorId)
+    
+    %% 步骤4：验证信息（如果不完整则触发Errored用例）
+    Note over FE,EX: 步骤4：验证信息
+    TS->>VS: validateTouristData(request)
+    VS->>TV: validate(request)
+    TV->>VS: ValidationResult
+    VS->>EV: isEmailValid(request.email)
+    EV-->>VS: boolean
+    
+    alt 验证失败
+        VS-->>TS: ValidationResult (invalid)
+        TS-->>EX: throw ValidationException
+        EX-->>FE: 400验证错误响应
+        Note over FE,EX: 激活Errored用例
+        FE->>TC: 显示错误信息并要求重新输入
+    else 验证成功
+        VS-->>TS: ValidationResult (valid)
+        
+        %% 检查ETOUR连接
+        TS->>ECON: connectToETOUR()
+        alt 连接中断
+            ECON-->>TS: false (connection failed)
+            TS->>ECON: retryConnection(3)
+            alt 重试成功
+                ECON-->>TS: true
+            else 重试失败
+                ECON-->>TS: false
+                TS-->>EX: throw ETourConnectionException
+                EX-->>FE: 503服务不可用
+                Note over FE,EX: 中断连接处理
+                break
+            end
+        else 连接正常
+            ECON-->>TS: true
+        end
+        
+        %% 数据验证和审计记录
+        TS->>REPO: findById(id)
+        REPO-->>TS: Optional~Tourist~
+        TS->>AUDIT: createPreUpdateAuditLog(tourist, operatorId)
+        AUDIT-->>TS: AuditLog
+        
+        %% 更新游客数据
+        TS->>TS: tourist.updateFrom(request)
+        TS->>REPO: save(tourist)
+        REPO-->>TS: 更新的Tourist
+        
+        %% 步骤5：确认操作
+        Note over FE,EX: 步骤5：请求操作确认
+        TS->>TC: TouristResponse (needs confirmation, auditLogId)
+        TC-->>FE: 响应（需要确认，包含auditLogId）
+        
+        %% 用户确认操作
+        FE->>TC: POST /api/tourists/{id}/confirm/{auditLogId}
+        TC->>TS: confirmUpdate(touristId, auditLogId, operatorId)
+        
+        %% 步骤6：存储修改后的数据
+        Note over FE,EX: 步骤6：存储修改的数据
+        TS->>AUDIT: confirmAuditLog(auditLogId)
+        TS->>ECON: sendDataToETOUR(updatedTourist)
+        ECON-->>TS: boolean (success)
+        
+        TS->>DTO: TouristDTO.fromEntity(updatedTourist)
+        DTO-->>TS: TouristDTO
+        TS->>TC: TouristResponse.success(touristDTO)
+        TC-->>FE: 成功响应（更新后的游客数据）
+        
+        %% 退出条件：系统报告更新信息
+        Note over FE,EX: 退出：系统报告更新后的游客账户信息
+        FE->>FE: 显示成功消息和更新后的账户详情
+    end

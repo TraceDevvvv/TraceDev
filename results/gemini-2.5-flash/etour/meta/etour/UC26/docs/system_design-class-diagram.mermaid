@@ -1,0 +1,107 @@
+classDiagram
+    class Site {
+        +String id
+        +String name
+        +List<Feedback> feedbacks
+        +Site(id: String, name: String)
+    }
+
+    class Feedback {
+        +String id
+        +String content
+        +Comment comment
+        +Feedback(id: String, content: String)
+        +setComment(comment: Comment)
+    }
+
+    class Comment {
+        +String id
+        +String text
+        +Comment(id: String, text: String)
+        +setText(text: String)
+    }
+
+    class SiteRepository {
+        <<interface>>
+        +List<Site> findAllSites()
+        +Site findSiteById(id: String)
+    }
+
+    class FeedbackRepository {
+        <<interface>>
+        +List<Feedback> findFeedbacksBySiteId(siteId: String)
+        +Feedback findFeedbackById(feedbackId: String)
+        +void saveFeedback(feedback: Feedback)
+    }
+
+    class CommentRepository {
+        <<interface>>
+        +Comment findCommentById(commentId: String)
+        +void saveComment(comment: Comment)
+    }
+
+    class InMemorySiteRepository {
+        +List<Site> findAllSites()
+        +Site findSiteById(id: String)
+    }
+    InMemorySiteRepository --|> SiteRepository
+
+    class InMemoryFeedbackRepository {
+        +List<Feedback> findFeedbacksBySiteId(siteId: String)
+        +Feedback findFeedbackById(feedbackId: String)
+        +void saveFeedback(feedback: Feedback)
+    }
+    InMemoryFeedbackRepository --|> FeedbackRepository
+
+    class InMemoryCommentRepository {
+        +Comment findCommentById(commentId: String)
+        +void saveComment(comment: Comment)
+    }
+    InMemoryCommentRepository --|> CommentRepository
+
+    class SiteService {
+        -SiteRepository siteRepository
+        +SiteService(siteRepository: SiteRepository)
+        +List<Site> getAllSites()
+        +Site getSiteById(siteId: String)
+    }
+    SiteService --> SiteRepository
+
+    class FeedbackService {
+        -FeedbackRepository feedbackRepository
+        +FeedbackService(feedbackRepository: FeedbackRepository)
+        +List<Feedback> getFeedbacksBySiteId(siteId: String)
+        +Feedback getFeedbackById(feedbackId: String)
+        +void updateFeedback(feedback: Feedback)
+    }
+    FeedbackService --> FeedbackRepository
+
+    class CommentService {
+        -CommentRepository commentRepository
+        +CommentService(commentRepository: CommentRepository)
+        +Comment getCommentById(commentId: String)
+        +void updateCommentText(commentId: String, newText: String)
+        +boolean validateComment(comment: Comment)
+    }
+    CommentService --> CommentRepository
+
+    class ModifyCommentController {
+        -SiteService siteService
+        -FeedbackService feedbackService
+        -CommentService commentService
+        +ModifyCommentController(siteService: SiteService, feedbackService: FeedbackService, commentService: CommentService)
+        +void startModifyCommentProcess()
+        +void displaySites(sites: List<Site>)
+        +void displayFeedbacks(feedbacks: List<Feedback>)
+        +void displayCommentForm(comment: Comment)
+        +boolean confirmChange(oldComment: String, newComment: String)
+        +void handleInvalidData()
+    }
+    ModifyCommentController --> SiteService
+    ModifyCommentController --> FeedbackService
+    ModifyCommentController --> CommentService
+
+    class Main {
+        +main(args: String[])
+    }
+    Main --> ModifyCommentController

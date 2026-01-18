@@ -1,0 +1,91 @@
+classDiagram
+    class Main {
+        +main(String[] args)
+    }
+
+    class ConventionView {
+        +displayConventionForm(Convention convention)
+        +getConfirmation(): boolean
+        +showSuccess(String message)
+        +showError(String message)
+        +showConventionList(List<ConventionRequest> requests)
+        +getSelectedConventionRequest(): ConventionRequest
+        +enableActivationFunction()
+    }
+
+    class ConventionController {
+        -ConventionService conventionService
+        -ConventionView conventionView
+        +ConventionController(ConventionService service, ConventionView view)
+        +init()
+        +loadAndDisplayConventionData(String requestId)
+        +activateConvention(String conventionId)
+        +handleEtourConnectionInterruption(EtourConnectionException e)
+    }
+
+    class ConventionService {
+        -ConventionRepository conventionRepository
+        -EtourService etourService
+        +ConventionService(ConventionRepository repo, EtourService etourService)
+        +getConventionRequest(String requestId): ConventionRequest
+        +getConventionDetails(String conventionId): Convention
+        +activateConvention(Convention convention): boolean
+        +validateConventionData(Convention convention): boolean
+    }
+
+    class ConventionRepository {
+        +getPendingConventionRequests(): List<ConventionRequest>
+        +getConventionById(String id): Convention
+        +saveActivatedConvention(Convention convention)
+    }
+
+    class EtourService {
+        +sendActivationRequest(Convention convention): boolean
+    }
+
+    class Convention {
+        +String id
+        +String refreshmentPointName
+        +String startDate
+        +String endDate
+        +String terms
+        +String status
+        +Convention(String id, String rpName, String sDate, String eDate, String terms, String status)
+    }
+
+    class ConventionRequest {
+        +String requestId
+        +String conventionId
+        +String refreshmentPointName
+        +Date requestDate
+        +String status
+        +ConventionRequest(String requestId, String conventionId, String rpName, Date reqDate, String status)
+    }
+
+    class EtourConnectionException {
+        +EtourConnectionException(String message, Throwable cause)
+    }
+
+    class Logger {
+        +logInfo(String message)
+        +logError(String message, Throwable t)
+    }
+
+    Main --> ConventionController : creates
+    ConventionController --> ConventionService : uses
+    ConventionController --> ConventionView : uses
+    ConventionService --> ConventionRepository : uses
+    ConventionService --> EtourService : uses
+    ConventionService --> Convention : creates/uses
+    ConventionService --> ConventionRequest : creates/uses
+    ConventionRepository --> Convention : retrieves/stores
+    ConventionRepository --> ConventionRequest : retrieves
+    EtourService --> Convention : uses
+    ConventionView --> ConventionRequest : displays
+    ConventionView --> Convention : displays
+    ConventionController ..> EtourConnectionException : handles
+    Main ..> Logger : uses
+    ConventionController ..> Logger : uses
+    ConventionService ..> Logger : uses
+    ConventionRepository ..> Logger : uses
+    EtourService ..> Logger : uses

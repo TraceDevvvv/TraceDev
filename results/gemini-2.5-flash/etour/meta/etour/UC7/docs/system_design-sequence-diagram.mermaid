@@ -1,0 +1,68 @@
+sequenceDiagram
+    participant O as Agency Operator
+    participant M as Main
+    participant C as ConventionController
+    participant V as ConventionView
+    participant S as ConventionService
+    participant R as ConventionRepository
+    participant E as EtourService
+    participant L as Logger
+
+    O->>M: Starts Application
+    M->>C: init()
+    C->>V: enableActivationFunction()
+    V-->>C: Activation function enabled
+
+    O->>V: Requests to view pending conventions
+    V->>C: requestLoadPendingConventions()
+    C->>S: getPendingConventionRequests()
+    S->>R: getPendingConventionRequests()
+    R-->>S: List<ConventionRequest>
+    S-->>C: List<ConventionRequest>
+    C->>V: showConventionList(List<ConventionRequest>)
+    V-->>O: Displays list of pending requests
+
+    O->>V: Selects a Convention Request (e.g., clicks 'View Details')
+    V->>C: loadAndDisplayConventionData(requestId)
+    C->>S: getConventionDetails(conventionId)
+    S->>R: getConventionById(conventionId)
+    R-->>S: Convention object
+    S-->>C: Convention object
+    C->>V: displayConventionForm(Convention)
+    V-->>O: Displays convention details form
+
+    O->>V: Reviews data and ticks 'approve activation' checkbox
+    O->>V: Clicks 'Activate Convention' button
+    V->>C: activateConvention(conventionId)
+    C->>V: getConfirmation()
+    V-->>O: Asks for confirmation (dialog)
+    O->>V: Confirms activation ('Yes, Activate')
+    V-->>C: true (confirmation received)
+
+    C->>S: activateConvention(Convention convention)
+    S->>S: validateConventionData(convention)
+    alt Data is valid
+        S->>E: sendActivationRequest(convention)
+        alt ETOUR connection successful
+            E-->>S: true (activation successful)
+            S->>R: saveActivatedConvention(convention)
+            R-->>S: Convention saved
+            S-->>C: true (activation successful)
+            C->>V: showSuccess("Convention activated successfully.")
+            V-->>O: Notifies success
+            S->>L: logInfo("Convention activated: " + convention.getId())
+        else ETOUR connection interrupted
+            E-->>S: EtourConnectionException
+            S->>C: EtourConnectionException
+            C->>C: handleEtourConnectionInterruption(e)
+            C->>V: showError("Error: ETOUR server connection lost. Please try again later.")
+            V-->>O: Notifies error
+            S->>L: logError("ETOUR connection failed for " + convention.getId(), e)
+            C->>L: logError("ETOUR connection failed during activation", e)
+        end
+    else Data is invalid
+        S-->>C: false (validation failed)
+        C->>V: showError("Error: Convention data is invalid. Please review.")
+        V-->>O: Notifies error
+        S->>L: logError("Validation failed for convention: " + convention.getId())
+    end

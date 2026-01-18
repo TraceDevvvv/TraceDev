@@ -1,0 +1,30 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Use case name VISUALIZZASCHEDAPUNTODIRISTORO 
+View the details of a selected point of rest. 
+Partecipating 
+Actor initialization Agency Operator 
+Entry 
+Operator conditions  The agency has logged. 
+Flow of events User System 
+1. View the list of points of rest as a result of the use case RicercaPuntoDiRistoro, it selects and activates a function to view the card. 
+2 Upload data to a selected restaurant. 
+Exit conditions  The system displays the details of the selected point of rest. 
+ Interruption of the connection to the server ETOUR. 
+Quality 
+requirements
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

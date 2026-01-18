@@ -1,0 +1,4 @@
+# This Java project uses Swing for GUI, which is part of the standard Java SE.
+# No external dependencies are required beyond Java 8 or higher.
+# Specify the Java version requirement
+java_version >= 1.8

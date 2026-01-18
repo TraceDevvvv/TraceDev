@@ -1,0 +1,83 @@
+classDiagram
+    class CulturalHeritageObject {
+        -String id
+        -String name
+        -String description
+        -String origin
+        -int year
+        +CulturalHeritageObject(id: String, name: String, description: String, origin: String, year: int)
+        +getId(): String
+        +getName(): String
+        +setName(name: String): void
+        +getDescription(): String
+        +setDescription(description: String): void
+        +getOrigin(): String
+        +setOrigin(origin: String): void
+        +getYear(): int
+        +setYear(year: int): void
+        +toString(): String
+    }
+
+    interface CulturalHeritageRepository {
+        +findById(id: String): Optional<CulturalHeritageObject>
+        +save(object: CulturalHeritageObject): void
+        +findAll(): List<CulturalHeritageObject>
+    }
+
+    class InMemoryCulturalHeritageRepository {
+        -Map<String, CulturalHeritageObject> dataStore
+        +InMemoryCulturalHeritageRepository()
+        +findById(id: String): Optional<CulturalHeritageObject>
+        +save(object: CulturalHeritageObject): void
+        +findAll(): List<CulturalHeritageObject>
+    }
+
+    class CulturalHeritageValidator {
+        +validate(object: CulturalHeritageObject): void
+    }
+
+    class CulturalHeritageService {
+        -CulturalHeritageRepository repository
+        -CulturalHeritageValidator validator
+        +CulturalHeritageService(repository: CulturalHeritageRepository, validator: CulturalHeritageValidator)
+        +getCulturalHeritageObject(id: String): CulturalHeritageObject
+        +updateCulturalHeritageObject(object: CulturalHeritageObject): void
+        +getAllCulturalHeritageObjects(): List<CulturalHeritageObject>
+    }
+
+    class CulturalHeritageController {
+        -CulturalHeritageService service
+        -Scanner scanner
+        +CulturalHeritageController(service: CulturalHeritageService)
+        +start(): void
+        +displayCulturalHeritageList(): void
+        +modifyCulturalHeritage(): void
+        -promptForCulturalHeritageId(): String
+        -loadAndDisplayForm(id: String): CulturalHeritageObject
+        -editCulturalHeritageData(object: CulturalHeritageObject): CulturalHeritageObject
+        -confirmTransaction(object: CulturalHeritageObject): boolean
+        -saveModifiedData(object: CulturalHeritageObject): void
+        -handleInvalidData(e: InvalidCulturalHeritageDataException): void
+        -handleNotFound(e: CulturalHeritageNotFoundException): void
+    }
+
+    class InvalidCulturalHeritageDataException {
+        +InvalidCulturalHeritageDataException(message: String)
+    }
+
+    class CulturalHeritageNotFoundException {
+        +CulturalHeritageNotFoundException(message: String)
+    }
+
+    class MainApplication {
+        +main(args: String[]): void
+    }
+
+    CulturalHeritageRepository <|.. InMemoryCulturalHeritageRepository
+    CulturalHeritageService "1" --> "1" CulturalHeritageRepository : uses
+    CulturalHeritageService "1" --> "1" CulturalHeritageValidator : uses
+    CulturalHeritageController "1" --> "1" CulturalHeritageService : uses
+    MainApplication --> CulturalHeritageController : creates
+    MainApplication --> CulturalHeritageService : creates
+    MainApplication --> InMemoryCulturalHeritageRepository : creates
+    MainApplication --> CulturalHeritageValidator : creates

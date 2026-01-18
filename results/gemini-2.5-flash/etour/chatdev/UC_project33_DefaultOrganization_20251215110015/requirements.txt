@@ -1,0 +1,5 @@
+# This is a Java project and uses standard Java Development Kit (JDK) libraries only.
+# No external dependencies are required beyond a compatible JDK.
+# Therefore, a 'requirements.txt' file, typically used for Python projects, is not applicable
+# in the standard sense for this pure Java application with no third-party libraries.
+# If this were a Maven or Gradle project, dependencies would be listed in pom.xml or build.gradle.

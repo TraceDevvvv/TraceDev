@@ -1,0 +1,42 @@
+sequenceDiagram
+    participant AO as Agency Operator
+    participant CLI as NewsInsertionCLI
+    participant NAS as NewsArticleService
+    participant VU as ValidationUtil
+    participant NADAO as NewsArticleDAO
+    participant DB as Database
+
+    AO->>CLI: 1. Activates feature to insert news
+    CLI->>CLI: 2. Displays form for news input
+    AO->>CLI: 3. Fills out form and submits data
+
+    CLI->>NAS: Calls insertNews(newsArticleData)
+    NAS->>VU: 4. validateNewsArticle(newsArticleData)
+    alt Data is invalid or insufficient
+        VU-->>NAS: Throws InvalidNewsDataException
+        NAS-->>CLI: Catches exception, returns error
+        CLI->>AO: Displays error messages (activates Errored use case)
+        AO->>CLI: Corrects data or cancels operation
+    else Data is valid
+        VU-->>NAS: Returns successfully
+        NAS->>CLI: Returns success for validation
+        CLI->>AO: Asks for confirmation of transaction
+        AO->>CLI: 5. Confirms operation (or cancels)
+        alt Operation confirmed
+            CLI->>NAS: Calls insertNews(newsArticle)
+            NAS->>NADAO: save(newsArticle)
+            alt Database operation successful
+                NADAO->>DB: Stores data of new news
+                DB-->>NADAO: Returns success
+                NADAO-->>NAS: Returns success
+                NAS-->>CLI: Returns success
+                CLI->>AO: 6. Notifies proper placement of news
+            else Database operation fails
+                NADAO-->>NAS: Throws DatabaseOperationException
+                NAS-->>CLI: Catches exception, returns error
+                CLI->>AO: Displays system error (e.g., "Connection lost")
+            end
+        else Operation cancelled by AO
+            CLI->>AO: Notifies cancellation, redirects
+        end
+    end

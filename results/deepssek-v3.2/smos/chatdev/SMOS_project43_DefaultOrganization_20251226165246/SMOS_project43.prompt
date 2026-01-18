@@ -1,0 +1,30 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Name: DeleteNote
+Actors: Administrator
+Description: Deleting disciplinary notes
+Preconditions:
+â¢ The user must be logged in to the system as an administrator â¢ The user has carried out the case of use "SHOWDDETTICLETA" and the system is
+Viewing the details of a note â¢ The user clicks the "Delete" button
+Events sequence
+User
+System
+1. The system sends a notification of incorrect corrige to the student's parents, then eliminates the data of the note from the archive.
+Postconditions:
+â¢ The note has been canceled, and the system sent notification to parents. The system returns to the registry screen.
+â¢ The administrator interrupts the operation â¢ Connection to the SMOS server interrupted
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

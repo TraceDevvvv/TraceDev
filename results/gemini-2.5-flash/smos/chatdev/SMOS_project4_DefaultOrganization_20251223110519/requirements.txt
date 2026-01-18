@@ -1,0 +1,4 @@
+# This project is written in Java and utilizes only standard Java libraries (JDK).
+# In Java, external dependencies are typically managed using build tools like Maven (pom.xml) or Gradle (build.gradle).
+# This particular project does not require any third-party external libraries or frameworks beyond the Java Development Kit (JDK) itself.
+# Therefore, a Python-style requirements.txt file listing external packages is not applicable or necessary for this Java application.

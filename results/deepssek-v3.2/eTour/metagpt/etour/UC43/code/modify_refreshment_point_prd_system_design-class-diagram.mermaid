@@ -1,0 +1,165 @@
+classDiagram
+    class User {
+        +String userId
+        +String username
+        +String password
+        +String email
+        +String role
+        +Date createdAt
+        +Date lastLoginAt
+        +boolean isActive
+        +authenticate(password: String) boolean
+        +hasRole(role: String) boolean
+    }
+    
+    class RestaurantPoint {
+        +String pointId
+        +String restaurantName
+        +String address
+        +String businessHours
+        +String contactPerson
+        +String phoneNumber
+        +PointStatus status
+        +Date lastUpdated
+        +String updatedBy
+        +int version
+        +validate() ValidationResult
+        +getFormattedBusinessHours() String
+    }
+    
+    class RefreshmentData {
+        +String refreshmentId
+        +String pointId
+        +String dataType
+        +Object dataValue
+        +Date timestamp
+        +boolean validated
+        +String validationNotes
+        +isValidated() boolean
+        +setValidationStatus(validated: boolean, notes: String)
+    }
+    
+    class OperationLog {
+        +Long logId
+        +String operationType
+        +String pointId
+        +String operatorId
+        +Date operationTime
+        +String oldData
+        +String newData
+        +String status
+        +String errorMessage
+        +logOperation(operationType: String, pointId: String, operatorId: String)
+        +setResult(status: String, errorMessage: String)
+    }
+    
+    class ValidationResult {
+        +boolean isValid
+        +List~ValidationError~ errors
+        +Date validationTime
+        +String validatorName
+        +addError(field: String, message: String)
+        +hasErrors() boolean
+        +getErrorMessages() List~String~
+    }
+    
+    class ValidationError {
+        +String field
+        +String message
+        +String errorCode
+        +Object rejectedValue
+        +getFormattedMessage() String
+    }
+    
+    class PointStatus {
+        <<enumeration>>
+        ACTIVE
+        MAINTENANCE
+        CLOSED
+    }
+    
+    class OperationType {
+        <<enumeration>>
+        CREATE
+        UPDATE
+        DELETE
+        VALIDATE
+        CANCEL
+    }
+    
+    %% 服务接口
+    class RestaurantPointService {
+        <<interface>>
+        +getPointById(pointId: String) RestaurantPointDTO
+        +searchPoints(criteria: SearchCriteria) Page~RestaurantPointDTO~
+        +createPoint(point: CreatePointRequest) RestaurantPointDTO
+        +updatePoint(pointId: String, updateData: UpdatePointRequest) RestaurantPointDTO
+        +deletePoint(pointId: String) boolean
+        +validatePoint(pointId: String) ValidationResultDTO
+        +confirmUpdate(pointId: String, confirmation: ConfirmationRequest) boolean
+        +cancelOperation(pointId: String) boolean
+    }
+    
+    class ValidationService {
+        <<interface>>
+        +validateRestaurantPoint(point: RestaurantPointDTO) ValidationResultDTO
+        +validateBusinessHours(hours: String) boolean
+        +validatePhoneNumber(phone: String) boolean
+        +validateAddress(address: String) boolean
+        +validateRequiredFields(data: Map~String, Object~) List~String~
+    }
+    
+    class AuthService {
+        <<interface>>
+        +authenticate(username: String, password: String) AuthResponse
+        +refreshToken(refreshToken: String) AuthResponse
+        +logout(token: String) boolean
+        +validateToken(token: String) UserDetails
+        +getCurrentUser() UserDTO
+    }
+    
+    class OperationLogService {
+        <<interface>>
+        +logOperation(operation: OperationLogDTO) OperationLogDTO
+        +getLogsByPointId(pointId: String) List~OperationLogDTO~
+        +getLogsByOperatorId(operatorId: String) List~OperationLogDTO~
+        +searchLogs(criteria: LogSearchCriteria) Page~OperationLogDTO~
+        +exportLogs(criteria: ExportCriteria) byte[]
+    }
+    
+    class ETOURIntegrationService {
+        <<interface>>
+        +syncPointData(pointId: String) boolean
+        +checkConnection() boolean
+        +handleConnectionError(error: Exception) boolean
+        +getPointFromETOUR(pointId: String) ETOURPointDTO
+        +updatePointInETOUR(pointId: String, data: Map~String, Object~) boolean
+    }
+    
+    %% 关系定义
+    User "1" --> "*" OperationLog : 执行
+    RestaurantPoint "1" --> "*" RefreshmentData : 关联
+    RestaurantPoint "1" --> "*" OperationLog : 记录
+    ValidationResult "1" --> "*" ValidationError : 包含
+    RestaurantPoint ..> ValidationResult : 生成
+    RestaurantPoint ..> PointStatus : 使用
+    OperationLog ..> OperationType : 使用
+    
+    %% 实现关系
+    class RestaurantPointServiceImpl {
+        +getPointById(pointId: String) RestaurantPointDTO
+        +updatePoint(pointId: String, updateData: UpdatePointRequest) RestaurantPointDTO
+        -validateUpdateRequest(request: UpdatePointRequest) ValidationResultDTO
+        -checkConcurrentUpdate(pointId: String, version: int) boolean
+        -saveWithRetry(point: RestaurantPoint, maxRetries: int) RestaurantPoint
+    }
+    
+    class ValidationServiceImpl {
+        +validateRestaurantPoint(point: RestaurantPointDTO) ValidationResultDTO
+        -validateFieldLengths(point: RestaurantPointDTO) List~ValidationError~
+        -validateBusinessRules(point: RestaurantPointDTO) List~ValidationError~
+        -validateDataConsistency(point: RestaurantPointDTO) List~ValidationError~
+    }
+    
+    RestaurantPointServiceImpl ..|> RestaurantPointService : 实现
+    ValidationServiceImpl ..|> ValidationService : 实现

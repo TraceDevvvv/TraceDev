@@ -1,0 +1,17 @@
+# Requirements for ViewTeachingDetails Java Application
+# This is a Java Swing application that requires Java Runtime Environment or JDK
+
+# Java version requirement for compilation and execution
+java >= 8
+
+# Since this is a pure Java application using Swing framework,
+# no additional external dependencies are required.
+# All necessary libraries are part of the standard Java Development Kit (JDK).
+
+# Optional build tools (for developers):
+# Maven or Gradle can be used for project management
+# maven >= 3.6.0
+# gradle >= 6.7
+
+# Note: This application uses javax.swing package for GUI
+# which is included in standard Java distributions

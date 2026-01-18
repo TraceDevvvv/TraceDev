@@ -1,0 +1,45 @@
+sequenceDiagram
+    participant F as Frontend (React/Vite)
+    participant C as ClassController
+    participant S as ClassService
+    participant R as ClassRepository
+    participant DB as Database
+    participant E as GlobalExceptionHandler
+
+    F->>C: POST /api/classes (ClassCreateRequest)
+    activate C
+    C->>S: createClass(request)
+    activate S
+
+    S->>S: validateClassData(request)
+    alt Valid Data
+        S->>R: save(ClassEntity)
+        activate R
+        R->>DB: INSERT INTO classes (...)
+        activate DB
+        DB-->>R: ClassEntity (with ID)
+        deactivate DB
+        R-->>S: ClassEntity
+        deactivate R
+        S-->>C: ClassResponse
+        deactivate S
+        C-->>F: 201 Created (ClassResponse)
+        deactivate C
+        F->>F: Display success message
+    else Invalid Data
+        S->>S: Throws InvalidClassDataException
+        S--x C: InvalidClassDataException
+        deactivate S
+        C->>E: Catches InvalidClassDataException
+        activate E
+        E-->>C: 400 Bad Request (Error Details)
+        deactivate E
+        C-->>F: 400 Bad Request (Error Details)
+        deactivate C
+        F->>F: Display error messages (Errodati use case)
+    end
+
+    alt Administrator interrupts operation (e.g., clicks Cancel)
+        F->>F: Discard form data
+        F-->>F: Navigate back to class list
+    end

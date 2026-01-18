@@ -1,0 +1,38 @@
+# Java GUI Registration System Requirements
+# This project uses standard Java libraries included in JDK
+
+# Core Requirements:
+# 1. Java Development Kit (JDK) 8 or higher
+# 2. Java Swing and AWT (included with JDK)
+# 3. Java Util Logging Framework (included with JDK)
+
+# Minimum System Requirements:
+# - Operating System: Windows 7+, macOS 10.10+, or Linux with GUI
+# - Java Runtime Environment (JRE) 8 or higher
+# - 512MB RAM minimum
+# - 1024x768 display resolution
+# - Mouse and keyboard input
+
+# Development/Build Tools (optional):
+# - Apache Maven 3.6+ (for building with provided pom.xml)
+# - IDE: IntelliJ IDEA, Eclipse, or NetBeans (recommended)
+# - Version Control: Git (recommended)
+
+# Java Standard Libraries Used:
+# - javax.swing.* (GUI components)
+# - java.awt.* (window toolkit)
+# - java.util.logging.* (logging framework)
+# - java.lang.* (core language features)
+
+# No external dependencies required - project is self-contained
+# All required libraries are part of standard Java SE distribution
+
+# To run the project:
+# 1. Ensure Java is installed (check: java -version)
+# 2. Compile: javac *.java
+# 3. Run: java Registration
+
+# For Maven build (if using pom.xml):
+# 1. mvn clean compile
+# 2. mvn package
+# 3. java -jar target/registration-system-1.0.0.jar

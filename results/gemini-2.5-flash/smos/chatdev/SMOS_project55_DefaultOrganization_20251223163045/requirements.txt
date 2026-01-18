@@ -1,0 +1,15 @@
+# This project is written in Java and primarily uses standard Java libraries
+# (such as javax.swing for GUI, java.awt, and java.util for data structures).
+#
+# In Java, external dependencies are typically managed using build tools like
+# Maven (pom.xml) or Gradle (build.gradle), not a 'requirements.txt' file
+# in the style of Python projects.
+#
+# Since this application uses only core Java APIs, no additional external
+# libraries or third-party dependencies are required beyond a standard
+# Java Development Kit (JDK) to compile and run the code.
+#
+# The minimal requirement is a Java Development Kit (JDK) version 8 or higher
+# (as Swing is part of the standard library up to current versions).
+#
+# No external dependencies to list here.

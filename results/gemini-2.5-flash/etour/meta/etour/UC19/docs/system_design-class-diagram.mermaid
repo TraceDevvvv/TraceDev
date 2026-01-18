@@ -1,0 +1,86 @@
+classDiagram
+    class MainApplication {
+        <<entry point>>
+        +start(Stage primaryStage)
+        -showRefreshmentPointView()
+    }
+
+    class RefreshmentPointController {
+        -RefreshmentPointService refreshmentPointService
+        -BannerService bannerService
+        +initialize()
+        +loadRefreshmentPoints()
+        +onSelectRefreshmentPoint()
+        +onViewBanners()
+    }
+
+    class BannerController {
+        -BannerService bannerService
+        -RefreshmentPoint selectedRefreshmentPoint
+        +initialize()
+        +loadBanners(RefreshmentPoint rp)
+        +onSelectBanner()
+        +onDeleteBanner()
+        +onBack()
+    }
+
+    class RefreshmentPointService {
+        -EtourApiClient etourApiClient
+        +getRefreshmentPoints(): List<RefreshmentPoint>
+    }
+
+    class BannerService {
+        -EtourApiClient etourApiClient
+        +getBannersForRefreshmentPoint(String rpId): List<Banner>
+        +deleteBanner(String bannerId): boolean
+    }
+
+    class EtourApiClient {
+        +get(String url): String
+        +delete(String url): boolean
+        -handleNetworkError(Exception e)
+    }
+
+    class RefreshmentPoint {
+        +String id
+        +String name
+        +String location
+        +String toString()
+    }
+
+    class Banner {
+        +String id
+        +String name
+        +String type
+        +String startDate
+        +String endDate
+        +String imageUrl
+        +String toString()
+    }
+
+    class ConfirmationDialog {
+        +show(String title, String message): boolean
+    }
+
+    class EtourApiException {
+        +EtourApiException(String message, Throwable cause)
+    }
+
+    class NetworkException {
+        +NetworkException(String message, Throwable cause)
+    }
+
+    MainApplication "1" --> "1" RefreshmentPointController : uses
+    MainApplication "1" --> "1" BannerController : uses
+    RefreshmentPointController "1" --> "1" RefreshmentPointService : uses
+    RefreshmentPointController "1" --> "1" BannerService : uses
+    BannerController "1" --> "1" BannerService : uses
+    BannerController "1" --> "1" ConfirmationDialog : uses
+    RefreshmentPointService "1" --> "1" EtourApiClient : uses
+    BannerService "1" --> "1" EtourApiClient : uses
+    EtourApiClient ..> EtourApiException : throws
+    EtourApiClient ..> NetworkException : throws
+    RefreshmentPointController ..> RefreshmentPoint : manages
+    BannerController ..> Banner : manages
+    RefreshmentPointService ..> RefreshmentPoint : returns
+    BannerService ..> Banner : returns

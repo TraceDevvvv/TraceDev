@@ -1,0 +1,83 @@
+sequenceDiagram
+    participant C as Client (UI)
+    participant PC as PreferenceController
+    participant PS as PreferenceService
+    participant PR as PreferenceRepository
+    participant DB as Database
+
+    C->>PC: GET /api/preferences/{userId} (Access functionality)
+    activate PC
+    PC->>PS: getPreferences(userId)
+    activate PS
+    PS->>PR: findByUserId(userId)
+    activate PR
+    PR->>DB: SELECT * FROM preferences WHERE userId = :userId
+    activate DB
+    DB-->>PR: Preference data (or empty)
+    deactivate DB
+    PR-->>PS: Optional<Preference>
+    deactivate PR
+    alt Preference found
+        PS->>PS: Map Preference to PreferenceDTO
+        PS-->>PC: PreferenceDTO
+    else Preference not found
+        PS->>PS: Create default PreferenceDTO
+        PS-->>PC: Default PreferenceDTO
+    end
+    deactivate PS
+    PC-->>C: HTTP 200 OK, PreferenceDTO (Upload preferences to form)
+    deactivate PC
+
+    C->>C: User edits fields in form
+    C->>C: User clicks "Save Changes"
+    C->>C: Displays confirmation dialog
+    C->>C: User clicks "Confirm"
+
+    C->>PC: PUT /api/preferences/{userId} (PreferenceDTO) (Submit edited fields)
+    activate PC
+    PC->>PS: updatePreferences(userId, preferenceDTO)
+    activate PS
+    PS->>PS: validatePreferences(preferenceDTO)
+    alt Validation successful
+        PS->>PR: findByUserId(userId)
+        activate PR
+        PR->>DB: SELECT * FROM preferences WHERE userId = :userId
+        activate DB
+        DB-->>PR: Existing Preference data (or empty)
+        deactivate DB
+        PR-->>PS: Optional<Preference>
+        deactivate PR
+        alt Existing Preference found
+            PS->>PS: Update existing Preference object with new settings from DTO
+        else No existing Preference
+            PS->>PS: Create new Preference object from DTO
+        end
+        PS->>PR: save(preference)
+        activate PR
+        PR->>DB: INSERT/UPDATE preferences table
+        activate DB
+        DB-->>PR: Saved Preference data
+        deactivate DB
+        PR-->>PS: Saved Preference
+        deactivate PR
+        PS->>PS: Map saved Preference to PreferenceDTO
+        PS-->>PC: Saved PreferenceDTO
+    else Validation failed
+        PS-->>PC: InvalidPreferenceDataException
+    end
+    deactivate PS
+    alt Update successful
+        PC-->>C: HTTP 200 OK, Saved PreferenceDTO (Notify successful modification)
+    else Update failed (e.g., validation error)
+        PC-->>C: HTTP 400 Bad Request, Error Message (Notify error)
+    end
+    deactivate PC
+
+    C->>C: User cancels operation (before submission or confirmation)
+    C-->>PC: (No request sent, or previous request aborted)
+    Note over C: System does not store changes.
+
+    C->>PC: (Connection interruption to ETOUR server during any API call)
+    Note over C,PC: Network error occurs
+    PC--x C: Connection interrupted / Timeout
+    Note over C: Client handles connection error, informs user.

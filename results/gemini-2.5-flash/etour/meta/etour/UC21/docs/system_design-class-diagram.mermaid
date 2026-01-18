@@ -1,0 +1,89 @@
+classDiagram
+    class NewsArticle {
+        +String id
+        +String title
+        +String content
+        +String author
+        +Date publicationDate
+        +List~String~ categories
+        +List~String~ tags
+        +NewsArticle(id: String, title: String, content: String, author: String, publicationDate: Date, categories: List~String~, tags: List~String~)
+        +String getId()
+        +void setId(id: String)
+        +String getTitle()
+        +void setTitle(title: String)
+        +String getContent()
+        +void setContent(content: String)
+        +String getAuthor()
+        +void setAuthor(author: String)
+        +Date getPublicationDate()
+        +void setPublicationDate(publicationDate: Date)
+        +List~String~ getCategories()
+        +void setCategories(categories: List~String~)
+        +List~String~ getTags()
+        +void setTags(tags: List~String~)
+        +boolean isValid()
+    }
+
+    class NewsArticleDAO {
+        <<interface>>
+        +void save(newsArticle: NewsArticle)
+        +Optional~NewsArticle~ findById(id: String)
+        +List~NewsArticle~ findAll()
+        +void update(newsArticle: NewsArticle)
+        +void delete(id: String)
+    }
+
+    class NewsArticleDAOImpl {
+        +Connection connection
+        +NewsArticleDAOImpl(connection: Connection)
+        +void save(newsArticle: NewsArticle)
+        +Optional~NewsArticle~ findById(id: String)
+        +List~NewsArticle~ findAll()
+        +void update(newsArticle: NewsArticle)
+        +void delete(id: String)
+    }
+
+    class NewsArticleService {
+        -NewsArticleDAO newsArticleDAO
+        +NewsArticleService(newsArticleDAO: NewsArticleDAO)
+        +void insertNews(newsArticle: NewsArticle)
+        +void validateNewsArticle(newsArticle: NewsArticle)
+        +NewsArticle getNewsById(id: String)
+        +List~NewsArticle~ getAllNews()
+    }
+
+    class ValidationUtil {
+        +static void validateString(value: String, fieldName: String, minLength: int, maxLength: int, required: boolean)
+        +static void validateDate(date: Date, fieldName: String, required: boolean)
+        +static void validateList(list: List~String~, fieldName: String, required: boolean)
+    }
+
+    class InvalidNewsDataException {
+        +InvalidNewsDataException(message: String)
+    }
+
+    class DatabaseOperationException {
+        +DatabaseOperationException(message: String, cause: Throwable)
+    }
+
+    class MainApplication {
+        +static void main(args: String[])
+    }
+
+    class NewsInsertionCLI {
+        -NewsArticleService newsArticleService
+        +NewsInsertionCLI(newsArticleService: NewsArticleService)
+        +void start()
+        +NewsArticle getNewsArticleFromUserInput()
+        +boolean confirmOperation()
+        +void displayMessage(message: String)
+        +void displayError(error: String)
+    }
+
+    NewsArticleDAO <|.. NewsArticleDAOImpl : implements
+    NewsArticleService "1" --> "1" NewsArticleDAO : uses
+    NewsArticleService "1" --> "*" NewsArticle : manages
+    NewsArticleService "1" --> "1" ValidationUtil : uses
+    NewsInsertionCLI "1" --> "1" NewsArticleService : uses
+    MainApplication "1" --> "1" NewsInsertionCLI : starts

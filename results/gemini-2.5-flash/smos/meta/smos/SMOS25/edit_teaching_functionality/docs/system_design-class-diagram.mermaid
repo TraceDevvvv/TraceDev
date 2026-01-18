@@ -1,0 +1,86 @@
+classDiagram
+    class Teaching {
+        +String id
+        +String name
+        +String courseCode
+        +String instructor
+        +LocalDate startDate
+        +LocalDate endDate
+        +String description
+        +Teaching(id: String, name: String, courseCode: String, instructor: String, startDate: LocalDate, endDate: LocalDate, description: String)
+        +getId(): String
+        +setName(name: String): void
+        +getName(): String
+        +setCourseCode(courseCode: String): void
+        +getCourseCode(): String
+        +setInstructor(instructor: String): void
+        +getInstructor(): String
+        +setStartDate(startDate: LocalDate): void
+        +getStartDate(): LocalDate
+        +setEndDate(endDate: LocalDate): void
+        +getEndDate(): LocalDate
+        +setDescription(description: String): void
+        +getDescription(): String
+    }
+
+    class TeachingDTO {
+        +String name
+        +String courseCode
+        +String instructor
+        +LocalDate startDate
+        +LocalDate endDate
+        +String description
+        +TeachingDTO(name: String, courseCode: String, instructor: String, startDate: LocalDate, endDate: LocalDate, description: String)
+        +getName(): String
+        +getCourseCode(): String
+        +getInstructor(): String
+        +getStartDate(): LocalDate
+        +getEndDate(): LocalDate
+        +getDescription(): String
+    }
+
+    class TeachingRepository {
+        <<interface>>
+        +findById(id: String): Optional~Teaching~
+        +save(teaching: Teaching): Teaching
+        +findAll(): List~Teaching~
+    }
+
+    class TeachingService {
+        -TeachingRepository teachingRepository
+        +TeachingService(teachingRepository: TeachingRepository)
+        +getTeachingById(id: String): Teaching
+        +updateTeaching(id: String, teachingDTO: TeachingDTO): Teaching
+        -validateTeachingData(teachingDTO: TeachingDTO): void
+        +getAllTeachings(): List~Teaching~
+    }
+
+    class TeachingController {
+        -TeachingService teachingService
+        +TeachingController(teachingService: TeachingService)
+        +getTeaching(id: String): ResponseEntity~Teaching~
+        +updateTeaching(id: String, teachingDTO: TeachingDTO): ResponseEntity~Teaching~
+        +getAllTeachings(): ResponseEntity~List~Teaching~~~
+    }
+
+    class TeachingNotFoundException {
+        +TeachingNotFoundException(message: String)
+    }
+
+    class InvalidTeachingDataException {
+        +InvalidTeachingDataException(message: String)
+    }
+
+    class GlobalExceptionHandler {
+        +handleTeachingNotFoundException(ex: TeachingNotFoundException): ResponseEntity~String~
+        +handleInvalidTeachingDataException(ex: InvalidTeachingDataException): ResponseEntity~String~
+        +handleGenericException(ex: Exception): ResponseEntity~String~
+    }
+
+    TeachingDTO "1" -- "1" Teaching : converts to
+    TeachingService "1" -- "1" TeachingRepository : uses
+    TeachingController "1" -- "1" TeachingService : uses
+    TeachingService ..> TeachingNotFoundException : throws
+    TeachingService ..> InvalidTeachingDataException : throws
+    GlobalExceptionHandler ..> TeachingNotFoundException : handles
+    GlobalExceptionHandler ..> InvalidTeachingDataException : handles

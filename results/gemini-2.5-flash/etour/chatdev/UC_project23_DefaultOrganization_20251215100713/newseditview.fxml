@@ -1,0 +1,49 @@
+<!--
+DOCSTRING: FXML layout for the News Edit View.
+This file defines the graphical user interface for editing a specific news item.
+It includes text fields for news details (ID, Title, Content, Author, Date) and
+buttons to save or cancel the changes.
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox alignment="TOP_CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chatdev.newsapp.controllers.NewsEditController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <Label text="Edit News Item">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+    <Separator prefWidth="200.0" />
+    <GridPane hgap="10.0" vgap="10.0">
+        <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+        </padding>
+        <Label text="News ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="idField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="titleField" promptText="Enter news title" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Content:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextArea fx:id="contentArea" promptText="Enter news content" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Author:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="authorField" promptText="Enter author's name" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Label text="Date (YYYY-MM-DD):" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="dateField" promptText="e.g., 2023-10-27" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </GridPane>
+    <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+        <Button onAction="#handleSaveNews" text="Save Changes" />
+        <Button onAction="#handleCancelEdit" text="Cancel" />
+        <!-- Button added for simulating server failure as per instructions. fx:id added for controller access. -->
+        <Button fx:id="simulateServerFailureButton" onAction="#handleToggleServerFailureSimulation" text="Simulate Server Failure" />
+    </HBox>
+</VBox>

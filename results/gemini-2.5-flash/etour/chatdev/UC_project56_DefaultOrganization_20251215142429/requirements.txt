@@ -1,0 +1,7 @@
+# This project is written in Java and uses only standard Java libraries that are part of the Java Development Kit (JDK).
+# Therefore, there are no external dependencies to be listed in a 'requirements.txt' file, which is typically used for Python projects.
+#
+# To run this program, you will need a Java Development Kit (JDK) or Java Runtime Environment (JRE)
+# installed on your system, version 8 or higher.
+#
+# No specific third-party libraries or frameworks are required beyond the standard Java platform.

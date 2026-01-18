@@ -1,0 +1,50 @@
+sequenceDiagram
+    participant A as AgencyOperator
+    participant UI as ConsoleUI
+    participant C as CulturalHeritageController
+    participant S as CulturalHeritageService
+    participant V as ValidationUtil
+    participant R as CulturalHeritageRepository
+    participant DB as Database
+    
+    A->>UI: start()
+    UI->>A: displayMenu()
+    A->>UI: activateInsertionFeature()
+    UI->>C: handleInsertionForm()
+    C->>UI: displayForm()
+    UI->>A: displayForm()
+    A->>UI: fillForm()
+    UI->>C: insertCulturalHeritage(formData)
+    C->>S: insertCulturalHeritage(heritage)
+    S->>V: validateCulturalHeritage(heritage)
+    alt Data is invalid
+        V-->>S: ValidationException
+        S-->>C: ValidationException
+        C-->>UI: ValidationException
+        UI->>A: handleError("Invalid data")
+    else Data is valid
+        S->>S: checkForDuplicates(heritage)
+        alt Duplicate found
+            S-->>C: DuplicateHeritageException
+            C-->>UI: DuplicateHeritageException
+            UI->>A: handleError("Duplicate heritage")
+        else No duplicate
+            S->>UI: askForConfirmation(heritage)
+            UI->>A: askForConfirmation(heritage)
+            alt User confirms
+                A->>UI: confirm()
+                UI->>S: confirmTransaction(heritage)
+                S->>R: save(heritage)
+                R->>DB: INSERT INTO cultural_heritage
+                DB-->>R: success
+                R-->>S: saved heritage
+                S-->>C: saved heritage
+                C->>C: memorizeCulturalHeritage(heritage)
+                C->>UI: notifyInclusion(heritage)
+                UI->>A: displaySuccess(heritage)
+            else User cancels
+                A->>UI: cancel()
+                UI->>A: displayCancellation()
+            end
+        end
+    end

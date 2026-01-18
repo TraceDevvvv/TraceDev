@@ -1,0 +1,122 @@
+classDiagram
+    class Administrator {
+        +String id
+        +String username
+        +String passwordHash
+        +String role
+        +List<DelayRecord> enteredDelays
+        +authenticate(username: String, password: String): boolean
+    }
+
+    class Student {
+        +String id
+        +String name
+        +String parentContactInfo
+        +List<DelayRecord> delayRecords
+    }
+
+    enum DelayReason {
+        LATE_BUS
+        APPOINTMENT
+        SICKNESS
+        OTHER
+    }
+
+    class DelayRecord {
+        +String id
+        +String studentId
+        +LocalDate date
+        +DelayReason reason
+        +LocalDateTime entryTimestamp
+        +String enteredByAdminId
+        +boolean parentNotified
+        +Student student
+        +Administrator administrator
+    }
+
+    class Notification {
+        +String id
+        +String recipient
+        +String message
+        +LocalDateTime sentTimestamp
+        +String status
+        +String delayRecordId
+        +DelayRecord delayRecord
+    }
+
+    class LoginRequest {
+        +String username
+        +String password
+    }
+
+    class LoginResponse {
+        +String token
+        +String username
+        +String role
+    }
+
+    class DelayEntryRequest {
+        +String studentId
+        +LocalDate date
+        +String reason
+    }
+
+    class DelayRecordDTO {
+        +String id
+        +String studentName
+        +LocalDate date
+        +String reason
+        +LocalDateTime entryTimestamp
+        +boolean parentNotified
+        +String enteredByAdminName
+    }
+
+    class AdministratorRepository {
+        <<interface>>
+        +Optional<Administrator> findByUsername(username: String)
+    }
+
+    class StudentRepository {
+        <<interface>>
+        +Optional<Student> findById(id: String)
+        +List<Student> findByNameContainingIgnoreCase(name: String)
+    }
+
+    class DelayRecordRepository {
+        <<interface>>
+        +DelayRecord save(delayRecord: DelayRecord)
+        +List<DelayRecord> findByDate(date: LocalDate)
+        +List<DelayRecord> findByDateAndEnteredByAdminId(date: LocalDate, adminId: String)
+    }
+
+    class AuthService {
+        +LoginResponse login(request: LoginRequest): LoginResponse
+        +validateToken(token: String): boolean
+    }
+
+    class DelayService {
+        +DelayRecord createDelayRecord(request: DelayEntryRequest, adminId: String): DelayRecord
+        +List<DelayRecordDTO> getDelayRecordsForDate(date: LocalDate, adminId: String): List<DelayRecordDTO>
+        +updateDelayRecord(recordId: String, updatedReason: String): DelayRecord
+        +deleteDelayRecord(recordId: String): void
+    }
+
+    class NotificationService {
+        +void sendParentNotification(delayRecord: DelayRecord): void
+    }
+
+    class AdminController {
+        +ResponseEntity<LoginResponse> login(request: LoginRequest)
+        +ResponseEntity<DelayRecordDTO> createDelay(@RequestBody request: DelayEntryRequest, @AuthenticationPrincipal admin: Administrator)
+        +ResponseEntity<List<DelayRecordDTO>> getDelaysByDate(@RequestParam date: String, @AuthenticationPrincipal admin: Administrator)
+    }
+
+    Administrator "1" -- "*" DelayRecord : enters
+    Student "1" -- "*" DelayRecord : has
+    DelayRecord "1" -- "1" Notification : triggers
+    AdministratorRepository <|.. AuthService : uses
+    StudentRepository <|.. DelayService : uses
+    DelayRecordRepository <|.. DelayService : uses
+    NotificationService <|.. DelayService : uses
+    AuthService <|.. AdminController : uses
+    DelayService <|.. AdminController : uses

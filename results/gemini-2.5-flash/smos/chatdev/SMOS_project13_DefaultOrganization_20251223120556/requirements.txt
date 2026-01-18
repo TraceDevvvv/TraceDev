@@ -1,0 +1,7 @@
+# This project is implemented in Java and utilizes only standard Java SE libraries (e.g., Swing, AWT, java.util).
+# As a Java project, it does not use a Python-style requirements.txt file for dependency management.
+#
+# To compile and run this application, a Java Development Kit (JDK) version 8 or higher is required.
+# For execution, a Java Runtime Environment (JRE) 8 or higher is sufficient.
+#
+# There are no external Java libraries or third-party dependencies that need to be listed here.

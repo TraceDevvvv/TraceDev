@@ -1,0 +1,2 @@
+Java SE Development Kit (JDK) 8 or later
+# No additional external libraries required for this project

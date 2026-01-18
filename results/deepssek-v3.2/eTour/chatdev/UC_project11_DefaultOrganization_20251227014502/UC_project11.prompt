@@ -1,0 +1,27 @@
+
+You are an expert software engineer.
+
+Task:
+Based on the following use case, write a complete, runnable program in Java. Make sure to include all necessary functions, classes, and imports. Ensure the code is correct, efficient, and handles edge cases.
+
+Use Case:
+Use case name: ViewConventionHistory 
+Description: View the history of conventions derived from a selected point of rest. 
+Participating Actor: initialization Agency Operator 
+Entry Operator conditions: The Agency is in the form of a designated point of rest. 
+Flow of events User System: 
+1. Access the features on the display of historical conventions. 
+2 Upload data on conventions from the restaurant selected. 
+Exit conditions: The system displays the history of conventions concerning the point of eating selected. 
+Interruption of the connection to the server ETOUR. 
+Quality requirements:
+
+Requirements:
+1. Use Java.
+2. The code should be fully runnable.
+3. Include comments explaining key logic.
+4. Do not include explanations outside of code.
+
+Output:
+Only provide the code, nothing else.
+Please begin writing the code now.

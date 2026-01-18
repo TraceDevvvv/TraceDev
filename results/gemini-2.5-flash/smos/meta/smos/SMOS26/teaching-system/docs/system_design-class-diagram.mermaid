@@ -1,0 +1,58 @@
+classDiagram
+    class TeachingSystemApplication {
+        +main(String[] args)
+    }
+
+    class Teaching {
+        +Long id
+        +String name
+        +String description
+        +Teaching(Long id, String name, String description)
+        +Teaching()
+    }
+
+    interface TeachingRepository {
+        +Optional~Teaching~ findById(Long id)
+        +void delete(Teaching teaching)
+        +List~Teaching~ findAll()
+    }
+
+    class TeachingService {
+        -TeachingRepository teachingRepository
+        -SMOSIntegrationService smosIntegrationService
+        +TeachingService(TeachingRepository teachingRepository, SMOSIntegrationService smosIntegrationService)
+        +void deleteTeaching(Long teachingId)
+        +List~Teaching~ getAllTeachings()
+    }
+
+    class SMOSIntegrationService {
+        -Logger log
+        -boolean isConnected
+        +void connect()
+        +void disconnect()
+        +boolean isConnected()
+    }
+
+    class TeachingController {
+        -TeachingService teachingService
+        +TeachingController(TeachingService teachingService)
+        +ResponseEntity~Void~ deleteTeaching(@PathVariable Long id)
+        +ResponseEntity~List~Teaching~~ getAllTeachings()
+    }
+
+    class TeachingNotFoundException {
+        +TeachingNotFoundException(String message)
+    }
+
+    class SMOSConnectionException {
+        +SMOSConnectionException(String message)
+        +SMOSConnectionException(String message, Throwable cause)
+    }
+
+    TeachingSystemApplication ..> TeachingController
+    TeachingController --> TeachingService
+    TeachingService --> TeachingRepository
+    TeachingService --> SMOSIntegrationService
+    TeachingRepository ..> Teaching
+    TeachingService ..> TeachingNotFoundException
+    TeachingService ..> SMOSConnectionException

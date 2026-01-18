@@ -1,0 +1,3 @@
+## Anything UNCLEAR
+
+1.  **"SeveralTetTingloregister"**: The PRD mentions "the user took the case of use 'SeveralTetTingloregister' selects the date on which he wants to enter the information." This phrase is still unclear. We have assumed it implies a preceding action where the administrator navigates to a registration context and then selects a date. For the current design, we assume the date selection is a direct UI interaction within the `InsertDelayAdmin` flow, not dependent on a specific external "case of use" name. Clarification is needed on whether this refers to a specific module, a type of registration, or if it's a typo.
