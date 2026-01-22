@@ -87,7 +87,7 @@ classDiagram
         CANCEL
     }
     
-    %% 服务接口
+    %%     
     class RestaurantPointService {
         <<interface>>
         +getPointById(pointId: String) RestaurantPointDTO
@@ -136,16 +136,16 @@ classDiagram
         +updatePointInETOUR(pointId: String, data: Map~String, Object~) boolean
     }
     
-    %% 关系定义
-    User "1" --> "*" OperationLog : 执行
-    RestaurantPoint "1" --> "*" RefreshmentData : 关联
-    RestaurantPoint "1" --> "*" OperationLog : 记录
-    ValidationResult "1" --> "*" ValidationError : 包含
-    RestaurantPoint ..> ValidationResult : 生成
-    RestaurantPoint ..> PointStatus : 使用
-    OperationLog ..> OperationType : 使用
+    %%     
+    User "1" --> "*" OperationLog :   
+    RestaurantPoint "1" --> "*" RefreshmentData :   
+    RestaurantPoint "1" --> "*" OperationLog :   
+    ValidationResult "1" --> "*" ValidationError :   
+    RestaurantPoint ..> ValidationResult :   
+    RestaurantPoint ..> PointStatus :   
+    OperationLog ..> OperationType :   
     
-    %% 实现关系
+    %%     
     class RestaurantPointServiceImpl {
         +getPointById(pointId: String) RestaurantPointDTO
         +updatePoint(pointId: String, updateData: UpdatePointRequest) RestaurantPointDTO
@@ -161,5 +161,5 @@ classDiagram
         -validateDataConsistency(point: RestaurantPointDTO) List~ValidationError~
     }
     
-    RestaurantPointServiceImpl ..|> RestaurantPointService : 实现
-    ValidationServiceImpl ..|> ValidationService : 实现
+    RestaurantPointServiceImpl ..|> RestaurantPointService :   
+    ValidationServiceImpl ..|> ValidationService :   

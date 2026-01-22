@@ -1,8 +1,8 @@
 import java.time.LocalDateTime;
 
 /**
- * Feedback类表示一个反馈，包含反馈ID、评论内容、站点ID、创建时间和最后修改时间。
- * 支持评论编辑功能，并跟踪修改历史。
+ * Feedback       ，    ID、    、  ID、           。
+ *         ，       。
  */
 public class Feedback {
     private int feedbackId;
@@ -13,10 +13,10 @@ public class Feedback {
     private boolean isModified;
 
     /**
-     * 构造函数，初始化反馈。
-     * @param feedbackId 反馈唯一标识
-     * @param comment 评论内容
-     * @param siteId 所属站点ID
+     *     ，     。
+     * @param feedbackId       
+     * @param comment     
+     * @param siteId     ID
      */
     public Feedback(int feedbackId, String comment, int siteId) {
         this.feedbackId = feedbackId;
@@ -28,37 +28,37 @@ public class Feedback {
     }
 
     /**
-     * 获取反馈ID。
-     * @return 反馈ID
+     *     ID。
+     * @return   ID
      */
     public int getFeedbackId() {
         return feedbackId;
     }
 
     /**
-     * 设置反馈ID。
-     * @param feedbackId 新的反馈ID
+     *     ID。
+     * @param feedbackId     ID
      */
     public void setFeedbackId(int feedbackId) {
         this.feedbackId = feedbackId;
     }
 
     /**
-     * 获取评论内容。
-     * @return 评论内容
+     *       。
+     * @return     
      */
     public String getComment() {
         return comment;
     }
 
     /**
-     * 设置评论内容，并更新修改时间和修改标志。
-     * @param comment 新的评论内容
-     * @return 如果评论内容有效且已更改则返回true，否则返回false
+     *       ，            。
+     * @param comment       
+     * @return                true，    false
      */
     public boolean setComment(String comment) {
         if (comment == null || comment.trim().isEmpty()) {
-            return false; // 评论不能为空或空白
+            return false; //          
         }
         
         if (!comment.equals(this.comment)) {
@@ -67,71 +67,71 @@ public class Feedback {
             this.isModified = true;
             return true;
         }
-        return false; // 评论内容未改变
+        return false; //        
     }
 
     /**
-     * 获取所属站点ID。
-     * @return 站点ID
+     *       ID。
+     * @return   ID
      */
     public int getSiteId() {
         return siteId;
     }
 
     /**
-     * 设置所属站点ID。
-     * @param siteId 新的站点ID
+     *       ID。
+     * @param siteId     ID
      */
     public void setSiteId(int siteId) {
         this.siteId = siteId;
     }
 
     /**
-     * 获取创建时间。
-     * @return 创建时间
+     *       。
+     * @return     
      */
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
     /**
-     * 获取最后修改时间。
-     * @return 最后修改时间
+     *         。
+     * @return       
      */
     public LocalDateTime getLastModifiedAt() {
         return lastModifiedAt;
     }
 
     /**
-     * 检查反馈是否已被修改过。
-     * @return 如果评论被修改过则返回true，否则返回false
+     *            。
+     * @return            true，    false
      */
     public boolean isModified() {
         return isModified;
     }
 
     /**
-     * 重置修改标志。
+     *       。
      */
     public void resetModifiedFlag() {
         this.isModified = false;
     }
 
     /**
-     * 验证评论内容是否有效。
-     * @return 如果评论不为空且长度在合理范围内则返回true，否则返回false
+     *           。
+     * @return                    true，    false
      */
     public boolean isValidComment() {
         if (comment == null || comment.trim().isEmpty()) {
             return false;
         }
-        // 假设评论长度应在1到1000字符之间
+        //         1 1000    
         return comment.length() >= 1 && comment.length() <= 1000;
     }
 
     /**
-     * 获取反馈信息字符串表示。
-     * @return 反馈信息字符串
+     *            。
+     * @return        
      */
     @Override
     public String toString() {

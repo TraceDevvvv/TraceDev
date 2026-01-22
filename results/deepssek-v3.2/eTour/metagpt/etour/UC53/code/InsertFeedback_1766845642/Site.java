@@ -2,20 +2,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Site实体类，表示旅游站点
- * 包含站点ID、名称、描述等属性，以及已访问该站点的游客列表
+ * Site   ，      
+ *     ID、  、     ，             
  */
 public class Site {
     private String siteId;
     private String name;
     private String description;
-    private List<String> visitedTouristIds; // 已访问该站点的游客ID列表
+    private List<String> visitedTouristIds; //          ID  
     
     /**
-     * 构造函数
-     * @param siteId 站点ID
-     * @param name 站点名称
-     * @param description 站点描述
+     *     
+     * @param siteId   ID
+     * @param name     
+     * @param description     
      */
     public Site(String siteId, String name, String description) {
         this.siteId = siteId;
@@ -25,13 +25,13 @@ public class Site {
     }
     
     /**
-     * 无参构造函数
+     *       
      */
     public Site() {
         this.visitedTouristIds = new ArrayList<>();
     }
     
-    // Getter和Setter方法
+    // Getter Setter  
     
     public String getSiteId() {
         return siteId;
@@ -66,8 +66,8 @@ public class Site {
     }
     
     /**
-     * 添加游客到已访问列表
-     * @param touristId 游客ID
+     *           
+     * @param touristId   ID
      */
     public void addVisitedTourist(String touristId) {
         if (!visitedTouristIds.contains(touristId)) {
@@ -76,9 +76,9 @@ public class Site {
     }
     
     /**
-     * 检查游客是否已访问过该站点
-     * @param touristId 游客ID
-     * @return 如果游客已访问过该站点，返回true
+     *              
+     * @param touristId   ID
+     * @return            ，  true
      */
     public boolean hasTouristVisited(String touristId) {
         return visitedTouristIds.contains(touristId);

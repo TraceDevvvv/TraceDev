@@ -1,6 +1,6 @@
 /**
- * Student类 - 表示学生
- * 包含学生的基本信息和关联的家长信息
+ * Student  -     
+ *                  
  */
 public class Student {
     private String studentId;
@@ -10,26 +10,26 @@ public class Student {
     private Parent parent;
     
     /**
-     * 构造函数
-     * @param studentId 学生ID
-     * @param name 学生姓名
-     * @param parent 家长对象
+     *     
+     * @param studentId   ID
+     * @param name     
+     * @param parent     
      */
     public Student(String studentId, String name, Parent parent) {
         this.studentId = studentId;
         this.name = name;
         this.parent = parent;
-        this.grade = 1; // 默认年级
-        this.className = "A班"; // 默认班级
+        this.grade = 1; //     
+        this.className = "A "; //     
     }
     
     /**
-     * 完整构造函数
-     * @param studentId 学生ID
-     * @param name 学生姓名
-     * @param grade 年级
-     * @param className 班级名称
-     * @param parent 家长对象
+     *       
+     * @param studentId   ID
+     * @param name     
+     * @param grade   
+     * @param className     
+     * @param parent     
      */
     public Student(String studentId, String name, int grade, String className, Parent parent) {
         this.studentId = studentId;
@@ -40,47 +40,47 @@ public class Student {
     }
     
     /**
-     * 检查学生信息是否完整有效
-     * @return 信息是否有效
+     *             
+     * @return       
      */
     public boolean validate() {
         if (studentId == null || studentId.trim().isEmpty()) {
-            System.out.println("错误：学生ID不能为空。");
+            System.out.println("  ：  ID    。");
             return false;
         }
         
         if (name == null || name.trim().isEmpty()) {
-            System.out.println("错误：学生姓名不能为空。");
+            System.out.println("  ：        。");
             return false;
         }
         
         if (parent == null) {
-            System.out.println("错误：学生必须有关联的家长信息。");
+            System.out.println("  ：            。");
             return false;
         }
         
         if (!parent.validate()) {
-            System.out.println("错误：家长信息无效。");
+            System.out.println("  ：      。");
             return false;
         }
         
         if (grade < 1 || grade > 12) {
-            System.out.println("警告：年级应在1-12范围内。");
+            System.out.println("  ：    1-12   。");
         }
         
         return true;
     }
     
     /**
-     * 获取学生完整信息
-     * @return 格式化后的学生信息
+     *         
+     * @return          
      */
     public String getFullInfo() {
-        return String.format("学生ID: %s | 姓名: %s | 年级: %d | 班级: %s | 家长: %s",
+        return String.format("  ID: %s |   : %s |   : %d |   : %s |   : %s",
                            studentId, name, grade, className, parent.getName());
     }
     
-    // Getter和Setter方法
+    // Getter Setter  
     
     public String getStudentId() {
         return studentId;
@@ -130,8 +130,8 @@ public class Student {
 }
 
 /**
- * Parent类 - 表示学生家长
- * 包含家长的基本信息和联系方式
+ * Parent  -       
+ *               
  */
 class Parent {
     private String parentId;
@@ -140,24 +140,24 @@ class Parent {
     private String phone;
     
     /**
-     * 构造函数
-     * @param parentId 家长ID
-     * @param name 家长姓名
-     * @param email 邮箱地址
+     *     
+     * @param parentId   ID
+     * @param name     
+     * @param email     
      */
     public Parent(String parentId, String name, String email) {
         this.parentId = parentId;
         this.name = name;
         this.email = email;
-        this.phone = "未设置";
+        this.phone = "   ";
     }
     
     /**
-     * 完整构造函数
-     * @param parentId 家长ID
-     * @param name 家长姓名
-     * @param email 邮箱地址
-     * @param phone 电话号码
+     *       
+     * @param parentId   ID
+     * @param name     
+     * @param email     
+     * @param phone     
      */
     public Parent(String parentId, String name, String email, String phone) {
         this.parentId = parentId;
@@ -167,42 +167,42 @@ class Parent {
     }
     
     /**
-     * 验证家长信息是否有效
-     * @return 信息是否有效
+     *           
+     * @return       
      */
     public boolean validate() {
         if (parentId == null || parentId.trim().isEmpty()) {
-            System.out.println("错误：家长ID不能为空。");
+            System.out.println("  ：  ID    。");
             return false;
         }
         
         if (name == null || name.trim().isEmpty()) {
-            System.out.println("错误：家长姓名不能为空。");
+            System.out.println("  ：        。");
             return false;
         }
         
         if (email == null || email.trim().isEmpty()) {
-            System.out.println("错误：家长邮箱不能为空。");
+            System.out.println("  ：        。");
             return false;
         }
         
-        // 简单的邮箱格式验证
+        //          
         if (!email.contains("@")) {
-            System.out.println("警告：邮箱格式可能不正确：" + email);
+            System.out.println("  ：         ：" + email);
         }
         
         return true;
     }
     
     /**
-     * 获取家长联系方式
-     * @return 格式化后的联系方式
+     *         
+     * @return          
      */
     public String getContactInfo() {
-        return String.format("姓名: %s | 邮箱: %s | 电话: %s", name, email, phone);
+        return String.format("  : %s |   : %s |   : %s", name, email, phone);
     }
     
-    // Getter和Setter方法
+    // Getter Setter  
     
     public String getParentId() {
         return parentId;

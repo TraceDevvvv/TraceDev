@@ -1,888 +1,888 @@
 
 ==================================================
-✅ 任务 [SMOS1] 执行完成！
-⏰ 开始时间: 2025-12-28 14:30:01
-⏰ 结束时间: 2025-12-28 14:32:35
-⏱️ 总耗时: 0小时 2分钟 33.90秒
-🔢 Token 消耗: 56261
+✅    [SMOS1]     ！
+⏰     : 2025-12-28 14:30:01
+⏰     : 2025-12-28 14:32:35
+⏱️    : 0   2   33.90 
+🔢 Token   : 56261
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS1/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS1/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS1/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS1/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS2] 执行完成！
-⏰ 开始时间: 2025-12-28 14:32:35
-⏰ 结束时间: 2025-12-28 14:38:48
-⏱️ 总耗时: 0小时 6分钟 13.38秒
-🔢 Token 消耗: 159498
+✅    [SMOS2]     ！
+⏰     : 2025-12-28 14:32:35
+⏰     : 2025-12-28 14:38:48
+⏱️    : 0   6   13.38 
+🔢 Token   : 159498
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS2/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS2/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS2/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS2/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS3] 执行完成！
-⏰ 开始时间: 2025-12-28 14:38:48
-⏰ 结束时间: 2025-12-28 14:41:44
-⏱️ 总耗时: 0小时 2分钟 55.66秒
-🔢 Token 消耗: 85502
+✅    [SMOS3]     ！
+⏰     : 2025-12-28 14:38:48
+⏰     : 2025-12-28 14:41:44
+⏱️    : 0   2   55.66 
+🔢 Token   : 85502
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS3/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS3/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS3/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS3/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS4] 执行完成！
-⏰ 开始时间: 2025-12-28 14:41:44
-⏰ 结束时间: 2025-12-28 14:44:27
-⏱️ 总耗时: 0小时 2分钟 43.72秒
-🔢 Token 消耗: 77546
+✅    [SMOS4]     ！
+⏰     : 2025-12-28 14:41:44
+⏰     : 2025-12-28 14:44:27
+⏱️    : 0   2   43.72 
+🔢 Token   : 77546
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS4/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS4/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS4/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS4/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS5] 执行完成！
-⏰ 开始时间: 2025-12-28 14:44:27
-⏰ 结束时间: 2025-12-28 14:47:23
-⏱️ 总耗时: 0小时 2分钟 55.38秒
-🔢 Token 消耗: 69386
+✅    [SMOS5]     ！
+⏰     : 2025-12-28 14:44:27
+⏰     : 2025-12-28 14:47:23
+⏱️    : 0   2   55.38 
+🔢 Token   : 69386
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS5/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS5/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS5/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS5/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS6] 执行完成！
-⏰ 开始时间: 2025-12-28 14:47:23
-⏰ 结束时间: 2025-12-28 14:55:27
-⏱️ 总耗时: 0小时 8分钟 4.55秒
-🔢 Token 消耗: 173141
+✅    [SMOS6]     ！
+⏰     : 2025-12-28 14:47:23
+⏰     : 2025-12-28 14:55:27
+⏱️    : 0   8   4.55 
+🔢 Token   : 173141
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS6/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS6/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS6/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS6/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS7] 执行完成！
-⏰ 开始时间: 2025-12-28 14:55:27
-⏰ 结束时间: 2025-12-28 14:57:14
-⏱️ 总耗时: 0小时 1分钟 46.99秒
-🔢 Token 消耗: 53079
+✅    [SMOS7]     ！
+⏰     : 2025-12-28 14:55:27
+⏰     : 2025-12-28 14:57:14
+⏱️    : 0   1   46.99 
+🔢 Token   : 53079
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS7/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS7/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS7/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS7/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS8] 执行完成！
-⏰ 开始时间: 2025-12-28 14:57:14
-⏰ 结束时间: 2025-12-28 15:02:26
-⏱️ 总耗时: 0小时 5分钟 11.75秒
-🔢 Token 消耗: 130124
+✅    [SMOS8]     ！
+⏰     : 2025-12-28 14:57:14
+⏰     : 2025-12-28 15:02:26
+⏱️    : 0   5   11.75 
+🔢 Token   : 130124
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS8/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS8/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS8/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS8/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS9] 执行完成！
-⏰ 开始时间: 2025-12-28 15:02:26
-⏰ 结束时间: 2025-12-28 15:05:11
-⏱️ 总耗时: 0小时 2分钟 44.87秒
-🔢 Token 消耗: 54269
+✅    [SMOS9]     ！
+⏰     : 2025-12-28 15:02:26
+⏰     : 2025-12-28 15:05:11
+⏱️    : 0   2   44.87 
+🔢 Token   : 54269
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS9/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS9/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS9/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS9/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS10] 执行完成！
-⏰ 开始时间: 2025-12-28 15:05:11
-⏰ 结束时间: 2025-12-28 15:14:10
-⏱️ 总耗时: 0小时 8分钟 59.21秒
-🔢 Token 消耗: 297513
+✅    [SMOS10]     ！
+⏰     : 2025-12-28 15:05:11
+⏰     : 2025-12-28 15:14:10
+⏱️    : 0   8   59.21 
+🔢 Token   : 297513
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS10/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS10/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS10/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS10/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS12] 执行完成！
-⏰ 开始时间: 2025-12-28 15:21:40
-⏰ 结束时间: 2025-12-28 15:23:52
-⏱️ 总耗时: 0小时 2分钟 11.72秒
-🔢 Token 消耗: 82774
+✅    [SMOS12]     ！
+⏰     : 2025-12-28 15:21:40
+⏰     : 2025-12-28 15:23:52
+⏱️    : 0   2   11.72 
+🔢 Token   : 82774
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS12/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS12/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS12/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS12/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS13] 执行完成！
-⏰ 开始时间: 2025-12-28 15:23:52
-⏰ 结束时间: 2025-12-28 15:31:02
-⏱️ 总耗时: 0小时 7分钟 9.78秒
-🔢 Token 消耗: 206531
+✅    [SMOS13]     ！
+⏰     : 2025-12-28 15:23:52
+⏰     : 2025-12-28 15:31:02
+⏱️    : 0   7   9.78 
+🔢 Token   : 206531
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS13/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS13/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS13/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS13/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS14] 执行完成！
-⏰ 开始时间: 2025-12-28 15:31:02
-⏰ 结束时间: 2025-12-28 15:33:53
-⏱️ 总耗时: 0小时 2分钟 51.40秒
-🔢 Token 消耗: 84224
+✅    [SMOS14]     ！
+⏰     : 2025-12-28 15:31:02
+⏰     : 2025-12-28 15:33:53
+⏱️    : 0   2   51.40 
+🔢 Token   : 84224
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS14/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS14/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS14/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS14/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS15] 执行完成！
-⏰ 开始时间: 2025-12-28 15:33:53
-⏰ 结束时间: 2025-12-28 15:36:06
-⏱️ 总耗时: 0小时 2分钟 13.25秒
-🔢 Token 消耗: 53223
+✅    [SMOS15]     ！
+⏰     : 2025-12-28 15:33:53
+⏰     : 2025-12-28 15:36:06
+⏱️    : 0   2   13.25 
+🔢 Token   : 53223
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS15/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS15/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS15/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS15/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 ==================================================
-✅ 任务 [SMOS17] 执行完成！
-⏰ 开始时间: 2025-12-28 15:37:26
-⏰ 结束时间: 2025-12-28 15:39:40
-⏱️ 总耗时: 0小时 2分钟 13.63秒
-🔢 Token 消耗: 75218
+✅    [SMOS17]     ！
+⏰     : 2025-12-28 15:37:26
+⏰     : 2025-12-28 15:39:40
+⏱️    : 0   2   13.63 
+🔢 Token   : 75218
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS17/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS17/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS17/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS17/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS18] 执行完成！
-⏰ 开始时间: 2025-12-28 15:39:40
-⏰ 结束时间: 2025-12-28 15:42:27
-⏱️ 总耗时: 0小时 2分钟 46.99秒
-🔢 Token 消耗: 72359
+✅    [SMOS18]     ！
+⏰     : 2025-12-28 15:39:40
+⏰     : 2025-12-28 15:42:27
+⏱️    : 0   2   46.99 
+🔢 Token   : 72359
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS18/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS18/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS18/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS18/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS19] 执行完成！
-⏰ 开始时间: 2025-12-28 15:42:27
-⏰ 结束时间: 2025-12-28 15:45:40
-⏱️ 总耗时: 0小时 3分钟 13.08秒
-🔢 Token 消耗: 83511
+✅    [SMOS19]     ！
+⏰     : 2025-12-28 15:42:27
+⏰     : 2025-12-28 15:45:40
+⏱️    : 0   3   13.08 
+🔢 Token   : 83511
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS19/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS19/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS19/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS19/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS20] 执行完成！
-⏰ 开始时间: 2025-12-28 15:45:40
-⏰ 结束时间: 2025-12-28 15:49:23
-⏱️ 总耗时: 0小时 3分钟 43.30秒
-🔢 Token 消耗: 122465
+✅    [SMOS20]     ！
+⏰     : 2025-12-28 15:45:40
+⏰     : 2025-12-28 15:49:23
+⏱️    : 0   3   43.30 
+🔢 Token   : 122465
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS20/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS20/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS20/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS20/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS21] 执行完成！
-⏰ 开始时间: 2025-12-28 15:49:23
-⏰ 结束时间: 2025-12-28 15:52:29
-⏱️ 总耗时: 0小时 3分钟 5.67秒
-🔢 Token 消耗: 62185
+✅    [SMOS21]     ！
+⏰     : 2025-12-28 15:49:23
+⏰     : 2025-12-28 15:52:29
+⏱️    : 0   3   5.67 
+🔢 Token   : 62185
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS21/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS21/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS21/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS21/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS22] 执行完成！
-⏰ 开始时间: 2025-12-28 15:52:29
-⏰ 结束时间: 2025-12-28 15:57:40
-⏱️ 总耗时: 0小时 5分钟 10.82秒
-🔢 Token 消耗: 143265
+✅    [SMOS22]     ！
+⏰     : 2025-12-28 15:52:29
+⏰     : 2025-12-28 15:57:40
+⏱️    : 0   5   10.82 
+🔢 Token   : 143265
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS22/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS22/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS22/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS22/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS23] 执行完成！
-⏰ 开始时间: 2025-12-28 15:57:40
-⏰ 结束时间: 2025-12-28 15:59:53
-⏱️ 总耗时: 0小时 2分钟 13.14秒
-🔢 Token 消耗: 70328
+✅    [SMOS23]     ！
+⏰     : 2025-12-28 15:57:40
+⏰     : 2025-12-28 15:59:53
+⏱️    : 0   2   13.14 
+🔢 Token   : 70328
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS23/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS23/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS23/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS23/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS24] 执行完成！
-⏰ 开始时间: 2025-12-28 15:59:53
-⏰ 结束时间: 2025-12-28 16:02:32
-⏱️ 总耗时: 0小时 2分钟 38.78秒
-🔢 Token 消耗: 77759
+✅    [SMOS24]     ！
+⏰     : 2025-12-28 15:59:53
+⏰     : 2025-12-28 16:02:32
+⏱️    : 0   2   38.78 
+🔢 Token   : 77759
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS24/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS24/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS24/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS24/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS25] 执行完成！
-⏰ 开始时间: 2025-12-28 16:02:32
-⏰ 结束时间: 2025-12-28 16:10:53
-⏱️ 总耗时: 0小时 8分钟 20.99秒
-🔢 Token 消耗: 308295
+✅    [SMOS25]     ！
+⏰     : 2025-12-28 16:02:32
+⏰     : 2025-12-28 16:10:53
+⏱️    : 0   8   20.99 
+🔢 Token   : 308295
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS25/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS25/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS25/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS25/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS26] 执行完成！
-⏰ 开始时间: 2025-12-28 16:10:53
-⏰ 结束时间: 2025-12-28 16:18:28
-⏱️ 总耗时: 0小时 7分钟 35.59秒
-🔢 Token 消耗: 259118
+✅    [SMOS26]     ！
+⏰     : 2025-12-28 16:10:53
+⏰     : 2025-12-28 16:18:28
+⏱️    : 0   7   35.59 
+🔢 Token   : 259118
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS26/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS26/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS26/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS26/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 ==================================================
-✅ 任务 [SMOS28] 执行完成！
-⏰ 开始时间: 2025-12-28 16:20:10
-⏰ 结束时间: 2025-12-28 16:41:37
-⏱️ 总耗时: 0小时 21分钟 26.72秒
-🔢 Token 消耗: 1186343
+✅    [SMOS28]     ！
+⏰     : 2025-12-28 16:20:10
+⏰     : 2025-12-28 16:41:37
+⏱️    : 0   21   26.72 
+🔢 Token   : 1186343
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS28/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS28/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS28/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS28/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS29] 执行完成！
-⏰ 开始时间: 2025-12-28 16:41:37
-⏰ 结束时间: 2025-12-28 16:56:08
-⏱️ 总耗时: 0小时 14分钟 30.95秒
-🔢 Token 消耗: 681817
+✅    [SMOS29]     ！
+⏰     : 2025-12-28 16:41:37
+⏰     : 2025-12-28 16:56:08
+⏱️    : 0   14   30.95 
+🔢 Token   : 681817
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS29/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS29/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS29/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS29/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS30] 执行完成！
-⏰ 开始时间: 2025-12-28 16:56:08
-⏰ 结束时间: 2025-12-28 17:08:50
-⏱️ 总耗时: 0小时 12分钟 41.73秒
-🔢 Token 消耗: 371030
+✅    [SMOS30]     ！
+⏰     : 2025-12-28 16:56:08
+⏰     : 2025-12-28 17:08:50
+⏱️    : 0   12   41.73 
+🔢 Token   : 371030
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS30/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS30/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS30/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS30/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS31] 执行完成！
-⏰ 开始时间: 2025-12-28 17:08:50
-⏰ 结束时间: 2025-12-28 17:17:25
-⏱️ 总耗时: 0小时 8分钟 35.38秒
-🔢 Token 消耗: 216752
+✅    [SMOS31]     ！
+⏰     : 2025-12-28 17:08:50
+⏰     : 2025-12-28 17:17:25
+⏱️    : 0   8   35.38 
+🔢 Token   : 216752
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS31/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS31/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS31/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS31/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS32] 执行完成！
-⏰ 开始时间: 2025-12-28 17:17:25
-⏰ 结束时间: 2025-12-28 17:20:29
-⏱️ 总耗时: 0小时 3分钟 3.35秒
-🔢 Token 消耗: 59671
+✅    [SMOS32]     ！
+⏰     : 2025-12-28 17:17:25
+⏰     : 2025-12-28 17:20:29
+⏱️    : 0   3   3.35 
+🔢 Token   : 59671
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS32/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS32/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS32/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS32/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 ==================================================
-✅ 任务 [SMOS34] 执行完成！
-⏰ 开始时间: 2025-12-28 17:39:06
-⏰ 结束时间: 2025-12-28 17:41:32
-⏱️ 总耗时: 0小时 2分钟 26.04秒
-🔢 Token 消耗: 108989
+✅    [SMOS34]     ！
+⏰     : 2025-12-28 17:39:06
+⏰     : 2025-12-28 17:41:32
+⏱️    : 0   2   26.04 
+🔢 Token   : 108989
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS34/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS34/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS34/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS34/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS35] 执行完成！
-⏰ 开始时间: 2025-12-28 17:41:32
-⏰ 结束时间: 2025-12-28 17:43:47
-⏱️ 总耗时: 0小时 2分钟 15.05秒
-🔢 Token 消耗: 55710
+✅    [SMOS35]     ！
+⏰     : 2025-12-28 17:41:32
+⏰     : 2025-12-28 17:43:47
+⏱️    : 0   2   15.05 
+🔢 Token   : 55710
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS35/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS35/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS35/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS35/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS36] 执行完成！
-⏰ 开始时间: 2025-12-28 17:43:47
-⏰ 结束时间: 2025-12-28 18:02:04
-⏱️ 总耗时: 0小时 18分钟 16.54秒
-🔢 Token 消耗: 1161315
+✅    [SMOS36]     ！
+⏰     : 2025-12-28 17:43:47
+⏰     : 2025-12-28 18:02:04
+⏱️    : 0   18   16.54 
+🔢 Token   : 1161315
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS36/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS36/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS36/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS36/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS37] 执行完成！
-⏰ 开始时间: 2025-12-28 18:02:04
-⏰ 结束时间: 2025-12-28 18:12:13
-⏱️ 总耗时: 0小时 10分钟 8.95秒
-🔢 Token 消耗: 371231
+✅    [SMOS37]     ！
+⏰     : 2025-12-28 18:02:04
+⏰     : 2025-12-28 18:12:13
+⏱️    : 0   10   8.95 
+🔢 Token   : 371231
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS37/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS37/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS37/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS37/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS38] 执行完成！
-⏰ 开始时间: 2025-12-28 18:12:13
-⏰ 结束时间: 2025-12-28 18:15:18
-⏱️ 总耗时: 0小时 3分钟 4.83秒
-🔢 Token 消耗: 70023
+✅    [SMOS38]     ！
+⏰     : 2025-12-28 18:12:13
+⏰     : 2025-12-28 18:15:18
+⏱️    : 0   3   4.83 
+🔢 Token   : 70023
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS38/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS38/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS38/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS38/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS39] 执行完成！
-⏰ 开始时间: 2025-12-28 18:15:18
-⏰ 结束时间: 2025-12-28 18:21:18
-⏱️ 总耗时: 0小时 5分钟 59.74秒
-🔢 Token 消耗: 179605
+✅    [SMOS39]     ！
+⏰     : 2025-12-28 18:15:18
+⏰     : 2025-12-28 18:21:18
+⏱️    : 0   5   59.74 
+🔢 Token   : 179605
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS39/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS39/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS39/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS39/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS40] 执行完成！
-⏰ 开始时间: 2025-12-28 18:21:18
-⏰ 结束时间: 2025-12-28 18:28:44
-⏱️ 总耗时: 0小时 7分钟 26.03秒
-🔢 Token 消耗: 214052
+✅    [SMOS40]     ！
+⏰     : 2025-12-28 18:21:18
+⏰     : 2025-12-28 18:28:44
+⏱️    : 0   7   26.03 
+🔢 Token   : 214052
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS40/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS40/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS40/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS40/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 
 
 ==================================================
-✅ 任务 [SMOS43] 执行完成！
-⏰ 开始时间: 2025-12-28 18:41:13
-⏰ 结束时间: 2025-12-28 18:44:05
-⏱️ 总耗时: 0小时 2分钟 52.00秒
-🔢 Token 消耗: 89298
+✅    [SMOS43]     ！
+⏰     : 2025-12-28 18:41:13
+⏰     : 2025-12-28 18:44:05
+⏱️    : 0   2   52.00 
+🔢 Token   : 89298
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS43/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS43/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS43/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS43/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS44] 执行完成！
-⏰ 开始时间: 2025-12-28 18:44:05
-⏰ 结束时间: 2025-12-28 18:50:56
-⏱️ 总耗时: 0小时 6分钟 51.15秒
-🔢 Token 消耗: 233293
+✅    [SMOS44]     ！
+⏰     : 2025-12-28 18:44:05
+⏰     : 2025-12-28 18:50:56
+⏱️    : 0   6   51.15 
+🔢 Token   : 233293
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS44/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS44/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS44/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS44/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 
 ==================================================
-✅ 任务 [SMOS46] 执行完成！
-⏰ 开始时间: 2025-12-28 19:15:03
-⏰ 结束时间: 2025-12-28 19:26:05
-⏱️ 总耗时: 0小时 11分钟 2.65秒
-🔢 Token 消耗: 409084
+✅    [SMOS46]     ！
+⏰     : 2025-12-28 19:15:03
+⏰     : 2025-12-28 19:26:05
+⏱️    : 0   11   2.65 
+🔢 Token   : 409084
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS46/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS46/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS46/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS46/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS47] 执行完成！
-⏰ 开始时间: 2025-12-28 19:26:05
-⏰ 结束时间: 2025-12-28 19:33:03
-⏱️ 总耗时: 0小时 6分钟 57.98秒
-🔢 Token 消耗: 285353
+✅    [SMOS47]     ！
+⏰     : 2025-12-28 19:26:05
+⏰     : 2025-12-28 19:33:03
+⏱️    : 0   6   57.98 
+🔢 Token   : 285353
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS47/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS47/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS47/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS47/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS48] 执行完成！
-⏰ 开始时间: 2025-12-28 19:33:03
-⏰ 结束时间: 2025-12-28 19:34:55
-⏱️ 总耗时: 0小时 1分钟 51.97秒
-🔢 Token 消耗: 78484
+✅    [SMOS48]     ！
+⏰     : 2025-12-28 19:33:03
+⏰     : 2025-12-28 19:34:55
+⏱️    : 0   1   51.97 
+🔢 Token   : 78484
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS48/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS48/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS48/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS48/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS49] 执行完成！
-⏰ 开始时间: 2025-12-28 19:34:55
-⏰ 结束时间: 2025-12-28 19:36:28
-⏱️ 总耗时: 0小时 1分钟 32.97秒
-🔢 Token 消耗: 42689
+✅    [SMOS49]     ！
+⏰     : 2025-12-28 19:34:55
+⏰     : 2025-12-28 19:36:28
+⏱️    : 0   1   32.97 
+🔢 Token   : 42689
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS49/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS49/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS49/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS49/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS50] 执行完成！
-⏰ 开始时间: 2025-12-28 19:36:28
-⏰ 结束时间: 2025-12-28 19:44:12
-⏱️ 总耗时: 0小时 7分钟 43.54秒
-🔢 Token 消耗: 196458
+✅    [SMOS50]     ！
+⏰     : 2025-12-28 19:36:28
+⏰     : 2025-12-28 19:44:12
+⏱️    : 0   7   43.54 
+🔢 Token   : 196458
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS50/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS50/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS50/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS50/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS51] 执行完成！
-⏰ 开始时间: 2025-12-28 19:44:12
-⏰ 结束时间: 2025-12-28 19:46:27
-⏱️ 总耗时: 0小时 2分钟 15.07秒
-🔢 Token 消耗: 55544
+✅    [SMOS51]     ！
+⏰     : 2025-12-28 19:44:12
+⏰     : 2025-12-28 19:46:27
+⏱️    : 0   2   15.07 
+🔢 Token   : 55544
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS51/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS51/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS51/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS51/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 ==================================================
-✅ 任务 [SMOS53] 执行完成！
-⏰ 开始时间: 2025-12-28 20:00:04
-⏰ 结束时间: 2025-12-28 20:02:51
-⏱️ 总耗时: 0小时 2分钟 46.99秒
-🔢 Token 消耗: 83652
+✅    [SMOS53]     ！
+⏰     : 2025-12-28 20:00:04
+⏰     : 2025-12-28 20:02:51
+⏱️    : 0   2   46.99 
+🔢 Token   : 83652
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS53/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS53/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS53/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS53/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 ==================================================
-✅ 任务 [SMOS55] 执行完成！
-⏰ 开始时间: 2025-12-28 20:11:40
-⏰ 结束时间: 2025-12-28 20:20:55
-⏱️ 总耗时: 0小时 9分钟 15.34秒
-🔢 Token 消耗: 233356
+✅    [SMOS55]     ！
+⏰     : 2025-12-28 20:11:40
+⏰     : 2025-12-28 20:20:55
+⏱️    : 0   9   15.34 
+🔢 Token   : 233356
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS55/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS55/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS55/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS55/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS56] 执行完成！
-⏰ 开始时间: 2025-12-28 20:20:55
-⏰ 结束时间: 2025-12-28 20:23:28
-⏱️ 总耗时: 0小时 2分钟 32.12秒
-🔢 Token 消耗: 58747
+✅    [SMOS56]     ！
+⏰     : 2025-12-28 20:20:55
+⏰     : 2025-12-28 20:23:28
+⏱️    : 0   2   32.12 
+🔢 Token   : 58747
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS56/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS56/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS56/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS56/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS57] 执行完成！
-⏰ 开始时间: 2025-12-28 20:23:28
-⏰ 结束时间: 2025-12-28 20:27:11
-⏱️ 总耗时: 0小时 3分钟 43.74秒
-🔢 Token 消耗: 138339
+✅    [SMOS57]     ！
+⏰     : 2025-12-28 20:23:28
+⏰     : 2025-12-28 20:27:11
+⏱️    : 0   3   43.74 
+🔢 Token   : 138339
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS57/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS57/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS57/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS57/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS58] 执行完成！
-⏰ 开始时间: 2025-12-28 20:27:11
-⏰ 结束时间: 2025-12-28 20:29:44
-⏱️ 总耗时: 0小时 2分钟 33.13秒
-🔢 Token 消耗: 46379
+✅    [SMOS58]     ！
+⏰     : 2025-12-28 20:27:11
+⏰     : 2025-12-28 20:29:44
+⏱️    : 0   2   33.13 
+🔢 Token   : 46379
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS58/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS58/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS58/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS58/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS59] 执行完成！
-⏰ 开始时间: 2025-12-28 20:29:44
-⏰ 结束时间: 2025-12-28 20:41:47
-⏱️ 总耗时: 0小时 12分钟 2.48秒
-🔢 Token 消耗: 625348
+✅    [SMOS59]     ！
+⏰     : 2025-12-28 20:29:44
+⏰     : 2025-12-28 20:41:47
+⏱️    : 0   12   2.48 
+🔢 Token   : 625348
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS59/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS59/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS59/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS59/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS60] 执行完成！
-⏰ 开始时间: 2025-12-28 20:41:47
-⏰ 结束时间: 2025-12-28 20:44:42
-⏱️ 总耗时: 0小时 2分钟 54.70秒
-🔢 Token 消耗: 68809
+✅    [SMOS60]     ！
+⏰     : 2025-12-28 20:41:47
+⏰     : 2025-12-28 20:44:42
+⏱️    : 0   2   54.70 
+🔢 Token   : 68809
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS60/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS60/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS60/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS60/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS61] 执行完成！
-⏰ 开始时间: 2025-12-28 20:44:42
-⏰ 结束时间: 2025-12-28 20:48:09
-⏱️ 总耗时: 0小时 3分钟 27.62秒
-🔢 Token 消耗: 86682
+✅    [SMOS61]     ！
+⏰     : 2025-12-28 20:44:42
+⏰     : 2025-12-28 20:48:09
+⏱️    : 0   3   27.62 
+🔢 Token   : 86682
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS61/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS61/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS61/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS61/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS62] 执行完成！
-⏰ 开始时间: 2025-12-28 20:48:09
-⏰ 结束时间: 2025-12-28 20:51:06
-⏱️ 总耗时: 0小时 2分钟 56.61秒
-🔢 Token 消耗: 81575
+✅    [SMOS62]     ！
+⏰     : 2025-12-28 20:48:09
+⏰     : 2025-12-28 20:51:06
+⏱️    : 0   2   56.61 
+🔢 Token   : 81575
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS62/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS62/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS62/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS62/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS63] 执行完成！
-⏰ 开始时间: 2025-12-28 20:51:06
-⏰ 结束时间: 2025-12-28 20:53:21
-⏱️ 总耗时: 0小时 2分钟 14.62秒
-🔢 Token 消耗: 76185
+✅    [SMOS63]     ！
+⏰     : 2025-12-28 20:51:06
+⏰     : 2025-12-28 20:53:21
+⏱️    : 0   2   14.62 
+🔢 Token   : 76185
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS63/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS63/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS63/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS63/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS64] 执行完成！
-⏰ 开始时间: 2025-12-28 20:53:21
-⏰ 结束时间: 2025-12-28 20:56:21
-⏱️ 总耗时: 0小时 3分钟 0.60秒
-🔢 Token 消耗: 78431
+✅    [SMOS64]     ！
+⏰     : 2025-12-28 20:53:21
+⏰     : 2025-12-28 20:56:21
+⏱️    : 0   3   0.60 
+🔢 Token   : 78431
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS64/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS64/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS64/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS64/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS65] 执行完成！
-⏰ 开始时间: 2025-12-28 20:56:21
-⏰ 结束时间: 2025-12-28 20:59:12
-⏱️ 总耗时: 0小时 2分钟 50.42秒
-🔢 Token 消耗: 69993
+✅    [SMOS65]     ！
+⏰     : 2025-12-28 20:56:21
+⏰     : 2025-12-28 20:59:12
+⏱️    : 0   2   50.42 
+🔢 Token   : 69993
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS65/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS65/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS65/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS65/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS66] 执行完成！
-⏰ 开始时间: 2025-12-28 20:59:12
-⏰ 结束时间: 2025-12-28 21:07:59
-⏱️ 总耗时: 0小时 8分钟 47.75秒
-🔢 Token 消耗: 446393
+✅    [SMOS66]     ！
+⏰     : 2025-12-28 20:59:12
+⏰     : 2025-12-28 21:07:59
+⏱️    : 0   8   47.75 
+🔢 Token   : 446393
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS66/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS66/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS66/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS66/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS67] 执行完成！
-⏰ 开始时间: 2025-12-28 21:07:59
-⏰ 结束时间: 2025-12-28 21:14:38
-⏱️ 总耗时: 0小时 6分钟 38.88秒
-🔢 Token 消耗: 194269
+✅    [SMOS67]     ！
+⏰     : 2025-12-28 21:07:59
+⏰     : 2025-12-28 21:14:38
+⏱️    : 0   6   38.88 
+🔢 Token   : 194269
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS67/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS67/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS67/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS67/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
-🎉 所有批量任务处理完毕！
+🎉           ！
 
 ==================================================
-✅ 任务 [SMOS11] 执行完成！
-⏰ 开始时间: 2025-12-28 21:23:01
-⏰ 结束时间: 2025-12-28 21:26:43
-⏱️ 总耗时: 0小时 3分钟 42.03秒
-🔢 Token 消耗: 95808
+✅    [SMOS11]     ！
+⏰     : 2025-12-28 21:23:01
+⏰     : 2025-12-28 21:26:43
+⏱️    : 0   3   42.03 
+🔢 Token   : 95808
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS11/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS11/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS11/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS11/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS16] 执行完成！
-⏰ 开始时间: 2025-12-28 21:26:43
-⏰ 结束时间: 2025-12-28 21:28:54
-⏱️ 总耗时: 0小时 2分钟 10.98秒
-🔢 Token 消耗: 93017
+✅    [SMOS16]     ！
+⏰     : 2025-12-28 21:26:43
+⏰     : 2025-12-28 21:28:54
+⏱️    : 0   2   10.98 
+🔢 Token   : 93017
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS16/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS16/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS16/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS16/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS27] 执行完成！
-⏰ 开始时间: 2025-12-28 21:28:54
-⏰ 结束时间: 2025-12-28 21:31:32
-⏱️ 总耗时: 0小时 2分钟 37.50秒
-🔢 Token 消耗: 75384
+✅    [SMOS27]     ！
+⏰     : 2025-12-28 21:28:54
+⏰     : 2025-12-28 21:31:32
+⏱️    : 0   2   37.50 
+🔢 Token   : 75384
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS27/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS27/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS27/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS27/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 ==================================================
-✅ 任务 [SMOS52] 执行完成！
-⏰ 开始时间: 2025-12-28 21:44:51
-⏰ 结束时间: 2025-12-28 21:53:36
-⏱️ 总耗时: 0小时 8分钟 44.82秒
-🔢 Token 消耗: 407773
+✅    [SMOS52]     ！
+⏰     : 2025-12-28 21:44:51
+⏰     : 2025-12-28 21:53:36
+⏱️    : 0   8   44.82 
+🔢 Token   : 407773
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS52/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS52/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS52/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS52/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS54] 执行完成！
-⏰ 开始时间: 2025-12-28 21:53:36
-⏰ 结束时间: 2025-12-28 22:00:15
-⏱️ 总耗时: 0小时 6分钟 39.25秒
-🔢 Token 消耗: 198321
+✅    [SMOS54]     ！
+⏰     : 2025-12-28 21:53:36
+⏰     : 2025-12-28 22:00:15
+⏱️    : 0   6   39.25 
+🔢 Token   : 198321
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS54/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS54/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS54/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS54/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
-🎉 所有批量任务处理完毕！
+🎉           ！
 
 ==================================================
-✅ 任务 [SMOS33] 执行完成！
-⏰ 开始时间: 2025-12-28 22:30:40
-⏰ 结束时间: 2025-12-28 22:32:51
-⏱️ 总耗时: 0小时 2分钟 10.88秒
-🔢 Token 消耗: 67782
+✅    [SMOS33]     ！
+⏰     : 2025-12-28 22:30:40
+⏰     : 2025-12-28 22:32:51
+⏱️    : 0   2   10.88 
+🔢 Token   : 67782
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS33/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS33/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS33/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS33/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS41] 执行完成！
-⏰ 开始时间: 2025-12-28 22:32:51
-⏰ 结束时间: 2025-12-28 22:37:15
-⏱️ 总耗时: 0小时 4分钟 24.23秒
-🔢 Token 消耗: 130061
+✅    [SMOS41]     ！
+⏰     : 2025-12-28 22:32:51
+⏰     : 2025-12-28 22:37:15
+⏱️    : 0   4   24.23 
+🔢 Token   : 130061
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS41/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS41/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS41/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS41/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS42] 执行完成！
-⏰ 开始时间: 2025-12-28 22:37:15
-⏰ 结束时间: 2025-12-28 22:40:31
-⏱️ 总耗时: 0小时 3分钟 16.72秒
-🔢 Token 消耗: 63077
+✅    [SMOS42]     ！
+⏰     : 2025-12-28 22:37:15
+⏰     : 2025-12-28 22:40:31
+⏱️    : 0   3   16.72 
+🔢 Token   : 63077
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS42/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS42/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS42/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS42/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [SMOS45] 执行完成！
-⏰ 开始时间: 2025-12-28 22:40:31
-⏰ 结束时间: 2025-12-28 22:48:26
-⏱️ 总耗时: 0小时 7分钟 54.56秒
-🔢 Token 消耗: 679308
+✅    [SMOS45]     ！
+⏰     : 2025-12-28 22:40:31
+⏰     : 2025-12-28 22:48:26
+⏱️    : 0   7   54.56 
+🔢 Token   : 679308
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS45/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/smos/SMOS45/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/smos/SMOS45/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/smos/SMOS45/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
-🎉 所有批量任务处理完毕！
+🎉           ！

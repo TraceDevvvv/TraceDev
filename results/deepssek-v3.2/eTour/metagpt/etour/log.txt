@@ -1,873 +1,873 @@
 
 ==================================================
-✅ 任务 [UC1] 执行完成！
-⏰ 开始时间: 2025-12-27 14:41:06
-⏰ 结束时间: 2025-12-27 14:49:28
-⏱️ 总耗时: 0小时 8分钟 21.96秒
-🔢 Token 消耗: 243668
+✅    [UC1]     ！
+⏰     : 2025-12-27 14:41:06
+⏰     : 2025-12-27 14:49:28
+⏱️    : 0   8   21.96 
+🔢 Token   : 243668
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC1/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC1/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC1/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC1/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC2] 执行完成！
-⏰ 开始时间: 2025-12-27 14:49:28
-⏰ 结束时间: 2025-12-27 15:15:18
-⏱️ 总耗时: 0小时 25分钟 49.73秒
-🔢 Token 消耗: 778120
+✅    [UC2]     ！
+⏰     : 2025-12-27 14:49:28
+⏰     : 2025-12-27 15:15:18
+⏱️    : 0   25   49.73 
+🔢 Token   : 778120
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC2/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC2/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC2/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC2/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 ==================================================
-✅ 任务 [UC4] 执行完成！
-⏰ 开始时间: 2025-12-27 15:22:28
-⏰ 结束时间: 2025-12-27 15:32:09
-⏱️ 总耗时: 0小时 9分钟 40.58秒
-🔢 Token 消耗: 314701
+✅    [UC4]     ！
+⏰     : 2025-12-27 15:22:28
+⏰     : 2025-12-27 15:32:09
+⏱️    : 0   9   40.58 
+🔢 Token   : 314701
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC4/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC4/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC4/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC4/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC5] 执行完成！
-⏰ 开始时间: 2025-12-27 15:32:09
-⏰ 结束时间: 2025-12-27 15:35:34
-⏱️ 总耗时: 0小时 3分钟 25.63秒
-🔢 Token 消耗: 84436
+✅    [UC5]     ！
+⏰     : 2025-12-27 15:32:09
+⏰     : 2025-12-27 15:35:34
+⏱️    : 0   3   25.63 
+🔢 Token   : 84436
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC5/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC5/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC5/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC5/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC6] 执行完成！
-⏰ 开始时间: 2025-12-27 15:35:34
-⏰ 结束时间: 2025-12-27 15:38:06
-⏱️ 总耗时: 0小时 2分钟 31.42秒
-🔢 Token 消耗: 79252
+✅    [UC6]     ！
+⏰     : 2025-12-27 15:35:34
+⏰     : 2025-12-27 15:38:06
+⏱️    : 0   2   31.42 
+🔢 Token   : 79252
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC6/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC6/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC6/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC6/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC7] 执行完成！
-⏰ 开始时间: 2025-12-27 15:38:06
-⏰ 结束时间: 2025-12-27 15:41:16
-⏱️ 总耗时: 0小时 3分钟 10.62秒
-🔢 Token 消耗: 96951
+✅    [UC7]     ！
+⏰     : 2025-12-27 15:38:06
+⏰     : 2025-12-27 15:41:16
+⏱️    : 0   3   10.62 
+🔢 Token   : 96951
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC7/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC7/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC7/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC7/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 ==================================================
-✅ 任务 [UC10] 执行完成！
-⏰ 开始时间: 2025-12-27 15:54:50
-⏰ 结束时间: 2025-12-27 15:59:24
-⏱️ 总耗时: 0小时 4分钟 33.53秒
-🔢 Token 消耗: 118796
+✅    [UC10]     ！
+⏰     : 2025-12-27 15:54:50
+⏰     : 2025-12-27 15:59:24
+⏱️    : 0   4   33.53 
+🔢 Token   : 118796
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC10/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC10/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC10/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC10/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC11] 执行完成！
-⏰ 开始时间: 2025-12-27 15:59:24
-⏰ 结束时间: 2025-12-27 16:16:19
-⏱️ 总耗时: 0小时 16分钟 54.71秒
-🔢 Token 消耗: 93673
+✅    [UC11]     ！
+⏰     : 2025-12-27 15:59:24
+⏰     : 2025-12-27 16:16:19
+⏱️    : 0   16   54.71 
+🔢 Token   : 93673
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC11/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC11/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC11/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC11/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC12] 执行完成！
-⏰ 开始时间: 2025-12-27 16:16:19
-⏰ 结束时间: 2025-12-27 16:21:50
-⏱️ 总耗时: 0小时 5分钟 30.90秒
-🔢 Token 消耗: 126194
+✅    [UC12]     ！
+⏰     : 2025-12-27 16:16:19
+⏰     : 2025-12-27 16:21:50
+⏱️    : 0   5   30.90 
+🔢 Token   : 126194
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC12/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC12/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC12/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC12/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC13] 执行完成！
-⏰ 开始时间: 2025-12-27 16:21:50
-⏰ 结束时间: 2025-12-27 16:28:40
-⏱️ 总耗时: 0小时 6分钟 50.79秒
-🔢 Token 消耗: 236954
+✅    [UC13]     ！
+⏰     : 2025-12-27 16:21:50
+⏰     : 2025-12-27 16:28:40
+⏱️    : 0   6   50.79 
+🔢 Token   : 236954
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC13/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC13/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC13/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC13/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 ==================================================
-✅ 任务 [UC16] 执行完成！
-⏰ 开始时间: 2025-12-27 16:50:34
-⏰ 结束时间: 2025-12-27 17:07:27
-⏱️ 总耗时: 0小时 16分钟 53.12秒
-🔢 Token 消耗: 222064
+✅    [UC16]     ！
+⏰     : 2025-12-27 16:50:34
+⏰     : 2025-12-27 17:07:27
+⏱️    : 0   16   53.12 
+🔢 Token   : 222064
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC16/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC16/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC16/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC16/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC17] 执行完成！
-⏰ 开始时间: 2025-12-27 17:07:27
-⏰ 结束时间: 2025-12-27 17:18:00
-⏱️ 总耗时: 0小时 10分钟 32.99秒
-🔢 Token 消耗: 583696
+✅    [UC17]     ！
+⏰     : 2025-12-27 17:07:27
+⏰     : 2025-12-27 17:18:00
+⏱️    : 0   10   32.99 
+🔢 Token   : 583696
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC17/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC17/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC17/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC17/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC18] 执行完成！
-⏰ 开始时间: 2025-12-27 17:18:00
-⏰ 结束时间: 2025-12-27 17:25:46
-⏱️ 总耗时: 0小时 7分钟 46.17秒
-🔢 Token 消耗: 404446
+✅    [UC18]     ！
+⏰     : 2025-12-27 17:18:00
+⏰     : 2025-12-27 17:25:46
+⏱️    : 0   7   46.17 
+🔢 Token   : 404446
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC18/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC18/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC18/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC18/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC20] 执行完成！
-⏰ 开始时间: 2025-12-27 18:12:35
-⏰ 结束时间: 2025-12-27 18:25:00
-⏱️ 总耗时: 0小时 12分钟 25.53秒
-🔢 Token 消耗: 249199
+✅    [UC20]     ！
+⏰     : 2025-12-27 18:12:35
+⏰     : 2025-12-27 18:25:00
+⏱️    : 0   12   25.53 
+🔢 Token   : 249199
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC20/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC20/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC20/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC20/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC21] 执行完成！
-⏰ 开始时间: 2025-12-27 18:25:00
-⏰ 结束时间: 2025-12-27 18:28:02
-⏱️ 总耗时: 0小时 3分钟 1.97秒
-🔢 Token 消耗: 83072
+✅    [UC21]     ！
+⏰     : 2025-12-27 18:25:00
+⏰     : 2025-12-27 18:28:02
+⏱️    : 0   3   1.97 
+🔢 Token   : 83072
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC21/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC21/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC21/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC21/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC22] 执行完成！
-⏰ 开始时间: 2025-12-27 18:28:02
-⏰ 结束时间: 2025-12-27 18:32:31
-⏱️ 总耗时: 0小时 4分钟 29.09秒
-🔢 Token 消耗: 135871
+✅    [UC22]     ！
+⏰     : 2025-12-27 18:28:02
+⏰     : 2025-12-27 18:32:31
+⏱️    : 0   4   29.09 
+🔢 Token   : 135871
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC22/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC22/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC22/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC22/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC23] 执行完成！
-⏰ 开始时间: 2025-12-27 18:32:31
-⏰ 结束时间: 2025-12-27 18:39:23
-⏱️ 总耗时: 0小时 6分钟 51.30秒
-🔢 Token 消耗: 253511
+✅    [UC23]     ！
+⏰     : 2025-12-27 18:32:31
+⏰     : 2025-12-27 18:39:23
+⏱️    : 0   6   51.30 
+🔢 Token   : 253511
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC23/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC23/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC23/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC23/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC24] 执行完成！
-⏰ 开始时间: 2025-12-27 18:39:23
-⏰ 结束时间: 2025-12-27 18:42:32
-⏱️ 总耗时: 0小时 3分钟 9.80秒
-🔢 Token 消耗: 55797
+✅    [UC24]     ！
+⏰     : 2025-12-27 18:39:23
+⏰     : 2025-12-27 18:42:32
+⏱️    : 0   3   9.80 
+🔢 Token   : 55797
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC24/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC24/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC24/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC24/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC25] 执行完成！
-⏰ 开始时间: 2025-12-27 18:42:32
-⏰ 结束时间: 2025-12-27 18:45:29
-⏱️ 总耗时: 0小时 2分钟 57.06秒
-🔢 Token 消耗: 69149
+✅    [UC25]     ！
+⏰     : 2025-12-27 18:42:32
+⏰     : 2025-12-27 18:45:29
+⏱️    : 0   2   57.06 
+🔢 Token   : 69149
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC25/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC25/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC25/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC25/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 ==================================================
-✅ 任务 [UC27] 执行完成！
-⏰ 开始时间: 2025-12-27 18:52:30
-⏰ 结束时间: 2025-12-27 18:58:11
-⏱️ 总耗时: 0小时 5分钟 41.06秒
-🔢 Token 消耗: 185256
+✅    [UC27]     ！
+⏰     : 2025-12-27 18:52:30
+⏰     : 2025-12-27 18:58:11
+⏱️    : 0   5   41.06 
+🔢 Token   : 185256
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC27/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC27/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC27/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC27/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC28] 执行完成！
-⏰ 开始时间: 2025-12-27 18:58:11
-⏰ 结束时间: 2025-12-27 19:01:03
-⏱️ 总耗时: 0小时 2分钟 52.15秒
-🔢 Token 消耗: 135148
+✅    [UC28]     ！
+⏰     : 2025-12-27 18:58:11
+⏰     : 2025-12-27 19:01:03
+⏱️    : 0   2   52.15 
+🔢 Token   : 135148
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC28/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC28/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC28/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC28/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC29] 执行完成！
-⏰ 开始时间: 2025-12-27 19:01:03
-⏰ 结束时间: 2025-12-27 19:03:50
-⏱️ 总耗时: 0小时 2分钟 47.49秒
-🔢 Token 消耗: 71651
+✅    [UC29]     ！
+⏰     : 2025-12-27 19:01:03
+⏰     : 2025-12-27 19:03:50
+⏱️    : 0   2   47.49 
+🔢 Token   : 71651
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC29/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC29/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC29/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC29/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC30] 执行完成！
-⏰ 开始时间: 2025-12-27 19:03:50
-⏰ 结束时间: 2025-12-27 19:09:17
-⏱️ 总耗时: 0小时 5分钟 26.95秒
-🔢 Token 消耗: 87417
+✅    [UC30]     ！
+⏰     : 2025-12-27 19:03:50
+⏰     : 2025-12-27 19:09:17
+⏱️    : 0   5   26.95 
+🔢 Token   : 87417
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC30/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC30/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC30/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC30/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC31] 执行完成！
-⏰ 开始时间: 2025-12-27 19:09:17
-⏰ 结束时间: 2025-12-27 19:11:21
-⏱️ 总耗时: 0小时 2分钟 3.96秒
-🔢 Token 消耗: 41526
+✅    [UC31]     ！
+⏰     : 2025-12-27 19:09:17
+⏰     : 2025-12-27 19:11:21
+⏱️    : 0   2   3.96 
+🔢 Token   : 41526
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC31/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC31/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC31/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC31/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC32] 执行完成！
-⏰ 开始时间: 2025-12-27 19:11:21
-⏰ 结束时间: 2025-12-27 19:13:41
-⏱️ 总耗时: 0小时 2分钟 19.66秒
-🔢 Token 消耗: 77017
+✅    [UC32]     ！
+⏰     : 2025-12-27 19:11:21
+⏰     : 2025-12-27 19:13:41
+⏱️    : 0   2   19.66 
+🔢 Token   : 77017
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC32/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC32/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC32/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC32/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 ==================================================
-✅ 任务 [UC35] 执行完成！
-⏰ 开始时间: 2025-12-27 19:15:49
-⏰ 结束时间: 2025-12-27 19:19:36
-⏱️ 总耗时: 0小时 3分钟 47.01秒
-🔢 Token 消耗: 141741
+✅    [UC35]     ！
+⏰     : 2025-12-27 19:15:49
+⏰     : 2025-12-27 19:19:36
+⏱️    : 0   3   47.01 
+🔢 Token   : 141741
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC35/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC35/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC35/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC35/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC36] 执行完成！
-⏰ 开始时间: 2025-12-27 19:19:36
-⏰ 结束时间: 2025-12-27 19:22:06
-⏱️ 总耗时: 0小时 2分钟 29.49秒
-🔢 Token 消耗: 76412
+✅    [UC36]     ！
+⏰     : 2025-12-27 19:19:36
+⏰     : 2025-12-27 19:22:06
+⏱️    : 0   2   29.49 
+🔢 Token   : 76412
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC36/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC36/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC36/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC36/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC37] 执行完成！
-⏰ 开始时间: 2025-12-27 19:22:06
-⏰ 结束时间: 2025-12-27 19:24:33
-⏱️ 总耗时: 0小时 2分钟 26.96秒
-🔢 Token 消耗: 64551
+✅    [UC37]     ！
+⏰     : 2025-12-27 19:22:06
+⏰     : 2025-12-27 19:24:33
+⏱️    : 0   2   26.96 
+🔢 Token   : 64551
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC37/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC37/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC37/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC37/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC38] 执行完成！
-⏰ 开始时间: 2025-12-27 19:24:33
-⏰ 结束时间: 2025-12-27 19:49:50
-⏱️ 总耗时: 0小时 25分钟 16.66秒
-🔢 Token 消耗: 459802
+✅    [UC38]     ！
+⏰     : 2025-12-27 19:24:33
+⏰     : 2025-12-27 19:49:50
+⏱️    : 0   25   16.66 
+🔢 Token   : 459802
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC38/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC38/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC38/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC38/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC39] 执行完成！
-⏰ 开始时间: 2025-12-27 19:49:50
-⏰ 结束时间: 2025-12-27 20:01:22
-⏱️ 总耗时: 0小时 11分钟 32.87秒
-🔢 Token 消耗: 470340
+✅    [UC39]     ！
+⏰     : 2025-12-27 19:49:50
+⏰     : 2025-12-27 20:01:22
+⏱️    : 0   11   32.87 
+🔢 Token   : 470340
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC39/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC39/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC39/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC39/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC40] 执行完成！
-⏰ 开始时间: 2025-12-27 20:01:23
-⏰ 结束时间: 2025-12-27 20:04:31
-⏱️ 总耗时: 0小时 3分钟 8.24秒
-🔢 Token 消耗: 74223
+✅    [UC40]     ！
+⏰     : 2025-12-27 20:01:23
+⏰     : 2025-12-27 20:04:31
+⏱️    : 0   3   8.24 
+🔢 Token   : 74223
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC40/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC40/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC40/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC40/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC41] 执行完成！
-⏰ 开始时间: 2025-12-27 20:08:35
-⏰ 结束时间: 2025-12-27 20:27:44
-⏱️ 总耗时: 0小时 19分钟 8.20秒
-🔢 Token 消耗: 938176
+✅    [UC41]     ！
+⏰     : 2025-12-27 20:08:35
+⏰     : 2025-12-27 20:27:44
+⏱️    : 0   19   8.20 
+🔢 Token   : 938176
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC41/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC41/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC41/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC41/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC42] 执行完成！
-⏰ 开始时间: 2025-12-27 20:27:44
-⏰ 结束时间: 2025-12-27 20:35:00
-⏱️ 总耗时: 0小时 7分钟 16.16秒
-🔢 Token 消耗: 352521
+✅    [UC42]     ！
+⏰     : 2025-12-27 20:27:44
+⏰     : 2025-12-27 20:35:00
+⏱️    : 0   7   16.16 
+🔢 Token   : 352521
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC42/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC42/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC42/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC42/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC43] 执行完成！
-⏰ 开始时间: 2025-12-27 20:35:00
-⏰ 结束时间: 2025-12-27 20:54:03
-⏱️ 总耗时: 0小时 19分钟 3.20秒
-🔢 Token 消耗: 411707
+✅    [UC43]     ！
+⏰     : 2025-12-27 20:35:00
+⏰     : 2025-12-27 20:54:03
+⏱️    : 0   19   3.20 
+🔢 Token   : 411707
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC43/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC43/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC43/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC43/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC44] 执行完成！
-⏰ 开始时间: 2025-12-27 20:54:03
-⏰ 结束时间: 2025-12-27 21:09:40
-⏱️ 总耗时: 0小时 15分钟 36.52秒
-🔢 Token 消耗: 435033
+✅    [UC44]     ！
+⏰     : 2025-12-27 20:54:03
+⏰     : 2025-12-27 21:09:40
+⏱️    : 0   15   36.52 
+🔢 Token   : 435033
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC44/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC44/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC44/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC44/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC45] 执行完成！
-⏰ 开始时间: 2025-12-27 21:09:40
-⏰ 结束时间: 2025-12-27 21:16:59
-⏱️ 总耗时: 0小时 7分钟 19.45秒
-🔢 Token 消耗: 288154
+✅    [UC45]     ！
+⏰     : 2025-12-27 21:09:40
+⏰     : 2025-12-27 21:16:59
+⏱️    : 0   7   19.45 
+🔢 Token   : 288154
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC45/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC45/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC45/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC45/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC46] 执行完成！
-⏰ 开始时间: 2025-12-27 21:16:59
-⏰ 结束时间: 2025-12-27 21:23:56
-⏱️ 总耗时: 0小时 6分钟 56.98秒
-🔢 Token 消耗: 186363
+✅    [UC46]     ！
+⏰     : 2025-12-27 21:16:59
+⏰     : 2025-12-27 21:23:56
+⏱️    : 0   6   56.98 
+🔢 Token   : 186363
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC46/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC46/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC46/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC46/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC47] 执行完成！
-⏰ 开始时间: 2025-12-27 21:23:56
-⏰ 结束时间: 2025-12-27 21:27:27
-⏱️ 总耗时: 0小时 3分钟 31.02秒
-🔢 Token 消耗: 97465
+✅    [UC47]     ！
+⏰     : 2025-12-27 21:23:56
+⏰     : 2025-12-27 21:27:27
+⏱️    : 0   3   31.02 
+🔢 Token   : 97465
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC47/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC47/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC47/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC47/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC48] 执行完成！
-⏰ 开始时间: 2025-12-27 21:27:27
-⏰ 结束时间: 2025-12-27 21:36:07
-⏱️ 总耗时: 0小时 8分钟 39.82秒
-🔢 Token 消耗: 303624
+✅    [UC48]     ！
+⏰     : 2025-12-27 21:27:27
+⏰     : 2025-12-27 21:36:07
+⏱️    : 0   8   39.82 
+🔢 Token   : 303624
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC48/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC48/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC48/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC48/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC49] 执行完成！
-⏰ 开始时间: 2025-12-27 21:36:07
-⏰ 结束时间: 2025-12-27 21:38:49
-⏱️ 总耗时: 0小时 2分钟 41.86秒
-🔢 Token 消耗: 78924
+✅    [UC49]     ！
+⏰     : 2025-12-27 21:36:07
+⏰     : 2025-12-27 21:38:49
+⏱️    : 0   2   41.86 
+🔢 Token   : 78924
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC49/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC49/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC49/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC49/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC50] 执行完成！
-⏰ 开始时间: 2025-12-27 21:38:49
-⏰ 结束时间: 2025-12-27 22:20:45
-⏱️ 总耗时: 0小时 41分钟 56.23秒
-🔢 Token 消耗: 2778376
+✅    [UC50]     ！
+⏰     : 2025-12-27 21:38:49
+⏰     : 2025-12-27 22:20:45
+⏱️    : 0   41   56.23 
+🔢 Token   : 2778376
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC50/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC50/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC50/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC50/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
 ==================================================
-✅ 任务 [UC52] 执行完成！
-⏰ 开始时间: 2025-12-27 22:21:56
-⏰ 结束时间: 2025-12-27 22:27:15
-⏱️ 总耗时: 0小时 5分钟 19.08秒
-🔢 Token 消耗: 161291
+✅    [UC52]     ！
+⏰     : 2025-12-27 22:21:56
+⏰     : 2025-12-27 22:27:15
+⏱️    : 0   5   19.08 
+🔢 Token   : 161291
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC52/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC52/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC52/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC52/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC53] 执行完成！
-⏰ 开始时间: 2025-12-27 22:27:15
-⏰ 结束时间: 2025-12-27 22:35:49
-⏱️ 总耗时: 0小时 8分钟 33.18秒
-🔢 Token 消耗: 312292
+✅    [UC53]     ！
+⏰     : 2025-12-27 22:27:15
+⏰     : 2025-12-27 22:35:49
+⏱️    : 0   8   33.18 
+🔢 Token   : 312292
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC53/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC53/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC53/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC53/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC54] 执行完成！
-⏰ 开始时间: 2025-12-27 22:35:49
-⏰ 结束时间: 2025-12-27 22:50:16
-⏱️ 总耗时: 0小时 14分钟 27.96秒
-🔢 Token 消耗: 428798
+✅    [UC54]     ！
+⏰     : 2025-12-27 22:35:49
+⏰     : 2025-12-27 22:50:16
+⏱️    : 0   14   27.96 
+🔢 Token   : 428798
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC54/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC54/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC54/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC54/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC55] 执行完成！
-⏰ 开始时间: 2025-12-27 22:50:17
-⏰ 结束时间: 2025-12-27 22:52:49
-⏱️ 总耗时: 0小时 2分钟 32.17秒
-🔢 Token 消耗: 145787
+✅    [UC55]     ！
+⏰     : 2025-12-27 22:50:17
+⏰     : 2025-12-27 22:52:49
+⏱️    : 0   2   32.17 
+🔢 Token   : 145787
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC55/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC55/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC55/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC55/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC58] 执行完成！
-⏰ 开始时间: 2025-12-27 22:55:32
-⏰ 结束时间: 2025-12-27 23:02:23
-⏱️ 总耗时: 0小时 6分钟 51.03秒
-🔢 Token 消耗: 275447
+✅    [UC58]     ！
+⏰     : 2025-12-27 22:55:32
+⏰     : 2025-12-27 23:02:23
+⏱️    : 0   6   51.03 
+🔢 Token   : 275447
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC58/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC58/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC58/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC58/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
-🎉 所有批量任务处理完毕！
-⏭️ 项目 [UC1] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC1，跳过
-⏭️ 项目 [UC2] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC2，跳过
-⏭️ 项目 [UC1] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC1，跳过
-⏭️ 项目 [UC2] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC2，跳过
+🎉           ！
+⏭️    [UC1]      /home///baselines/MetaGPT/deepseek/etour/UC1，  
+⏭️    [UC2]      /home///baselines/MetaGPT/deepseek/etour/UC2，  
+⏭️    [UC1]      /home///baselines/MetaGPT/deepseek/etour/UC1，  
+⏭️    [UC2]      /home///baselines/MetaGPT/deepseek/etour/UC2，  
 
 ==================================================
-✅ 任务 [UC3] 执行完成！
-⏰ 开始时间: 2025-12-28 09:17:26
-⏰ 结束时间: 2025-12-28 09:25:40
-⏱️ 总耗时: 0小时 8分钟 13.67秒
-🔢 Token 消耗: 256534
+✅    [UC3]     ！
+⏰     : 2025-12-28 09:17:26
+⏰     : 2025-12-28 09:25:40
+⏱️    : 0   8   13.67 
+🔢 Token   : 256534
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC3/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC3/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
-⏭️ 项目 [UC4] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC4，跳过
-⏭️ 项目 [UC5] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC5，跳过
-⏭️ 项目 [UC6] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC6，跳过
-⏭️ 项目 [UC7] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC7，跳过
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC3/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC3/log
+🧹     logs: /home///baselines/MetaGPT/logs
+⏭️    [UC4]      /home///baselines/MetaGPT/deepseek/etour/UC4，  
+⏭️    [UC5]      /home///baselines/MetaGPT/deepseek/etour/UC5，  
+⏭️    [UC6]      /home///baselines/MetaGPT/deepseek/etour/UC6，  
+⏭️    [UC7]      /home///baselines/MetaGPT/deepseek/etour/UC7，  
 
 ==================================================
-✅ 任务 [UC8] 执行完成！
-⏰ 开始时间: 2025-12-28 09:25:40
-⏰ 结束时间: 2025-12-28 09:32:45
-⏱️ 总耗时: 0小时 7分钟 5.26秒
-🔢 Token 消耗: 243139
+✅    [UC8]     ！
+⏰     : 2025-12-28 09:25:40
+⏰     : 2025-12-28 09:32:45
+⏱️    : 0   7   5.26 
+🔢 Token   : 243139
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC8/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC8/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC8/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC8/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 
-⏭️ 项目 [UC10] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC10，跳过
-⏭️ 项目 [UC11] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC11，跳过
-⏭️ 项目 [UC12] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC12，跳过
-⏭️ 项目 [UC13] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC13，跳过
+⏭️    [UC10]      /home///baselines/MetaGPT/deepseek/etour/UC10，  
+⏭️    [UC11]      /home///baselines/MetaGPT/deepseek/etour/UC11，  
+⏭️    [UC12]      /home///baselines/MetaGPT/deepseek/etour/UC12，  
+⏭️    [UC13]      /home///baselines/MetaGPT/deepseek/etour/UC13，  
 
 ==================================================
-✅ 任务 [UC14] 执行完成！
-⏰ 开始时间: 2025-12-28 09:43:13
-⏰ 结束时间: 2025-12-28 09:50:24
-⏱️ 总耗时: 0小时 7分钟 11.81秒
-🔢 Token 消耗: 238212
+✅    [UC14]     ！
+⏰     : 2025-12-28 09:43:13
+⏰     : 2025-12-28 09:50:24
+⏱️    : 0   7   11.81 
+🔢 Token   : 238212
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC14/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC14/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC14/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC14/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC15] 执行完成！
-⏰ 开始时间: 2025-12-28 09:50:24
-⏰ 结束时间: 2025-12-28 10:14:00
-⏱️ 总耗时: 0小时 23分钟 35.75秒
-🔢 Token 消耗: 649555
+✅    [UC15]     ！
+⏰     : 2025-12-28 09:50:24
+⏰     : 2025-12-28 10:14:00
+⏱️    : 0   23   35.75 
+🔢 Token   : 649555
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC15/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC15/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
-⏭️ 项目 [UC16] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC16，跳过
-⏭️ 项目 [UC17] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC17，跳过
-⏭️ 项目 [UC18] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC18，跳过
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC15/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC15/log
+🧹     logs: /home///baselines/MetaGPT/logs
+⏭️    [UC16]      /home///baselines/MetaGPT/deepseek/etour/UC16，  
+⏭️    [UC17]      /home///baselines/MetaGPT/deepseek/etour/UC17，  
+⏭️    [UC18]      /home///baselines/MetaGPT/deepseek/etour/UC18，  
 
 ==================================================
-✅ 任务 [UC19] 执行完成！
-⏰ 开始时间: 2025-12-28 10:14:00
-⏰ 结束时间: 2025-12-28 10:16:41
-⏱️ 总耗时: 0小时 2分钟 40.88秒
-🔢 Token 消耗: 82493
+✅    [UC19]     ！
+⏰     : 2025-12-28 10:14:00
+⏰     : 2025-12-28 10:16:41
+⏱️    : 0   2   40.88 
+🔢 Token   : 82493
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC19/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC19/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
-⏭️ 项目 [UC20] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC20，跳过
-⏭️ 项目 [UC21] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC21，跳过
-⏭️ 项目 [UC22] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC22，跳过
-⏭️ 项目 [UC23] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC23，跳过
-⏭️ 项目 [UC24] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC24，跳过
-⏭️ 项目 [UC25] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC25，跳过
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC19/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC19/log
+🧹     logs: /home///baselines/MetaGPT/logs
+⏭️    [UC20]      /home///baselines/MetaGPT/deepseek/etour/UC20，  
+⏭️    [UC21]      /home///baselines/MetaGPT/deepseek/etour/UC21，  
+⏭️    [UC22]      /home///baselines/MetaGPT/deepseek/etour/UC22，  
+⏭️    [UC23]      /home///baselines/MetaGPT/deepseek/etour/UC23，  
+⏭️    [UC24]      /home///baselines/MetaGPT/deepseek/etour/UC24，  
+⏭️    [UC25]      /home///baselines/MetaGPT/deepseek/etour/UC25，  
 
 ==================================================
-✅ 任务 [UC26] 执行完成！
-⏰ 开始时间: 2025-12-28 10:16:41
-⏰ 结束时间: 2025-12-28 10:25:38
-⏱️ 总耗时: 0小时 8分钟 56.55秒
-🔢 Token 消耗: 362752
+✅    [UC26]     ！
+⏰     : 2025-12-28 10:16:41
+⏰     : 2025-12-28 10:25:38
+⏱️    : 0   8   56.55 
+🔢 Token   : 362752
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC26/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC26/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
-⏭️ 项目 [UC27] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC27，跳过
-⏭️ 项目 [UC28] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC28，跳过
-⏭️ 项目 [UC29] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC29，跳过
-⏭️ 项目 [UC30] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC30，跳过
-⏭️ 项目 [UC31] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC31，跳过
-⏭️ 项目 [UC32] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC32，跳过
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC26/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC26/log
+🧹     logs: /home///baselines/MetaGPT/logs
+⏭️    [UC27]      /home///baselines/MetaGPT/deepseek/etour/UC27，  
+⏭️    [UC28]      /home///baselines/MetaGPT/deepseek/etour/UC28，  
+⏭️    [UC29]      /home///baselines/MetaGPT/deepseek/etour/UC29，  
+⏭️    [UC30]      /home///baselines/MetaGPT/deepseek/etour/UC30，  
+⏭️    [UC31]      /home///baselines/MetaGPT/deepseek/etour/UC31，  
+⏭️    [UC32]      /home///baselines/MetaGPT/deepseek/etour/UC32，  
 
 
 ==================================================
-✅ 任务 [UC34] 执行完成！
-⏰ 开始时间: 2025-12-28 10:31:57
-⏰ 结束时间: 2025-12-28 10:34:28
-⏱️ 总耗时: 0小时 2分钟 30.15秒
-🔢 Token 消耗: 56464
+✅    [UC34]     ！
+⏰     : 2025-12-28 10:31:57
+⏰     : 2025-12-28 10:34:28
+⏱️    : 0   2   30.15 
+🔢 Token   : 56464
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC34/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC34/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
-⏭️ 项目 [UC35] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC35，跳过
-⏭️ 项目 [UC36] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC36，跳过
-⏭️ 项目 [UC37] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC37，跳过
-⏭️ 项目 [UC38] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC38，跳过
-⏭️ 项目 [UC39] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC39，跳过
-⏭️ 项目 [UC40] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC40，跳过
-⏭️ 项目 [UC41] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC41，跳过
-⏭️ 项目 [UC42] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC42，跳过
-⏭️ 项目 [UC43] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC43，跳过
-⏭️ 项目 [UC44] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC44，跳过
-⏭️ 项目 [UC45] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC45，跳过
-⏭️ 项目 [UC46] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC46，跳过
-⏭️ 项目 [UC47] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC47，跳过
-⏭️ 项目 [UC48] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC48，跳过
-⏭️ 项目 [UC49] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC49，跳过
-⏭️ 项目 [UC50] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC50，跳过
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC34/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC34/log
+🧹     logs: /home///baselines/MetaGPT/logs
+⏭️    [UC35]      /home///baselines/MetaGPT/deepseek/etour/UC35，  
+⏭️    [UC36]      /home///baselines/MetaGPT/deepseek/etour/UC36，  
+⏭️    [UC37]      /home///baselines/MetaGPT/deepseek/etour/UC37，  
+⏭️    [UC38]      /home///baselines/MetaGPT/deepseek/etour/UC38，  
+⏭️    [UC39]      /home///baselines/MetaGPT/deepseek/etour/UC39，  
+⏭️    [UC40]      /home///baselines/MetaGPT/deepseek/etour/UC40，  
+⏭️    [UC41]      /home///baselines/MetaGPT/deepseek/etour/UC41，  
+⏭️    [UC42]      /home///baselines/MetaGPT/deepseek/etour/UC42，  
+⏭️    [UC43]      /home///baselines/MetaGPT/deepseek/etour/UC43，  
+⏭️    [UC44]      /home///baselines/MetaGPT/deepseek/etour/UC44，  
+⏭️    [UC45]      /home///baselines/MetaGPT/deepseek/etour/UC45，  
+⏭️    [UC46]      /home///baselines/MetaGPT/deepseek/etour/UC46，  
+⏭️    [UC47]      /home///baselines/MetaGPT/deepseek/etour/UC47，  
+⏭️    [UC48]      /home///baselines/MetaGPT/deepseek/etour/UC48，  
+⏭️    [UC49]      /home///baselines/MetaGPT/deepseek/etour/UC49，  
+⏭️    [UC50]      /home///baselines/MetaGPT/deepseek/etour/UC50，  
 
 ==================================================
-✅ 任务 [UC51] 执行完成！
-⏰ 开始时间: 2025-12-28 10:34:28
-⏰ 结束时间: 2025-12-28 10:37:18
-⏱️ 总耗时: 0小时 2分钟 50.83秒
-🔢 Token 消耗: 80726
+✅    [UC51]     ！
+⏰     : 2025-12-28 10:34:28
+⏰     : 2025-12-28 10:37:18
+⏱️    : 0   2   50.83 
+🔢 Token   : 80726
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC51/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC51/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
-⏭️ 项目 [UC52] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC52，跳过
-⏭️ 项目 [UC53] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC53，跳过
-⏭️ 项目 [UC54] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC54，跳过
-⏭️ 项目 [UC55] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC55，跳过
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC51/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC51/log
+🧹     logs: /home///baselines/MetaGPT/logs
+⏭️    [UC52]      /home///baselines/MetaGPT/deepseek/etour/UC52，  
+⏭️    [UC53]      /home///baselines/MetaGPT/deepseek/etour/UC53，  
+⏭️    [UC54]      /home///baselines/MetaGPT/deepseek/etour/UC54，  
+⏭️    [UC55]      /home///baselines/MetaGPT/deepseek/etour/UC55，  
 
 ==================================================
-✅ 任务 [UC56] 执行完成！
-⏰ 开始时间: 2025-12-28 10:37:18
-⏰ 结束时间: 2025-12-28 10:39:50
-⏱️ 总耗时: 0小时 2分钟 31.88秒
-🔢 Token 消耗: 79592
+✅    [UC56]     ！
+⏰     : 2025-12-28 10:37:18
+⏰     : 2025-12-28 10:39:50
+⏱️    : 0   2   31.88 
+🔢 Token   : 79592
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC56/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC56/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC56/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC56/log
+🧹     logs: /home///baselines/MetaGPT/logs
 
 ==================================================
-✅ 任务 [UC57] 执行完成！
-⏰ 开始时间: 2025-12-28 10:39:50
-⏰ 结束时间: 2025-12-28 10:48:40
-⏱️ 总耗时: 0小时 8分钟 49.41秒
-🔢 Token 消耗: 132096
+✅    [UC57]     ！
+⏰     : 2025-12-28 10:39:50
+⏰     : 2025-12-28 10:48:40
+⏱️    : 0   8   49.41 
+🔢 Token   : 132096
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC57/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC57/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
-⏭️ 项目 [UC58] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC58，跳过
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC57/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC57/log
+🧹     logs: /home///baselines/MetaGPT/logs
+⏭️    [UC58]      /home///baselines/MetaGPT/deepseek/etour/UC58，  
 
-🎉 所有批量任务处理完毕！
-⏭️ 项目 [UC1] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC1，跳过
-⏭️ 项目 [UC2] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC2，跳过
-⏭️ 项目 [UC3] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC3，跳过
-⏭️ 项目 [UC4] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC4，跳过
-⏭️ 项目 [UC5] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC5，跳过
-⏭️ 项目 [UC6] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC6，跳过
-⏭️ 项目 [UC7] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC7，跳过
-⏭️ 项目 [UC8] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC8，跳过
+🎉           ！
+⏭️    [UC1]      /home///baselines/MetaGPT/deepseek/etour/UC1，  
+⏭️    [UC2]      /home///baselines/MetaGPT/deepseek/etour/UC2，  
+⏭️    [UC3]      /home///baselines/MetaGPT/deepseek/etour/UC3，  
+⏭️    [UC4]      /home///baselines/MetaGPT/deepseek/etour/UC4，  
+⏭️    [UC5]      /home///baselines/MetaGPT/deepseek/etour/UC5，  
+⏭️    [UC6]      /home///baselines/MetaGPT/deepseek/etour/UC6，  
+⏭️    [UC7]      /home///baselines/MetaGPT/deepseek/etour/UC7，  
+⏭️    [UC8]      /home///baselines/MetaGPT/deepseek/etour/UC8，  
 
 ==================================================
-✅ 任务 [UC9] 执行完成！
-⏰ 开始时间: 2025-12-28 10:58:47
-⏰ 结束时间: 2025-12-28 11:03:51
-⏱️ 总耗时: 0小时 5分钟 4.40秒
-🔢 Token 消耗: 177762
+✅    [UC9]     ！
+⏰     : 2025-12-28 10:58:47
+⏰     : 2025-12-28 11:03:51
+⏱️    : 0   5   4.40 
+🔢 Token   : 177762
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC9/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC9/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
-⏭️ 项目 [UC10] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC10，跳过
-⏭️ 项目 [UC11] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC11，跳过
-⏭️ 项目 [UC12] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC12，跳过
-⏭️ 项目 [UC13] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC13，跳过
-⏭️ 项目 [UC14] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC14，跳过
-⏭️ 项目 [UC15] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC15，跳过
-⏭️ 项目 [UC16] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC16，跳过
-⏭️ 项目 [UC17] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC17，跳过
-⏭️ 项目 [UC18] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC18，跳过
-⏭️ 项目 [UC19] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC19，跳过
-⏭️ 项目 [UC20] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC20，跳过
-⏭️ 项目 [UC21] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC21，跳过
-⏭️ 项目 [UC22] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC22，跳过
-⏭️ 项目 [UC23] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC23，跳过
-⏭️ 项目 [UC24] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC24，跳过
-⏭️ 项目 [UC25] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC25，跳过
-⏭️ 项目 [UC26] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC26，跳过
-⏭️ 项目 [UC27] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC27，跳过
-⏭️ 项目 [UC28] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC28，跳过
-⏭️ 项目 [UC29] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC29，跳过
-⏭️ 项目 [UC30] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC30，跳过
-⏭️ 项目 [UC31] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC31，跳过
-⏭️ 项目 [UC32] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC32，跳过
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC9/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC9/log
+🧹     logs: /home///baselines/MetaGPT/logs
+⏭️    [UC10]      /home///baselines/MetaGPT/deepseek/etour/UC10，  
+⏭️    [UC11]      /home///baselines/MetaGPT/deepseek/etour/UC11，  
+⏭️    [UC12]      /home///baselines/MetaGPT/deepseek/etour/UC12，  
+⏭️    [UC13]      /home///baselines/MetaGPT/deepseek/etour/UC13，  
+⏭️    [UC14]      /home///baselines/MetaGPT/deepseek/etour/UC14，  
+⏭️    [UC15]      /home///baselines/MetaGPT/deepseek/etour/UC15，  
+⏭️    [UC16]      /home///baselines/MetaGPT/deepseek/etour/UC16，  
+⏭️    [UC17]      /home///baselines/MetaGPT/deepseek/etour/UC17，  
+⏭️    [UC18]      /home///baselines/MetaGPT/deepseek/etour/UC18，  
+⏭️    [UC19]      /home///baselines/MetaGPT/deepseek/etour/UC19，  
+⏭️    [UC20]      /home///baselines/MetaGPT/deepseek/etour/UC20，  
+⏭️    [UC21]      /home///baselines/MetaGPT/deepseek/etour/UC21，  
+⏭️    [UC22]      /home///baselines/MetaGPT/deepseek/etour/UC22，  
+⏭️    [UC23]      /home///baselines/MetaGPT/deepseek/etour/UC23，  
+⏭️    [UC24]      /home///baselines/MetaGPT/deepseek/etour/UC24，  
+⏭️    [UC25]      /home///baselines/MetaGPT/deepseek/etour/UC25，  
+⏭️    [UC26]      /home///baselines/MetaGPT/deepseek/etour/UC26，  
+⏭️    [UC27]      /home///baselines/MetaGPT/deepseek/etour/UC27，  
+⏭️    [UC28]      /home///baselines/MetaGPT/deepseek/etour/UC28，  
+⏭️    [UC29]      /home///baselines/MetaGPT/deepseek/etour/UC29，  
+⏭️    [UC30]      /home///baselines/MetaGPT/deepseek/etour/UC30，  
+⏭️    [UC31]      /home///baselines/MetaGPT/deepseek/etour/UC31，  
+⏭️    [UC32]      /home///baselines/MetaGPT/deepseek/etour/UC32，  
 
 ==================================================
-✅ 任务 [UC33] 执行完成！
-⏰ 开始时间: 2025-12-28 11:03:51
-⏰ 结束时间: 2025-12-28 11:10:21
-⏱️ 总耗时: 0小时 6分钟 29.42秒
-🔢 Token 消耗: 170997
+✅    [UC33]     ！
+⏰     : 2025-12-28 11:03:51
+⏰     : 2025-12-28 11:10:21
+⏱️    : 0   6   29.42 
+🔢 Token   : 170997
 ==================================================
 
-📦 已将 workspace 备份到: /home///baselines/MetaGPT/deepseek/etour/UC33/code
-🧹 已清理 workspace: /home///baselines/MetaGPT/workspace
-📦 已将 logs 备份到: /home///baselines/MetaGPT/deepseek/etour/UC33/log
-🧹 已清理 logs: /home///baselines/MetaGPT/logs
-⏭️ 项目 [UC34] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC34，跳过
-⏭️ 项目 [UC35] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC35，跳过
-⏭️ 项目 [UC36] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC36，跳过
-⏭️ 项目 [UC37] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC37，跳过
-⏭️ 项目 [UC38] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC38，跳过
-⏭️ 项目 [UC39] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC39，跳过
-⏭️ 项目 [UC40] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC40，跳过
-⏭️ 项目 [UC41] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC41，跳过
-⏭️ 项目 [UC42] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC42，跳过
-⏭️ 项目 [UC43] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC43，跳过
-⏭️ 项目 [UC44] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC44，跳过
-⏭️ 项目 [UC45] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC45，跳过
-⏭️ 项目 [UC46] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC46，跳过
-⏭️ 项目 [UC47] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC47，跳过
-⏭️ 项目 [UC48] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC48，跳过
-⏭️ 项目 [UC49] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC49，跳过
-⏭️ 项目 [UC50] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC50，跳过
-⏭️ 项目 [UC51] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC51，跳过
-⏭️ 项目 [UC52] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC52，跳过
-⏭️ 项目 [UC53] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC53，跳过
-⏭️ 项目 [UC54] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC54，跳过
-⏭️ 项目 [UC55] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC55，跳过
-⏭️ 项目 [UC56] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC56，跳过
-⏭️ 项目 [UC57] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC57，跳过
-⏭️ 项目 [UC58] 已存在于 /home///baselines/MetaGPT/deepseek/etour/UC58，跳过
+📦    workspace    : /home///baselines/MetaGPT/deepseek/etour/UC33/code
+🧹     workspace: /home///baselines/MetaGPT/workspace
+📦    logs    : /home///baselines/MetaGPT/deepseek/etour/UC33/log
+🧹     logs: /home///baselines/MetaGPT/logs
+⏭️    [UC34]      /home///baselines/MetaGPT/deepseek/etour/UC34，  
+⏭️    [UC35]      /home///baselines/MetaGPT/deepseek/etour/UC35，  
+⏭️    [UC36]      /home///baselines/MetaGPT/deepseek/etour/UC36，  
+⏭️    [UC37]      /home///baselines/MetaGPT/deepseek/etour/UC37，  
+⏭️    [UC38]      /home///baselines/MetaGPT/deepseek/etour/UC38，  
+⏭️    [UC39]      /home///baselines/MetaGPT/deepseek/etour/UC39，  
+⏭️    [UC40]      /home///baselines/MetaGPT/deepseek/etour/UC40，  
+⏭️    [UC41]      /home///baselines/MetaGPT/deepseek/etour/UC41，  
+⏭️    [UC42]      /home///baselines/MetaGPT/deepseek/etour/UC42，  
+⏭️    [UC43]      /home///baselines/MetaGPT/deepseek/etour/UC43，  
+⏭️    [UC44]      /home///baselines/MetaGPT/deepseek/etour/UC44，  
+⏭️    [UC45]      /home///baselines/MetaGPT/deepseek/etour/UC45，  
+⏭️    [UC46]      /home///baselines/MetaGPT/deepseek/etour/UC46，  
+⏭️    [UC47]      /home///baselines/MetaGPT/deepseek/etour/UC47，  
+⏭️    [UC48]      /home///baselines/MetaGPT/deepseek/etour/UC48，  
+⏭️    [UC49]      /home///baselines/MetaGPT/deepseek/etour/UC49，  
+⏭️    [UC50]      /home///baselines/MetaGPT/deepseek/etour/UC50，  
+⏭️    [UC51]      /home///baselines/MetaGPT/deepseek/etour/UC51，  
+⏭️    [UC52]      /home///baselines/MetaGPT/deepseek/etour/UC52，  
+⏭️    [UC53]      /home///baselines/MetaGPT/deepseek/etour/UC53，  
+⏭️    [UC54]      /home///baselines/MetaGPT/deepseek/etour/UC54，  
+⏭️    [UC55]      /home///baselines/MetaGPT/deepseek/etour/UC55，  
+⏭️    [UC56]      /home///baselines/MetaGPT/deepseek/etour/UC56，  
+⏭️    [UC57]      /home///baselines/MetaGPT/deepseek/etour/UC57，  
+⏭️    [UC58]      /home///baselines/MetaGPT/deepseek/etour/UC58，  
 
-🎉 所有批量任务处理完毕！
+🎉           ！

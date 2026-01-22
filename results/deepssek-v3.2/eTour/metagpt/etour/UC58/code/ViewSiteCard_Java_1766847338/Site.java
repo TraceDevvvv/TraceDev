@@ -1,18 +1,18 @@
 // Site.java
-// 站点数据模型类，表示一个旅游地点的详细信息。
-// 包含站点的基本属性，如ID、名称、描述等，并提供getter和setter方法。
+//        ，             。
+//          ， ID、  、   ，   getter setter  。
 
 public class Site {
-    // 站点属性
-    private int id;               // 站点唯一标识符
-    private String name;          // 站点名称
-    private String description;   // 站点详细描述
-    private String location;      // 站点地理位置
-    private double rating;        // 站点评分（0.0到5.0）
-    private int visitCount;       // 访问次数
-    private boolean isFavorite;   // 是否已收藏
+    //     
+    private int id;               //        
+    private String name;          //     
+    private String description;   //       
+    private String location;      //       
+    private double rating;        //     （0.0 5.0）
+    private int visitCount;       //     
+    private boolean isFavorite;   //      
     
-    // 无参构造函数
+    //       
     public Site() {
         this.id = 0;
         this.name = "";
@@ -23,7 +23,7 @@ public class Site {
         this.isFavorite = false;
     }
     
-    // 带参数的构造函数
+    //         
     public Site(int id, String name, String description, String location, 
                 double rating, int visitCount, boolean isFavorite) {
         this.id = id;
@@ -35,7 +35,7 @@ public class Site {
         this.isFavorite = isFavorite;
     }
     
-    // Getter和Setter方法
+    // Getter Setter  
     
     public int getId() {
         return id;
@@ -74,7 +74,7 @@ public class Site {
     }
     
     public void setRating(double rating) {
-        // 确保评分在有效范围内
+        //           
         if (rating < 0.0) {
             this.rating = 0.0;
         } else if (rating > 5.0) {
@@ -89,7 +89,7 @@ public class Site {
     }
     
     public void setVisitCount(int visitCount) {
-        // 确保访问次数非负
+        //         
         if (visitCount < 0) {
             this.visitCount = 0;
         } else {
@@ -105,15 +105,15 @@ public class Site {
         isFavorite = favorite;
     }
     
-    // 重写toString方法，便于打印站点信息
+    //   toString  ，        
     @Override
     public String toString() {
-        return "站点ID: " + id + "\n" +
-               "名称: " + name + "\n" +
-               "描述: " + description + "\n" +
-               "位置: " + location + "\n" +
-               "评分: " + String.format("%.1f", rating) + "/5.0\n" +
-               "访问次数: " + visitCount + "\n" +
-               "已收藏: " + (isFavorite ? "是" : "否");
+        return "  ID: " + id + "\n" +
+               "  : " + name + "\n" +
+               "  : " + description + "\n" +
+               "  : " + location + "\n" +
+               "  : " + String.format("%.1f", rating) + "/5.0\n" +
+               "    : " + visitCount + "\n" +
+               "   : " + (isFavorite ? " " : " ");
     }
 }

@@ -1,8 +1,8 @@
 import java.time.LocalDate;
 
 /**
- * AbsenceRecord类 - 表示学生的缺勤记录
- * 包含缺勤的核心数据和编辑逻辑
+ * AbsenceRecord  -          
+ *               
  */
 public class AbsenceRecord {
     private String recordId;
@@ -14,13 +14,13 @@ public class AbsenceRecord {
     private LocalDate lastModified;
     
     /**
-     * 构造函数 - 创建新的缺勤记录
-     * @param recordId 记录ID
-     * @param studentId 学生ID
-     * @param studentName 学生姓名
-     * @param date 缺勤日期
-     * @param isAbsent 是否缺勤
-     * @param reason 缺勤原因
+     *      -         
+     * @param recordId   ID
+     * @param studentId   ID
+     * @param studentName     
+     * @param date     
+     * @param isAbsent     
+     * @param reason     
      */
     public AbsenceRecord(String recordId, String studentId, String studentName, 
                         LocalDate date, boolean isAbsent, String reason) {
@@ -34,85 +34,85 @@ public class AbsenceRecord {
     }
     
     /**
-     * 缺勤记录的编辑逻辑 - 添加或删除缺勤
-     * 根据用例要求，更改缺勤记录（添加或删除）
-     * @param newAbsenceStatus 新的缺勤状态（true=缺勤，false=出席）
-     * @param reason 缺勤原因（如果状态为缺勤）
-     * @return 编辑是否成功
+     *           -        
+     *       ，      （     ）
+     * @param newAbsenceStatus       （true=  ，false=  ）
+     * @param reason     （       ）
+     * @return       
      */
     public boolean editAbsence(boolean newAbsenceStatus, String reason) {
-        // 检查状态是否确实需要更改
+        //             
         if (this.isAbsent == newAbsenceStatus) {
-            System.out.println("警告：缺勤状态未改变（已为" + (newAbsenceStatus ? "缺勤" : "出席") + "）。");
+            System.out.println("  ：       （  " + (newAbsenceStatus ? "  " : "  ") + "）。");
             return false;
         }
         
-        // 更新缺勤状态
+        //       
         boolean oldStatus = this.isAbsent;
         this.isAbsent = newAbsenceStatus;
         
-        // 如果新状态为缺勤，更新原因；否则清空原因
+        //         ，    ；      
         if (newAbsenceStatus) {
-            this.reason = (reason != null && !reason.trim().isEmpty()) ? reason : "未指定原因";
+            this.reason = (reason != null && !reason.trim().isEmpty()) ? reason : "     ";
         } else {
             this.reason = null;
         }
         
-        // 更新最后修改时间
+        //         
         this.lastModified = LocalDate.now();
         
-        String action = newAbsenceStatus ? "添加" : "删除";
-        System.out.println("缺勤记录已成功" + action + "：");
-        System.out.println("  学生：" + studentName);
-        System.out.println("  日期：" + date);
-        System.out.println("  状态：" + (oldStatus ? "缺勤" : "出席") + " → " + (newAbsenceStatus ? "缺勤" : "出席"));
+        String action = newAbsenceStatus ? "  " : "  ";
+        System.out.println("       " + action + "：");
+        System.out.println("    ：" + studentName);
+        System.out.println("    ：" + date);
+        System.out.println("    ：" + (oldStatus ? "  " : "  ") + " → " + (newAbsenceStatus ? "  " : "  "));
         
         return true;
     }
     
     /**
-     * 检查记录是否为指定日期
-     * @param targetDate 目标日期
-     * @return 是否为该日期的记录
+     *            
+     * @param targetDate     
+     * @return          
      */
     public boolean isForDate(LocalDate targetDate) {
         return this.date.equals(targetDate);
     }
     
     /**
-     * 验证记录数据的有效性
-     * @return 记录是否有效
+     *           
+     * @return       
      */
     public boolean validate() {
         if (recordId == null || recordId.trim().isEmpty()) {
-            System.out.println("错误：记录ID不能为空。");
+            System.out.println("  ：  ID    。");
             return false;
         }
         
         if (studentId == null || studentId.trim().isEmpty()) {
-            System.out.println("错误：学生ID不能为空。");
+            System.out.println("  ：  ID    。");
             return false;
         }
         
         if (date == null) {
-            System.out.println("错误：缺勤日期不能为空。");
+            System.out.println("  ：        。");
             return false;
         }
         
         if (date.isAfter(LocalDate.now())) {
-            System.out.println("警告：缺勤日期不能是未来日期。");
+            System.out.println("  ：           。");
             return false;
         }
         
-        // 如果标记为缺勤，但原因为空，给出警告但不阻止操作
+        //        ，     ，          
         if (isAbsent && (reason == null || reason.trim().isEmpty())) {
-            System.out.println("警告：缺勤记录缺少原因。");
+            System.out.println("  ：        。");
         }
         
         return true;
     }
     
-    // Getter和Setter方法
+    // Getter Setter  
     
     public String getRecordId() {
         return recordId;
@@ -153,7 +153,7 @@ public class AbsenceRecord {
     public void setAbsent(boolean absent) {
         this.isAbsent = absent;
         if (!absent) {
-            this.reason = null; // 如果不是缺勤，清除原因
+            this.reason = null; //       ，    
         }
     }
     
@@ -170,13 +170,13 @@ public class AbsenceRecord {
     }
     
     /**
-     * 获取记录摘要信息
-     * @return 格式化后的记录信息
+     *         
+     * @return          
      */
     public String getSummary() {
-        return String.format("记录ID: %s | 学生: %s (%s) | 日期: %s | 状态: %s | 最后修改: %s",
+        return String.format("  ID: %s |   : %s (%s) |   : %s |   : %s |     : %s",
                            recordId, studentName, studentId, date,
-                           isAbsent ? "缺勤" : "出席", lastModified);
+                           isAbsent ? "  " : "  ", lastModified);
     }
     
     @Override

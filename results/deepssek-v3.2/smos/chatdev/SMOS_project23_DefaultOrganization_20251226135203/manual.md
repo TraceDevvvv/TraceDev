@@ -14,7 +14,7 @@ The Teaching Management System is a Java-based application designed for administ
 ## System Requirements
 - Java Runtime Environment (JRE) 1.8 or higher
 - No external dependencies required
-和
+ 
 ## Installation Steps
 
 ### 1. Install Java

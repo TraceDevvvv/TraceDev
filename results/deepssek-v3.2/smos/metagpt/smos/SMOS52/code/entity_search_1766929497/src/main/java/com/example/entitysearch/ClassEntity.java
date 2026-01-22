@@ -1,26 +1,26 @@
 package com.example.entitysearch;
 
 /**
- * 班级实体类
- * 表示系统中的班级实体，继承自Entity基类
- * 包含班级特有的属性和方法
+ *      
+ *           ，   Entity  
+ *             
  */
 public class ClassEntity extends Entity {
-    private String teacherName;      // 班主任姓名
-    private int studentCount;        // 学生人数
-    private String grade;            // 年级
-    private String department;       // 所属院系
+    private String teacherName;      //      
+    private int studentCount;        //     
+    private String grade;            //   
+    private String department;       //     
     
     /**
-     * 构造函数
+     *     
      * 
-     * @param id 班级唯一标识
-     * @param name 班级名称
-     * @param description 班级描述
-     * @param teacherName 班主任姓名
-     * @param studentCount 学生人数
-     * @param grade 年级
-     * @param department 所属院系
+     * @param id       
+     * @param name     
+     * @param description     
+     * @param teacherName      
+     * @param studentCount     
+     * @param grade   
+     * @param department     
      */
     public ClassEntity(String id, String name, String description, 
                       String teacherName, int studentCount, String grade, String department) {
@@ -32,22 +32,22 @@ public class ClassEntity extends Entity {
     }
     
     /**
-     * 获取实体类型
-     * 实现父类的抽象方法
+     *       
+     *          
      * 
-     * @return 实体类型字符串 "班级"
+     * @return         "  "
      */
     @Override
     public String getType() {
-        return "班级";
+        return "  ";
     }
     
     /**
-     * 检查班级实体是否包含指定的关键词
-     * 覆盖父类方法，添加班级特有字段的搜索
+     *                 
+     *       ，           
      * 
-     * @param keyword 要搜索的关键词
-     * @return 如果班级包含关键词返回true，否则返回false
+     * @param keyword        
+     * @return            true，    false
      */
     @Override
     public boolean containsKeyword(String keyword) {
@@ -57,69 +57,69 @@ public class ClassEntity extends Entity {
         
         String lowerKeyword = keyword.toLowerCase().trim();
         
-        // 首先调用父类的搜索逻辑
+        //            
         if (super.containsKeyword(keyword)) {
             return true;
         }
         
-        // 检查班主任姓名是否包含关键词
+        //               
         if (teacherName != null && teacherName.toLowerCase().contains(lowerKeyword)) {
             return true;
         }
         
-        // 检查年级是否包含关键词
+        //            
         if (grade != null && grade.toLowerCase().contains(lowerKeyword)) {
             return true;
         }
         
-        // 检查院系是否包含关键词
+        //            
         if (department != null && department.toLowerCase().contains(lowerKeyword)) {
             return true;
         }
         
-        // 检查学生人数（如果关键词是数字）
+        //       （        ）
         try {
             int keywordNumber = Integer.parseInt(keyword);
             if (studentCount == keywordNumber) {
                 return true;
             }
         } catch (NumberFormatException e) {
-            // 关键词不是数字，忽略
+            //        ，  
         }
         
         return false;
     }
     
     /**
-     * 获取用于显示的班级信息
-     * 覆盖父类方法，提供更详细的班级信息
+     *            
+     *       ，          
      * 
-     * @return 格式化的班级显示信息
+     * @return           
      */
     @Override
     public String getDisplayInfo() {
-        return name + " (" + grade + "年级) - 班主任: " + teacherName + 
-               ", 学生: " + studentCount + "人, 院系: " + department;
+        return name + " (" + grade + "  ) -    : " + teacherName + 
+               ",   : " + studentCount + " ,   : " + department;
     }
     
     /**
-     * 获取详细的班级信息
-     * 覆盖父类方法，提供完整的班级信息
+     *          
+     *       ，         
      * 
-     * @return 详细的班级信息字符串
+     * @return           
      */
     @Override
     public String getDetailedInfo() {
         return getType() + " ID: " + id + 
-               ", 名称: " + name + 
-               ", 描述: " + description + 
-               ", 班主任: " + teacherName + 
-               ", 学生人数: " + studentCount + 
-               ", 年级: " + grade + 
-               ", 院系: " + department;
+               ",   : " + name + 
+               ",   : " + description + 
+               ",    : " + teacherName + 
+               ",     : " + studentCount + 
+               ",   : " + grade + 
+               ",   : " + department;
     }
     
-    // Getter和Setter方法
+    // Getter Setter  
     
     public String getTeacherName() {
         return teacherName;

@@ -1069,7 +1069,7 @@
                             },
                             {
                                 "id": "246c895f472f4b05905b8f3ccbb4fa26",
-                                "content": "Command Terminal.run_command executed:\n[command]: pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace\ntotal 8\ndrwxrwxr-x  2   4096 12月 27 19:24 .\ndrwxrwxr-x 17   4096 12月 27 19:24 ..\n",
+                                "content": "Command Terminal.run_command executed:\n[command]: pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace\ntotal 8\ndrwxrwxr-x  2   4096 12  27 19:24 .\ndrwxrwxr-x 17   4096 12  27 19:24 ..\n",
                                 "instruct_content": null,
                                 "role": "user",
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1093,7 +1093,7 @@
                             },
                             {
                                 "id": "d1b5206a722146308aebefa229c790fc",
-                                "content": "Command Terminal.run_command executed:\n[command]: mkdir -p InsertBanner_1766834679 && cd InsertBanner_1766834679 && pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace/InsertBanner_1766834679\ntotal 8\ndrwxrwxr-x 2   4096 12月 27 19:25 .\ndrwxrwxr-x 3   4096 12月 27 19:25 ..\n",
+                                "content": "Command Terminal.run_command executed:\n[command]: mkdir -p InsertBanner_1766834679 && cd InsertBanner_1766834679 && pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace/InsertBanner_1766834679\ntotal 8\ndrwxrwxr-x 2   4096 12  27 19:25 .\ndrwxrwxr-x 3   4096 12  27 19:25 ..\n",
                                 "instruct_content": null,
                                 "role": "user",
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1213,7 +1213,7 @@
                             },
                             {
                                 "id": "b099250f4dd24e3682a26ccf88a96e37",
-                                "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -la \n[command output] : total 24\ndrwxrwxr-x 2   4096 12月 27 19:27 .\ndrwxrwxr-x 3   4096 12月 27 19:25 ..\n-rw-rw-r-- 1    331 12月 27 19:27 Banner.java\n-rw-rw-r-- 1   9838 12月 27 19:27 InsertBannerApp.java\n",
+                                "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -la \n[command output] : total 24\ndrwxrwxr-x 2   4096 12  27 19:27 .\ndrwxrwxr-x 3   4096 12  27 19:25 ..\n-rw-rw-r-- 1    331 12  27 19:27 Banner.java\n-rw-rw-r-- 1   9838 12  27 19:27 InsertBannerApp.java\n",
                                 "instruct_content": null,
                                 "role": "user",
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1333,7 +1333,7 @@
                             },
                             {
                                 "id": "c8bbc7705fdc4c6082b04d7843c6787d",
-                                "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l *.java \n[command output] : -rw-rw-r-- 1   4431 12月 27 19:28 Banner.java\n-rw-rw-r-- 1   9838 12月 27 19:27 InsertBannerApp.java\n-rw-rw-r-- 1   5388 12月 27 19:29 RestaurantPoint.java\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
+                                "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l *.java \n[command output] : -rw-rw-r-- 1   4431 12  27 19:28 Banner.java\n-rw-rw-r-- 1   9838 12  27 19:27 InsertBannerApp.java\n-rw-rw-r-- 1   5388 12  27 19:29 RestaurantPoint.java\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
                                 "instruct_content": null,
                                 "role": "user",
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1381,7 +1381,7 @@
                             },
                             {
                                 "id": "cc4dcec931574712831a1f4e799fcdc2",
-                                "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l ImageValidator.java && head -5 ImageValidator.java \n[command output] : -rw-rw-r-- 1   11164 12月 27 19:30 ImageValidator.java\nimport java.io.File;\nimport java.io.IOException;\nimport java.nio.file.Files;\nimport java.nio.file.Path;\nimport java.nio.file.Paths;\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
+                                "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l ImageValidator.java && head -5 ImageValidator.java \n[command output] : -rw-rw-r-- 1   11164 12  27 19:30 ImageValidator.java\nimport java.io.File;\nimport java.io.IOException;\nimport java.nio.file.Files;\nimport java.nio.file.Path;\nimport java.nio.file.Paths;\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
                                 "instruct_content": null,
                                 "role": "user",
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1429,7 +1429,7 @@
                             },
                             {
                                 "id": "6c5441c45daf40cd833d0819adf16c29",
-                                "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l BannerManager.java && wc -l BannerManager.java \n[command output] : -rw-rw-r-- 1   13543 12月 27 19:32 BannerManager.java\n340 BannerManager.java\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
+                                "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l BannerManager.java && wc -l BannerManager.java \n[command output] : -rw-rw-r-- 1   13543 12  27 19:32 BannerManager.java\n340 BannerManager.java\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
                                 "instruct_content": null,
                                 "role": "user",
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1477,7 +1477,7 @@
                             },
                             {
                                 "id": "bcbdeb5306e14fea93aeeaf3e8928fbc",
-                                "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l Operator.java && head -5 Operator.java \n[command output] : -rw-rw-r-- 1   15753 12月 27 19:35 Operator.java\nimport java.util.Date;\nimport java.util.HashSet;\nimport java.util.Set;\n\n/**\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
+                                "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l Operator.java && head -5 Operator.java \n[command output] : -rw-rw-r-- 1   15753 12  27 19:35 Operator.java\nimport java.util.Date;\nimport java.util.HashSet;\nimport java.util.Set;\n\n/**\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
                                 "instruct_content": null,
                                 "role": "user",
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1808,7 +1808,7 @@
                                 },
                                 {
                                     "id": "246c895f472f4b05905b8f3ccbb4fa26",
-                                    "content": "Command Terminal.run_command executed:\n[command]: pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace\ntotal 8\ndrwxrwxr-x  2   4096 12月 27 19:24 .\ndrwxrwxr-x 17   4096 12月 27 19:24 ..\n",
+                                    "content": "Command Terminal.run_command executed:\n[command]: pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace\ntotal 8\ndrwxrwxr-x  2   4096 12  27 19:24 .\ndrwxrwxr-x 17   4096 12  27 19:24 ..\n",
                                     "instruct_content": null,
                                     "role": "user",
                                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1820,7 +1820,7 @@
                                 },
                                 {
                                     "id": "d1b5206a722146308aebefa229c790fc",
-                                    "content": "Command Terminal.run_command executed:\n[command]: mkdir -p InsertBanner_1766834679 && cd InsertBanner_1766834679 && pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace/InsertBanner_1766834679\ntotal 8\ndrwxrwxr-x 2   4096 12月 27 19:25 .\ndrwxrwxr-x 3   4096 12月 27 19:25 ..\n",
+                                    "content": "Command Terminal.run_command executed:\n[command]: mkdir -p InsertBanner_1766834679 && cd InsertBanner_1766834679 && pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace/InsertBanner_1766834679\ntotal 8\ndrwxrwxr-x 2   4096 12  27 19:25 .\ndrwxrwxr-x 3   4096 12  27 19:25 ..\n",
                                     "instruct_content": null,
                                     "role": "user",
                                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1880,7 +1880,7 @@
                                 },
                                 {
                                     "id": "b099250f4dd24e3682a26ccf88a96e37",
-                                    "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -la \n[command output] : total 24\ndrwxrwxr-x 2   4096 12月 27 19:27 .\ndrwxrwxr-x 3   4096 12月 27 19:25 ..\n-rw-rw-r-- 1    331 12月 27 19:27 Banner.java\n-rw-rw-r-- 1   9838 12月 27 19:27 InsertBannerApp.java\n",
+                                    "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -la \n[command output] : total 24\ndrwxrwxr-x 2   4096 12  27 19:27 .\ndrwxrwxr-x 3   4096 12  27 19:25 ..\n-rw-rw-r-- 1    331 12  27 19:27 Banner.java\n-rw-rw-r-- 1   9838 12  27 19:27 InsertBannerApp.java\n",
                                     "instruct_content": null,
                                     "role": "user",
                                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1940,7 +1940,7 @@
                                 },
                                 {
                                     "id": "c8bbc7705fdc4c6082b04d7843c6787d",
-                                    "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l *.java \n[command output] : -rw-rw-r-- 1   4431 12月 27 19:28 Banner.java\n-rw-rw-r-- 1   9838 12月 27 19:27 InsertBannerApp.java\n-rw-rw-r-- 1   5388 12月 27 19:29 RestaurantPoint.java\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
+                                    "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l *.java \n[command output] : -rw-rw-r-- 1   4431 12  27 19:28 Banner.java\n-rw-rw-r-- 1   9838 12  27 19:27 InsertBannerApp.java\n-rw-rw-r-- 1   5388 12  27 19:29 RestaurantPoint.java\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
                                     "instruct_content": null,
                                     "role": "user",
                                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1964,7 +1964,7 @@
                                 },
                                 {
                                     "id": "cc4dcec931574712831a1f4e799fcdc2",
-                                    "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l ImageValidator.java && head -5 ImageValidator.java \n[command output] : -rw-rw-r-- 1   11164 12月 27 19:30 ImageValidator.java\nimport java.io.File;\nimport java.io.IOException;\nimport java.nio.file.Files;\nimport java.nio.file.Path;\nimport java.nio.file.Paths;\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
+                                    "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l ImageValidator.java && head -5 ImageValidator.java \n[command output] : -rw-rw-r-- 1   11164 12  27 19:30 ImageValidator.java\nimport java.io.File;\nimport java.io.IOException;\nimport java.nio.file.Files;\nimport java.nio.file.Path;\nimport java.nio.file.Paths;\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
                                     "instruct_content": null,
                                     "role": "user",
                                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1988,7 +1988,7 @@
                                 },
                                 {
                                     "id": "6c5441c45daf40cd833d0819adf16c29",
-                                    "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l BannerManager.java && wc -l BannerManager.java \n[command output] : -rw-rw-r-- 1   13543 12月 27 19:32 BannerManager.java\n340 BannerManager.java\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
+                                    "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l BannerManager.java && wc -l BannerManager.java \n[command output] : -rw-rw-r-- 1   13543 12  27 19:32 BannerManager.java\n340 BannerManager.java\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
                                     "instruct_content": null,
                                     "role": "user",
                                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -2012,7 +2012,7 @@
                                 },
                                 {
                                     "id": "bcbdeb5306e14fea93aeeaf3e8928fbc",
-                                    "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l Operator.java && head -5 Operator.java \n[command output] : -rw-rw-r-- 1   15753 12月 27 19:35 Operator.java\nimport java.util.Date;\nimport java.util.HashSet;\nimport java.util.Set;\n\n/**\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
+                                    "content": "Command Terminal.run_command executed:\n[command]: cd /home///baselines/MetaGPT/workspace/InsertBanner_1766834679 && ls -l Operator.java && head -5 Operator.java \n[command output] : -rw-rw-r-- 1   15753 12  27 19:35 Operator.java\nimport java.util.Date;\nimport java.util.HashSet;\nimport java.util.Set;\n\n/**\n\n\nCommand Plan.finish_current_task executed:Current task is finished. If you no longer need to take action, use the command ‘end’ to stop.",
                                     "instruct_content": null,
                                     "role": "user",
                                     "cause_by": "metagpt.actions.di.run_command.RunCommand",

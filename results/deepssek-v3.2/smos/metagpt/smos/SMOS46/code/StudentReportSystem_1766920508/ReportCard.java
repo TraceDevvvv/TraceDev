@@ -1,7 +1,7 @@
 /**
  * ReportCard.java
- * 成绩单类，包含学生成绩单的详细信息
- * 包括科目、分数、评语、总分等
+ *     ，            
+ *     、  、  、   
  */
 import java.util.HashMap;
 import java.util.Map;
@@ -10,41 +10,41 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 
 public class ReportCard {
-    private int id;                        // 成绩单ID
-    private int studentId;                 // 学生ID
-    private String studentName;            // 学生姓名（冗余存储，便于查询）
-    private String academicYear;           // 学年
-    private String semester;               // 学期（如：春季学期、秋季学期）
-    private Date issueDate;                // 发布日期
-    private Map<String, SubjectGrade> grades;  // 科目和成绩的映射
-    private String teacherComment;         // 教师评语
-    private String status;                 // 状态（如：已保存、已提交、已归档）
-    private boolean isArchived;            // 是否已归档
+    private int id;                        //    ID
+    private int studentId;                 //   ID
+    private String studentName;            //     （    ，    ）
+    private String academicYear;           //   
+    private String semester;               //   （ ：    、    ）
+    private Date issueDate;                //     
+    private Map<String, SubjectGrade> grades;  //         
+    private String teacherComment;         //     
+    private String status;                 //   （ ：   、   、   ）
+    private boolean isArchived;            //      
     
-    // 内部类，表示科目成绩
+    //    ，      
     public static class SubjectGrade {
-        private String subjectName;        // 科目名称
-        private double score;              // 分数（0-100）
-        private String grade;              // 等级（如：A、B、C）
-        private String comment;            // 科目评语
+        private String subjectName;        //     
+        private double score;              //   （0-100）
+        private String grade;              //   （ ：A、B、C）
+        private String comment;            //     
         
         /**
-         * 构造函数
-         * @param subjectName 科目名称
-         * @param score 分数
+         *     
+         * @param subjectName     
+         * @param score   
          */
         public SubjectGrade(String subjectName, double score) {
             this.subjectName = subjectName;
-            this.setScore(score);          // 使用setter设置分数，包含验证
+            this.setScore(score);          //   setter    ，    
             this.comment = "";
         }
         
         /**
-         * 完整构造函数
-         * @param subjectName 科目名称
-         * @param score 分数
-         * @param grade 等级
-         * @param comment 评语
+         *       
+         * @param subjectName     
+         * @param score   
+         * @param grade   
+         * @param comment   
          */
         public SubjectGrade(String subjectName, double score, String grade, String comment) {
             this.subjectName = subjectName;
@@ -53,14 +53,14 @@ public class ReportCard {
             this.comment = comment != null ? comment : "";
         }
         
-        // Getter 和 Setter 方法
+        // Getter   Setter   
         public String getSubjectName() {
             return subjectName;
         }
         
         public void setSubjectName(String subjectName) {
             if (subjectName == null || subjectName.trim().isEmpty()) {
-                throw new IllegalArgumentException("科目名称不能为空");
+                throw new IllegalArgumentException("        ");
             }
             this.subjectName = subjectName.trim();
         }
@@ -71,10 +71,10 @@ public class ReportCard {
         
         public void setScore(double score) {
             if (score < 0 || score > 100) {
-                throw new IllegalArgumentException("分数必须在0-100之间");
+                throw new IllegalArgumentException("     0-100  ");
             }
             this.score = score;
-            // 自动计算等级
+            //       
             this.grade = calculateGrade(score);
         }
         
@@ -95,9 +95,9 @@ public class ReportCard {
         }
         
         /**
-         * 根据分数计算等级
-         * @param score 分数
-         * @return 等级
+         *         
+         * @param score   
+         * @return   
          */
         private String calculateGrade(double score) {
             if (score >= 90) return "A";
@@ -119,27 +119,27 @@ public class ReportCard {
     }
     
     /**
-     * 默认构造函数
+     *       
      */
     public ReportCard() {
         this.id = 0;
         this.studentId = 0;
         this.studentName = "";
         this.academicYear = "2023-2024";
-        this.semester = "春季学期";
-        this.issueDate = new Date(); // 默认为当前日期
+        this.semester = "    ";
+        this.issueDate = new Date(); //        
         this.grades = new HashMap<>();
         this.teacherComment = "";
-        this.status = "已保存";
+        this.status = "   ";
         this.isArchived = false;
     }
     
     /**
-     * 带参数的构造函数
-     * @param id 成绩单ID
-     * @param studentId 学生ID
-     * @param studentName 学生姓名
-     * @param academicYear 学年
+     *         
+     * @param id    ID
+     * @param studentId   ID
+     * @param studentName     
+     * @param academicYear   
      */
     public ReportCard(int id, int studentId, String studentName, String academicYear) {
         this();
@@ -149,7 +149,7 @@ public class ReportCard {
         this.academicYear = academicYear;
     }
     
-    // Getter 和 Setter 方法
+    // Getter   Setter   
     
     public int getId() {
         return id;
@@ -157,7 +157,7 @@ public class ReportCard {
     
     public void setId(int id) {
         if (id < 0) {
-            throw new IllegalArgumentException("成绩单ID不能为负数");
+            throw new IllegalArgumentException("   ID     ");
         }
         this.id = id;
     }
@@ -168,7 +168,7 @@ public class ReportCard {
     
     public void setStudentId(int studentId) {
         if (studentId < 0) {
-            throw new IllegalArgumentException("学生ID不能为负数");
+            throw new IllegalArgumentException("  ID     ");
         }
         this.studentId = studentId;
     }
@@ -179,7 +179,7 @@ public class ReportCard {
     
     public void setStudentName(String studentName) {
         if (studentName == null || studentName.trim().isEmpty()) {
-            throw new IllegalArgumentException("学生姓名不能为空");
+            throw new IllegalArgumentException("        ");
         }
         this.studentName = studentName.trim();
     }
@@ -190,7 +190,7 @@ public class ReportCard {
     
     public void setAcademicYear(String academicYear) {
         if (academicYear == null || academicYear.trim().isEmpty()) {
-            throw new IllegalArgumentException("学年不能为空");
+            throw new IllegalArgumentException("      ");
         }
         this.academicYear = academicYear.trim();
     }
@@ -201,7 +201,7 @@ public class ReportCard {
     
     public void setSemester(String semester) {
         if (semester == null || semester.trim().isEmpty()) {
-            throw new IllegalArgumentException("学期不能为空");
+            throw new IllegalArgumentException("      ");
         }
         this.semester = semester.trim();
     }
@@ -212,13 +212,13 @@ public class ReportCard {
     
     public void setIssueDate(Date issueDate) {
         if (issueDate == null) {
-            throw new IllegalArgumentException("发布日期不能为空");
+            throw new IllegalArgumentException("        ");
         }
         this.issueDate = issueDate;
     }
     
     public Map<String, SubjectGrade> getGrades() {
-        return new HashMap<>(grades); // 返回副本以防止外部修改
+        return new HashMap<>(grades); //            
     }
     
     public String getTeacherComment() {
@@ -235,7 +235,7 @@ public class ReportCard {
     
     public void setStatus(String status) {
         if (status == null || status.trim().isEmpty()) {
-            throw new IllegalArgumentException("状态不能为空");
+            throw new IllegalArgumentException("      ");
         }
         this.status = status.trim();
     }
@@ -247,24 +247,24 @@ public class ReportCard {
     public void setArchived(boolean archived) {
         isArchived = archived;
         if (archived) {
-            this.status = "已归档";
+            this.status = "   ";
         }
     }
     
     /**
-     * 添加科目成绩
-     * @param subjectName 科目名称
-     * @param score 分数
-     * @return 如果添加成功返回true，否则返回false
+     *       
+     * @param subjectName     
+     * @param score   
+     * @return         true，    false
      */
     public boolean addGrade(String subjectName, double score) {
         if (subjectName == null || subjectName.trim().isEmpty()) {
-            System.err.println("错误：科目名称不能为空");
+            System.err.println("  ：        ");
             return false;
         }
         
         if (score < 0 || score > 100) {
-            System.err.println("错误：分数必须在0-100之间");
+            System.err.println("  ：     0-100  ");
             return false;
         }
         
@@ -274,20 +274,20 @@ public class ReportCard {
     }
     
     /**
-     * 添加带有评语的科目成绩
-     * @param subjectName 科目名称
-     * @param score 分数
-     * @param comment 评语
-     * @return 如果添加成功返回true，否则返回false
+     *            
+     * @param subjectName     
+     * @param score   
+     * @param comment   
+     * @return         true，    false
      */
     public boolean addGradeWithComment(String subjectName, double score, String comment) {
         if (subjectName == null || subjectName.trim().isEmpty()) {
-            System.err.println("错误：科目名称不能为空");
+            System.err.println("  ：        ");
             return false;
         }
         
         if (score < 0 || score > 100) {
-            System.err.println("错误：分数必须在0-100之间");
+            System.err.println("  ：     0-100  ");
             return false;
         }
         
@@ -297,28 +297,28 @@ public class ReportCard {
     }
     
     /**
-     * 移除科目成绩
-     * @param subjectName 科目名称
-     * @return 如果移除成功返回true，否则返回false
+     *       
+     * @param subjectName     
+     * @return         true，    false
      */
     public boolean removeGrade(String subjectName) {
         if (subjectName == null || subjectName.trim().isEmpty()) {
-            System.err.println("错误：科目名称不能为空");
+            System.err.println("  ：        ");
             return false;
         }
         
         if (grades.remove(subjectName.trim()) != null) {
             return true;
         } else {
-            System.err.println("错误：未找到科目 \"" + subjectName + "\" 的成绩");
+            System.err.println("  ：      \"" + subjectName + "\"    ");
             return false;
         }
     }
     
     /**
-     * 获取指定科目的成绩
-     * @param subjectName 科目名称
-     * @return 科目成绩对象，如果未找到则返回null
+     *          
+     * @param subjectName     
+     * @return       ，        null
      */
     public SubjectGrade getGrade(String subjectName) {
         if (subjectName == null || subjectName.trim().isEmpty()) {
@@ -328,9 +328,9 @@ public class ReportCard {
     }
     
     /**
-     * 获取指定科目的分数
-     * @param subjectName 科目名称
-     * @return 分数，如果未找到则返回-1
+     *          
+     * @param subjectName     
+     * @return   ，        -1
      */
     public double getScore(String subjectName) {
         SubjectGrade grade = getGrade(subjectName);
@@ -338,8 +338,8 @@ public class ReportCard {
     }
     
     /**
-     * 获取平均分
-     * @return 平均分，如果没有科目则返回0
+     *      
+     * @return    ，         0
      */
     public double getAverageScore() {
         if (grades.isEmpty()) {
@@ -354,8 +354,8 @@ public class ReportCard {
     }
     
     /**
-     * 获取总分
-     * @return 总分
+     *     
+     * @return   
      */
     public double getTotalScore() {
         double total = 0;
@@ -366,16 +366,16 @@ public class ReportCard {
     }
     
     /**
-     * 获取科目数量
-     * @return 科目数量
+     *       
+     * @return     
      */
     public int getSubjectCount() {
         return grades.size();
     }
     
     /**
-     * 获取最高分科目
-     * @return 最高分科目对象，如果没有科目则返回null
+     *        
+     * @return        ，         null
      */
     public SubjectGrade getHighestScoreSubject() {
         if (grades.isEmpty()) {
@@ -392,8 +392,8 @@ public class ReportCard {
     }
     
     /**
-     * 获取最低分科目
-     * @return 最低分科目对象，如果没有科目则返回null
+     *        
+     * @return        ，         null
      */
     public SubjectGrade getLowestScoreSubject() {
         if (grades.isEmpty()) {
@@ -410,8 +410,8 @@ public class ReportCard {
     }
     
     /**
-     * 检查是否所有科目都及格（分数>=60）
-     * @return 如果所有科目都及格返回true，否则返回false
+     *            （  >=60）
+     * @return            true，    false
      */
     public boolean isAllPassed() {
         for (SubjectGrade grade : grades.values()) {
@@ -423,55 +423,55 @@ public class ReportCard {
     }
     
     /**
-     * 显示成绩单详情
+     *        
      */
     public void displayReportCard() {
-        System.out.println("====================== 成绩单 ======================");
-        System.out.println("成绩单ID: " + id);
-        System.out.println("学生ID: " + studentId);
-        System.out.println("学生姓名: " + studentName);
-        System.out.println("学年: " + academicYear);
-        System.out.println("学期: " + semester);
+        System.out.println("======================     ======================");
+        System.out.println("   ID: " + id);
+        System.out.println("  ID: " + studentId);
+        System.out.println("    : " + studentName);
+        System.out.println("  : " + academicYear);
+        System.out.println("  : " + semester);
         
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        System.out.println("发布日期: " + sdf.format(issueDate));
-        System.out.println("状态: " + status);
-        System.out.println("归档状态: " + (isArchived ? "已归档" : "未归档"));
+        System.out.println("    : " + sdf.format(issueDate));
+        System.out.println("  : " + status);
+        System.out.println("    : " + (isArchived ? "   " : "   "));
         System.out.println();
-        System.out.println("科目成绩:");
+        System.out.println("    :");
         
         if (grades.isEmpty()) {
-            System.out.println("  暂无成绩记录");
+            System.out.println("        ");
         } else {
             int index = 1;
             for (SubjectGrade grade : grades.values()) {
-                System.out.printf("  %d. %-15s: 分数=%-5.1f 等级=%-2s%n", 
+                System.out.printf("  %d. %-15s:   =%-5.1f   =%-2s%n", 
                         index++, grade.getSubjectName(), grade.getScore(), grade.getGrade());
                 if (!grade.getComment().isEmpty()) {
-                    System.out.println("      评语: " + grade.getComment());
+                    System.out.println("        : " + grade.getComment());
                 }
             }
             
             System.out.println();
-            System.out.printf("平均分: %.2f%n", getAverageScore());
-            System.out.printf("总分: %.2f%n", getTotalScore());
-            System.out.println("科目数量: " + getSubjectCount());
+            System.out.printf("   : %.2f%n", getAverageScore());
+            System.out.printf("  : %.2f%n", getTotalScore());
+            System.out.println("    : " + getSubjectCount());
             
             if (getHighestScoreSubject() != null) {
-                System.out.println("最高分科目: " + getHighestScoreSubject().getSubjectName() + 
-                                 " (" + getHighestScoreSubject().getScore() + "分)");
+                System.out.println("     : " + getHighestScoreSubject().getSubjectName() + 
+                                 " (" + getHighestScoreSubject().getScore() + " )");
             }
             if (getLowestScoreSubject() != null) {
-                System.out.println("最低分科目: " + getLowestScoreSubject().getSubjectName() + 
-                                 " (" + getLowestScoreSubject().getScore() + "分)");
+                System.out.println("     : " + getLowestScoreSubject().getSubjectName() + 
+                                 " (" + getLowestScoreSubject().getScore() + " )");
             }
             
-            System.out.println("所有科目及格状态: " + (isAllPassed() ? "全部及格" : "有不及格科目"));
+            System.out.println("        : " + (isAllPassed() ? "    " : "      "));
         }
         
         if (!teacherComment.isEmpty()) {
             System.out.println();
-            System.out.println("教师总评:");
+            System.out.println("    :");
             System.out.println("  " + teacherComment);
         }
         
@@ -479,26 +479,26 @@ public class ReportCard {
     }
     
     /**
-     * 获取成绩单的简要信息
-     * @return 格式化字符串
+     *           
+     * @return       
      */
     public String getSimpleInfo() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        return String.format("成绩单ID:%d 学生:%s (平均分:%.2f, 状态:%s)", 
+        return String.format("   ID:%d   :%s (   :%.2f,   :%s)", 
                 id, studentName, getAverageScore(), status);
     }
     
     /**
-     * 清空所有成绩
+     *       
      */
     public void clearAllGrades() {
         grades.clear();
-        System.out.println("已清空所有科目成绩");
+        System.out.println("         ");
     }
     
     /**
-     * 检查成绩单是否有效
-     * @return 如果成绩单有基本信息和至少一个科目，则返回true
+     *          
+     * @return                  ，   true
      */
     public boolean isValid() {
         return id > 0 && 
@@ -508,31 +508,31 @@ public class ReportCard {
     }
     
     /**
-     * 归档成绩单
+     *      
      */
     public void archive() {
         this.isArchived = true;
-        this.status = "已归档";
-        System.out.println("成绩单已归档");
+        this.status = "   ";
+        System.out.println("      ");
     }
     
     /**
-     * 提交成绩单（从保存状态变为已提交状态）
-     * @return 如果提交成功返回true，否则返回false
+     *      （            ）
+     * @return         true，    false
      */
     public boolean submit() {
         if (grades.isEmpty()) {
-            System.err.println("错误：无法提交空成绩单");
+            System.err.println("  ：        ");
             return false;
         }
         
-        if ("已提交".equals(status) || "已归档".equals(status)) {
-            System.err.println("错误：成绩单已处于" + status + "状态，无法再次提交");
+        if ("   ".equals(status) || "   ".equals(status)) {
+            System.err.println("  ：      " + status + "  ，      ");
             return false;
         }
         
-        this.status = "已提交";
-        System.out.println("成绩单已提交");
+        this.status = "   ";
+        System.out.println("      ");
         return true;
     }
     

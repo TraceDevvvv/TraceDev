@@ -1,26 +1,26 @@
 ## Implementation approach
 
-我们将采用分层架构设计，使用Java Spring Boot框架构建一个RESTful API服务，处理旅游账户数据修改功能。系统将包含以下技术栈：
+           ，  Java Spring Boot      RESTful API  ，            。          ：
 
-1. **Spring Boot 3.x** - 主流Java后端框架，提供快速开发能力
-2. **Spring Data JPA** - 数据持久化层，与数据库交互
-3. **Hibernate Validator** - 数据验证框架，确保输入数据的有效性
-4. **Lombok** - 减少样板代码，提高代码可读性
-5. **SLF4J + Logback** - 日志记录，便于调试和监控
-6. **Spring Security** - 安全认证，确保只有登录的旅行社操作员可以访问
-7. **Connection Pool (HikariCP)** - 数据库连接池，提高性能
-8. **Java 17+** - LTS版本，提供现代语言特性
+1. **Spring Boot 3.x** -   Java    ，        
+2. **Spring Data JPA** -       ，      
+3. **Hibernate Validator** -       ，          
+4. **Lombok** -       ，       
+5. **SLF4J + Logback** -     ，       
+6. **Spring Security** -     ，                 
+7. **Connection Pool (HikariCP)** -       ，    
+8. **Java 17+** - LTS  ，        
 
-关键设计决策：
-- 使用DTO模式分离API层和业务层数据
-- 实现乐观锁机制防止并发修改冲突
-- 添加连接中断重试机制处理与ETOUR服务器的通信问题
-- 设计可扩展的验证框架，支持字段级验证规则
-- 实现审计功能，记录所有账户修改操作
+      ：
+-   DTO    API       
+-                
+-              ETOUR        
+-           ，         
+-       ，          
 
 ## File list
 
-以下是项目的主要文件结构：
+            ：
 
 ```
 tourist-account-system/
@@ -86,7 +86,7 @@ tourist-account-system/
 
 ```mermaid
 classDiagram
-    %% 实体类
+    %%    
     class Tourist {
         +Long id
         +String firstName
@@ -140,7 +140,7 @@ classDiagram
         +createLog(String action, Object entity, Object oldValue, Object newValue, String operatorId) AuditLog
     }
     
-    %% DTO类
+    %% DTO 
     class TouristDTO {
         +Long id
         +String fullName
@@ -175,7 +175,7 @@ classDiagram
         +static error(String message) TouristResponse
     }
     
-    %% 服务接口
+    %%     
     interface TouristService {
         +List~TouristDTO~ searchTourists(String searchTerm) List~TouristDTO~
         +TouristDTO getTouristById(Long id) TouristDTO
@@ -221,7 +221,7 @@ classDiagram
         +retryConnection(Integer maxRetries) boolean
     }
     
-    %% 仓库接口
+    %%     
     interface TouristRepository {
         +List~Tourist~ findBySearchTerm(String searchTerm) List~Tourist~
         +Optional~Tourist~ findById(Long id) Optional~Tourist~
@@ -237,7 +237,7 @@ classDiagram
         +Boolean isLoggedIn(Long operatorId) boolean
     }
     
-    %% 控制器
+    %%    
     class TouristController {
         -TouristService touristService
         +ResponseEntity~List~TouristDTO~~ searchTourists(@RequestParam String searchTerm) ResponseEntity~List~TouristDTO~~
@@ -252,7 +252,7 @@ classDiagram
         +ResponseEntity~Map~String, Object~~ handleETourConnectionException(ETourConnectionException ex) ResponseEntity~Map~String, Object~~
     }
     
-    %% 验证器
+    %%    
     class TouristValidator {
         -ValidationService validationService
         +ValidationResult validate(TouristUpdateRequest request) ValidationResult
@@ -268,7 +268,7 @@ classDiagram
         +String getErrorMessage() String
     }
     
-    %% 异常类
+    %%    
     class ETourConnectionException {
         +String connectionUrl
         +Integer statusCode
@@ -289,7 +289,7 @@ classDiagram
         +String fieldName
     }
     
-    %% 配置类
+    %%    
     class ETOURConnectionConfig {
         +String serverUrl
         +Integer timeoutSeconds
@@ -299,7 +299,7 @@ classDiagram
         +Boolean isProduction
     }
     
-    %% 关系
+    %%   
     Tourist "1" -- "1" Address
     TouristServiceImpl --> TouristRepository
     TouristServiceImpl --> ValidationService
@@ -331,8 +331,8 @@ sequenceDiagram
     participant DTO as TouristDTO
     participant EX as ExceptionHandler
     
-    %% 步骤1：从SearchTourist结果中选择游客
-    Note over FE,EX: 步骤1：旅行社操作员从列表选择游客
+    %%   1： SearchTourist       
+    Note over FE,EX:   1：             
     FE->>TC: GET /api/tourists?searchTerm="..."
     TC->>TS: searchTourists(searchTerm)
     TS->>REPO: findBySearchTerm(searchTerm)
@@ -340,87 +340,87 @@ sequenceDiagram
     TS->>DTO: TouristDTO.fromEntity(tourist)
     DTO-->>TS: TouristDTO
     TS-->>TC: List~TouristDTO~
-    TC-->>FE: JSON响应（游客列表）
+    TC-->>FE: JSON  （    ）
     
-    %% 步骤2：加载选中游客数据并显示在可编辑表单
-    Note over FE,EX: 步骤2：加载选中游客数据
+    %%   2：                 
+    Note over FE,EX:   2：        
     FE->>TC: GET /api/tourists/{id}
     TC->>TS: getTouristById(id)
     TS->>REPO: findById(id)
-    alt 游客存在
+    alt     
         REPO-->>TS: Optional~Tourist~
         TS->>DTO: TouristDTO.fromEntity(tourist)
         DTO-->>TS: TouristDTO
         TS-->>TC: TouristDTO
-        TC-->>FE: 游客详细信息
-    else 游客不存在
+        TC-->>FE:       
+    else      
         REPO-->>TS: Optional.empty()
         TS-->>EX: throw TouristNotFoundException
-        EX-->>FE: 404错误响应
+        EX-->>FE: 404    
     end
     
-    %% 步骤3：编辑表单字段并提交
-    Note over FE,EX: 步骤3：编辑并提交修改
+    %%   3：         
+    Note over FE,EX:   3：       
     FE->>TC: PUT /api/tourists/{id}
     TC->>TS: updateTourist(id, request, operatorId)
     
-    %% 步骤4：验证信息（如果不完整则触发Errored用例）
-    Note over FE,EX: 步骤4：验证信息
+    %%   4：    （        Errored  ）
+    Note over FE,EX:   4：    
     TS->>VS: validateTouristData(request)
     VS->>TV: validate(request)
     TV->>VS: ValidationResult
     VS->>EV: isEmailValid(request.email)
     EV-->>VS: boolean
     
-    alt 验证失败
+    alt     
         VS-->>TS: ValidationResult (invalid)
         TS-->>EX: throw ValidationException
-        EX-->>FE: 400验证错误响应
-        Note over FE,EX: 激活Errored用例
-        FE->>TC: 显示错误信息并要求重新输入
-    else 验证成功
+        EX-->>FE: 400      
+        Note over FE,EX:   Errored  
+        FE->>TC:              
+    else     
         VS-->>TS: ValidationResult (valid)
         
-        %% 检查ETOUR连接
+        %%   ETOUR  
         TS->>ECON: connectToETOUR()
-        alt 连接中断
+        alt     
             ECON-->>TS: false (connection failed)
             TS->>ECON: retryConnection(3)
-            alt 重试成功
+            alt     
                 ECON-->>TS: true
-            else 重试失败
+            else     
                 ECON-->>TS: false
                 TS-->>EX: throw ETourConnectionException
-                EX-->>FE: 503服务不可用
-                Note over FE,EX: 中断连接处理
+                EX-->>FE: 503     
+                Note over FE,EX:       
                 break
             end
-        else 连接正常
+        else     
             ECON-->>TS: true
         end
         
-        %% 数据验证和审计记录
+        %%          
         TS->>REPO: findById(id)
         REPO-->>TS: Optional~Tourist~
         TS->>AUDIT: createPreUpdateAuditLog(tourist, operatorId)
         AUDIT-->>TS: AuditLog
         
-        %% 更新游客数据
+        %%       
         TS->>TS: tourist.updateFrom(request)
         TS->>REPO: save(tourist)
-        REPO-->>TS: 更新的Tourist
+        REPO-->>TS:    Tourist
         
-        %% 步骤5：确认操作
-        Note over FE,EX: 步骤5：请求操作确认
+        %%   5：    
+        Note over FE,EX:   5：      
         TS->>TC: TouristResponse (needs confirmation, auditLogId)
-        TC-->>FE: 响应（需要确认，包含auditLogId）
+        TC-->>FE:   （    ，  auditLogId）
         
-        %% 用户确认操作
+        %%       
         FE->>TC: POST /api/tourists/{id}/confirm/{auditLogId}
         TC->>TS: confirmUpdate(touristId, auditLogId, operatorId)
         
-        %% 步骤6：存储修改后的数据
-        Note over FE,EX: 步骤6：存储修改的数据
+        %%   6：        
+        Note over FE,EX:   6：       
         TS->>AUDIT: confirmAuditLog(auditLogId)
         TS->>ECON: sendDataToETOUR(updatedTourist)
         ECON-->>TS: boolean (success)
@@ -428,16 +428,16 @@ sequenceDiagram
         TS->>DTO: TouristDTO.fromEntity(updatedTourist)
         DTO-->>TS: TouristDTO
         TS->>TC: TouristResponse.success(touristDTO)
-        TC-->>FE: 成功响应（更新后的游客数据）
+        TC-->>FE:     （        ）
         
-        %% 退出条件：系统报告更新信息
-        Note over FE,EX: 退出：系统报告更新后的游客账户信息
-        FE->>FE: 显示成功消息和更新后的账户详情
+        %%     ：        
+        Note over FE,EX:   ：              
+        FE->>FE:                
     end
 ```
 
 ## Anything UNCLEAR
 
-1. **ETOUR服务器接口规格**：不清楚ETOUR服务器API的具体格式、认证方式和数据格式要求。需要进一步明确接口规范才能实现完整的集成。
+1. **ETOUR       **：   ETOUR   API     、           。                    。
 
-2. **搜索功能依赖**
+2. **      **

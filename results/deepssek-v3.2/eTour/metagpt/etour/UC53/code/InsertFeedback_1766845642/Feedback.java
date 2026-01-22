@@ -1,24 +1,24 @@
 import java.time.LocalDateTime;
 
 /**
- * Feedback实体类，表示游客对站点的反馈
- * 包含评分、评论、时间戳、游客ID和站点ID等属性
+ * Feedback   ，          
+ *     、  、   、  ID   ID   
  */
 public class Feedback {
     private String feedbackId;
     private String touristId;
     private String siteId;
-    private int rating; // 评分，范围1-5
+    private int rating; //   ，  1-5
     private String comment;
     private LocalDateTime timestamp;
     
     /**
-     * 构造函数
-     * @param feedbackId 反馈ID
-     * @param touristId 游客ID
-     * @param siteId 站点ID
-     * @param rating 评分（1-5）
-     * @param comment 评论
+     *     
+     * @param feedbackId   ID
+     * @param touristId   ID
+     * @param siteId   ID
+     * @param rating   （1-5）
+     * @param comment   
      */
     public Feedback(String feedbackId, String touristId, String siteId, int rating, String comment) {
         this.feedbackId = feedbackId;
@@ -30,13 +30,13 @@ public class Feedback {
     }
     
     /**
-     * 无参构造函数
+     *       
      */
     public Feedback() {
         this.timestamp = LocalDateTime.now();
     }
     
-    // Getter和Setter方法
+    // Getter Setter  
     
     public String getFeedbackId() {
         return feedbackId;
@@ -87,8 +87,8 @@ public class Feedback {
     }
     
     /**
-     * 验证反馈数据是否有效
-     * @return 如果评分在1-5之间且评论不为空，则返回true
+     *           
+     * @return      1-5        ，   true
      */
     public boolean isValid() {
         return rating >= 1 && rating <= 5 && comment != null && !comment.trim().isEmpty();

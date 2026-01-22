@@ -1,100 +1,100 @@
-# Spring Boot应用配置文件
-# 配置文件采用YAML格式，支持多环境配置和嵌套属性
-# 主要配置包括：数据库连接、服务器端口、JPA属性、日志级别等
+# Spring Boot      
+#       YAML  ，            
+#       ：     、     、JPA  、     
 spring:
-  # 应用名称配置
+  #       
   application:
     name: tourist-feedback-system
 
-  # 数据源配置（MySQL数据库）
+  #      （MySQL   ）
   datasource:
-    # 数据库连接URL，连接名为tourist_feedback的数据库
-    # 使用MySQL 8.0+兼容的连接参数
+    #      URL，    tourist_feedback    
+    #   MySQL 8.0+       
     url: jdbc:mysql://localhost:3306/tourist_feedback?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
-    # 数据库用户名（默认使用root）
+    #       （    root）
     username: root
-    # 数据库密码（默认使用root，生产环境应使用环境变量或配置中心）
+    #      （    root，                ）
     password: root
-    # 数据库驱动类名（MySQL 8.0+）
+    #        （MySQL 8.0+）
     driver-class-name: com.mysql.cj.jdbc.Driver
-    # 连接池配置（使用HikariCP作为连接池）
+    #      （  HikariCP     ）
     hikari:
-      # 连接池名称，便于监控
+      #      ，    
       pool-name: TouristFeedbackHikariCP
-      # 最小空闲连接数
+      #        
       minimum-idle: 5
-      # 最大连接池大小
+      #        
       maximum-pool-size: 20
-      # 连接最大生存时间（毫秒）
+      #         （  ）
       max-lifetime: 1800000
-      # 连接超时时间（毫秒）
+      #       （  ）
       connection-timeout: 30000
-      # 空闲连接超时时间（毫秒）
+      #         （  ）
       idle-timeout: 600000
-      # 连接测试查询，验证连接的有效性
+      #       ，        
       connection-test-query: SELECT 1
 
-  # JPA/Hibernate配置
+  # JPA/Hibernate  
   jpa:
-    # 数据库平台（MySQL 8.0方言）
+    #      （MySQL 8.0  ）
     database-platform: org.hibernate.dialect.MySQL8Dialect
-    # 是否显示SQL语句（开发环境开启，生产环境关闭）
+    #     SQL  （      ，      ）
     show-sql: true
-    # SQL格式化输出，便于阅读
+    # SQL     ，    
     properties:
       hibernate:
-        # 格式化SQL语句
+        #    SQL  
         format_sql: true
-        # 使用JPA规范的命名策略
+        #   JPA       
         naming:
           physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
           implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
-    # 数据库初始化策略（更新模式，表不存在时创建）
+    #         （    ，       ）
     hibernate:
       ddl-auto: update
-    # 延迟初始化，提高启动性能
+    #      ，      
     defer-datasource-initialization: true
 
-  # Spring Security配置（由于认证需求）
+  # Spring Security  （      ）
   security:
-    # 基本认证配置（简化版，实际项目中应使用更复杂的配置）
+    #       （   ，              ）
     basic:
       enabled: false
-    # 用户配置（简化版，实际项目中应使用数据库存储用户信息）
+    #     （   ，                 ）
     user:
       name: admin
       password: admin123
 
-  # Web服务器配置
+  # Web     
   servlet:
-    # 上传文件配置（如果有上传功能）
+    #       （       ）
     multipart:
       max-file-size: 10MB
       max-request-size: 10MB
 
-  # MVC配置
+  # MVC  
   mvc:
-    # 日期时间格式处理
+    #         
     format:
       date: yyyy-MM-dd
       date-time: yyyy-MM-dd HH:mm:ss
       time: HH:mm:ss
 
-  # Jackson JSON配置
+  # Jackson JSON  
   jackson:
-    # 日期时间序列化格式
+    #          
     date-format: yyyy-MM-dd HH:mm:ss
-    # 时区设置为系统时区
+    #          
     time-zone: Asia/Shanghai
-    # 序列化配置
+    #      
     serialization:
       write-dates-as-timestamps: false
       write-date-timestamps-as-nanoseconds: false
-    # 反序列化配置
+    #       
     deserialization:
       fail-on-unknown-properties: false
 
-  # Actuator健康检查和监控端点配置
+  # Actuator           
   management:
     endpoints:
       web:
@@ -107,299 +107,299 @@ spring:
       db:
         enabled: true
 
-# 应用服务配置
+#       
 server:
-  # 服务器端口（默认8080）
+  #      （  8080）
   port: 8080
-  # 服务器地址（绑定所有网络接口）
+  #      （        ）
   address: 0.0.0.0
-  # 服务器上下文路径（API根路径）
+  #         （API   ）
   servlet:
     context-path: /api
-  # 连接超时设置
+  #       
   connection-timeout: 30000ms
-  # Tomcat特定配置（内嵌服务器）
+  # Tomcat    （     ）
   tomcat:
-    # URI编码
+    # URI  
     uri-encoding: UTF-8
-    # 最大线程数
+    #      
     max-threads: 200
-    # 最小工作线程数
+    #        
     min-spare-threads: 10
-    # 连接最大空闲时间
+    #         
     connection-timeout: 30000
-    # 最大连接数
+    #      
     max-connections: 10000
 
-# 应用日志配置
+#       
 logging:
-  # 日志级别配置
+  #       
   level:
-    # 根日志级别
+    #      
     root: INFO
-    # 应用包日志级别
+    #        
     com.tourist.feedback: DEBUG
-    # Spring框架日志级别
+    # Spring      
     org.springframework: INFO
-    # Hibernate SQL日志级别
+    # Hibernate SQL    
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
-    # JPA日志级别
+    # JPA    
     org.springframework.data.jpa: INFO
-    # Web日志级别
+    # Web    
     org.springframework.web: DEBUG
-  # 日志文件配置
+  #       
   file:
-    # 日志文件存放目录
+    #         
     path: ./logs
-    # 日志文件名
+    #      
     name: tourist-feedback-system.log
-  # 日志格式配置
+  #       
   pattern:
-    # 控制台日志格式
+    #        
     console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
-    # 文件日志格式
+    #       
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
-  # 日志文件滚动策略
+  #         
   logback:
     rollingpolicy:
-      # 日志文件最大大小
+      #         
       max-file-size: 10MB
-      # 日志文件最大历史天数
+      #           
       max-history: 30
-      # 日志文件总大小限制
+      #          
       total-size-cap: 1GB
-      # 是否在应用启动时清理历史日志
+      #               
       clean-history-on-start: false
 
-# 应用自定义配置
+#        
 tourist-feedback:
-  # ViewVisitedSites用例相关配置
+  # ViewVisitedSites      
   visited-sites:
-    # 默认分页大小
+    #       
     default-page-size: 10
-    # 最大分页大小
+    #       
     max-page-size: 50
-    # 最近访问记录默认限制
+    #           
     recent-limit: 10
-    # 搜索功能配置
+    #       
     search:
-      # 搜索关键词最小长度
+      #          
       min-keyword-length: 1
-      # 搜索关键词最大长度
+      #          
       max-keyword-length: 50
-      # 模糊搜索比例
+      #       
       fuzzy-match-ratio: 0.7
-    # 导出功能配置
+    #       
     export:
-      # CSV导出配置
+      # CSV    
       csv:
-        # 字段分隔符
+        #      
         delimiter: ","
-        # 文件编码
+        #     
         encoding: "UTF-8"
-        # 是否包含表头
+        #       
         include-header: true
-      # 最大导出记录数
+      #        
       max-export-records: 1000
-    # 缓存配置
+    #     
     cache:
-      # 是否启用缓存
+      #       
       enabled: true
-      # 缓存过期时间（秒）
+      #       （ ）
       expiry-seconds: 3600
-      # 缓存最大大小
+      #       
       max-size: 1000
-  # 性能监控配置
+  #       
   performance:
-    # API响应时间监控
+    # API      
     api-response-time:
-      # 慢查询阈值（毫秒）
+      #      （  ）
       slow-threshold-ms: 3000
-      # 是否记录慢查询
+      #        
       log-slow-queries: true
-    # 数据库查询监控
+    #        
     database-query:
-      # 慢SQL阈值（毫秒）
+      #  SQL  （  ）
       slow-threshold-ms: 1000
-      # 是否记录慢SQL
+      #      SQL
       log-slow-sql: true
-  # 错误处理配置
+  #       
   error-handling:
-    # 是否显示详细错误信息
+    #           
     show-details: false
-    # 是否记录客户端错误
+    #          
     log-client-errors: true
-    # 是否记录服务器错误
+    #          
     log-server-errors: true
-    # 自定义错误页面路径
+    #          
     error-page-path: "/error"
-  # 安全配置
+  #     
   security:
-    # JWT Token配置
+    # JWT Token  
     jwt:
-      # Token有效期（秒）
+      # Token   （ ）
       expire-seconds: 3600
-      # Token刷新阈值（秒）
+      # Token    （ ）
       refresh-threshold-seconds: 300
-      # 加密密钥（生产环境应使用环境变量）
+      #     （           ）
       secret-key: "your-jwt-secret-key-here-change-in-production"
-    # 认证配置
+    #     
     authentication:
-      # 登录重试次数限制
+      #         
       max-retry-count: 5
-      # 登录锁定时间（秒）
+      #       （ ）
       lock-duration-seconds: 1800
-      # 需要认证的API路径模式
+      #      API    
       secure-path-patterns:
         - "/api/users/**/visited-sites/**"
         - "/api/users/**/feedback/**"
 
-# 环境配置文件激活（默认开发环境）
+#         （      ）
 spring:
   profiles:
-    # 激活的配置文件，默认使用开发环境
+    #        ，        
     active: dev
-    # 配置文件包含列表（按优先级从高到低）
+    #         （        ）
     include: common
-    # 配置文件排除列表
+    #         
     exclude: prod
 
-# 开发环境特定配置（spring.profiles=dev）
+#         （spring.profiles=dev）
 ---
 spring:
   config:
     activate:
       on-profile: dev
-  # 开发环境数据源配置
+  #          
   datasource:
-    # 开发环境数据库连接（本地MySQL）
+    #          （  MySQL）
     url: jdbc:mysql://localhost:3306/tourist_feedback_dev?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
     username: dev_user
     password: dev_password
-  # 开发环境日志配置
+  #         
   jpa:
-    # 开发环境显示SQL
+    #       SQL
     show-sql: true
     properties:
       hibernate:
-        # 开发环境格式化SQL
+        #        SQL
         format_sql: true
-    # 开发环境数据库初始化策略
+    #             
     hibernate:
       ddl-auto: update
-  # 开发环境日志级别
+  #         
   logging:
     level:
       com.tourist.feedback: DEBUG
       org.hibernate.SQL: DEBUG
       org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 
-# 测试环境特定配置（spring.profiles=test）
+#         （spring.profiles=test）
 ---
 spring:
   config:
     activate:
       on-profile: test
-  # 测试环境数据源配置
+  #          
   datasource:
-    # 测试环境数据库连接（测试服务器）
+    #          （     ）
     url: jdbc:mysql://test-server:3306/tourist_feedback_test?useUnicode=true&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
     username: test_user
     password: test_password
-  # 测试环境日志配置
+  #         
   jpa:
-    # 测试环境不显示SQL（性能考虑）
+    #        SQL（    ）
     show-sql: false
     hibernate:
       ddl-auto: validate
-  # 测试环境日志级别
+  #         
   logging:
     level:
       com.tourist.feedback: INFO
       org.hibernate.SQL: WARN
 
-# 生产环境特定配置（spring.profiles=prod）
+#         （spring.profiles=prod）
 ---
 spring:
   config:
     activate:
       on-profile: prod
-  # 生产环境数据源配置（使用连接池和读写分离）
+  #          （          ）
   datasource:
-    # 生产环境主数据库连接
+    #           
     url: jdbc:mysql://prod-master-server:3306/tourist_feedback?useUnicode=true&characterEncoding=UTF-8&useSSL=true&allowPublicKeyRetrieval=false&serverTimezone=Asia/Shanghai
     username: prod_user
     password: ${DB_PASSWORD:prod_password}
-  # 生产环境日志配置
+  #         
   jpa:
-    # 生产环境不显示SQL（安全考虑）
+    #        SQL（    ）
     show-sql: false
     hibernate:
       ddl-auto: validate
-      # 生产环境使用更安全的命名策略
+      #               
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-  # 生产环境日志级别
+  #         
   logging:
     level:
       com.tourist.feedback: WARN
       org.springframework: WARN
       org.hibernate: WARN
-    # 生产环境日志输出到文件
+    #            
     file:
       path: /var/log/tourist-feedback
       name: application.log
-  # 生产环境安全配置
+  #         
   security:
-    # 生产环境启用基本认证
+    #           
     basic:
       enabled: true
-  # 生产环境服务器配置
+  #          
   server:
     port: 80
-    # 生产环境使用HTTPS
+    #       HTTPS
 #    ssl:
 #      key-store: classpath:keystore.p12
 #      key-store-password: ${SSL_KEYSTORE_PASSWORD}
 #      key-store-type: PKCS12
 #      key-alias: tomcat
 
-# 通用配置（所有环境共享）
+#     （      ）
 ---
 spring:
   config:
     activate:
       on-profile: common
-  # 通用缓存配置
+  #       
   cache:
     type: simple
-  # 通用消息配置
+  #       
   messages:
     basename: i18n/messages
     encoding: UTF-8
     cache-duration: 3600
-  # 通用资源处理配置
+  #         
   resources:
     cache:
       period: 3600
-  # 通用任务调度配置
+  #         
   task:
     execution:
       pool:
         core-size: 5
         max-size: 20
         queue-capacity: 100
-  # 通用Spring MVC配置
+  #   Spring MVC  
   mvc:
     throw-exception-if-no-handler-found: true
     static-path-pattern: /static/**
-  # 通用国际化配置
+  #        
   web:
     locale: zh_CN
     locale-resolver: fixed
 
-# 应用启动提示信息
+#         
 info:
   app:
     name: "${spring.application.name}"
@@ -426,7 +426,7 @@ info:
     file: "${logging.file.path:./logs}/${logging.file.name:tourist-feedback-system.log}"
     level: "${logging.level.com.tourist.feedback:INFO}"
 
-# JVM参数配置（通过环境变量或启动参数传递）
+# JVM    （             ）
 management:
   info:
     env:
@@ -445,7 +445,7 @@ management:
     enable:
       all: true
 
-# Micrometer监控配置（用于性能监控和指标收集）
+# Micrometer    （           ）
 micrometer:
   metrics:
     export:

@@ -1,21 +1,18 @@
-# TraceDev: A Traceability-Driven Multi-Agent Framework for
-Requirements-to-Code Development
+# TraceDev: A Traceability-Driven Multi-Agent Framework for Requirements-to-Code Development
 
-This is the repository of our TraceDev framework.
+This is the repository of our TraceDev framework. TraceDev is a traceability-driven multi-agent framework for automated software development grounded in industrial use cases. TraceDev comprises five role-specific agents: Requirement Refiner, Designer, Developer, Tester, and Validator.
+
+At the core of TraceDev is the Validator Agent, which constructs and maintains a heterogeneous traceability graph linking requirements, design models, and code artifacts. This traceability mechanism enables fine-grained verification throughout the development process and helps ensure requirement completeness in the generated code.
+
+We evaluate TraceDev on two widely used datasets, covering a total of 125 use cases, and compare it against two representative multi-agent frameworks, MetaGPT and ChatDev.
 
 ## Project Structure
 
 - **agent**: The core implementation of TraceDev and the prompts.
 - **data**:  The *eTour* and *smos* datasets.
-- **evaluate**:  the evaluation scripts for automatic evaluation and statistical analysis.
-- **results**:  the execution results of TraceDev and two baseline approaches.
+- **evaluate**:  The evaluation scripts for automatic evaluation and statistical analysis.
+- **results**:  The execution results of TraceDev and two baseline approaches.
 
-## Research Questions
-
-* **RQ1:** How effective is TraceDev compared with the state-of-the-art multi-agent approaches?
-* **RQ2:** How robust is TraceDev when applied with different foundation models?
-* **RQ3:** How does each agent contribute to the overall performance of TraceDev?
-* **RQ4:** How efficient is TraceDev compared to baseline approaches?
 
 ## Quick Start
 

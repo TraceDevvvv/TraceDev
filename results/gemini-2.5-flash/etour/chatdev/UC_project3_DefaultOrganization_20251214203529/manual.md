@@ -24,7 +24,7 @@ To run this Java application, you need to have a Java Development Kit (JDK) inst
 
 ### Prerequisites:
 
-*   **Java Development Kit (JDK) 8 or higher**: This includes the Java Runtime Environment (JRE) and necessary development tools like the Java compiler (`javac`) and the Java仮想マシン (`java`).
+*   **Java Development Kit (JDK) 8 or higher**: This includes the Java Runtime Environment (JRE) and necessary development tools like the Java compiler (`javac`) and the Java  マシン (`java`).
 
 ### Steps to Install JDK:
 

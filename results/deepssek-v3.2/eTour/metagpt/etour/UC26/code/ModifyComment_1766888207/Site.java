@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Site类表示一个站点，包含站点ID、名称和该站点的反馈列表。
- * 用于模拟站点数据，支持从SearchSite用例获取站点列表。
+ * Site       ，    ID、           。
+ *         ，   SearchSite        。
  */
 public class Site {
     private int siteId;
@@ -11,9 +11,9 @@ public class Site {
     private List<Feedback> feedbacks;
 
     /**
-     * 构造函数，初始化站点。
-     * @param siteId 站点唯一标识
-     * @param siteName 站点名称
+     *     ，     。
+     * @param siteId       
+     * @param siteName     
      */
     public Site(int siteId, String siteName) {
         this.siteId = siteId;
@@ -22,48 +22,48 @@ public class Site {
     }
 
     /**
-     * 获取站点ID。
-     * @return 站点ID
+     *     ID。
+     * @return   ID
      */
     public int getSiteId() {
         return siteId;
     }
 
     /**
-     * 设置站点ID。
-     * @param siteId 新的站点ID
+     *     ID。
+     * @param siteId     ID
      */
     public void setSiteId(int siteId) {
         this.siteId = siteId;
     }
 
     /**
-     * 获取站点名称。
-     * @return 站点名称
+     *       。
+     * @return     
      */
     public String getSiteName() {
         return siteName;
     }
 
     /**
-     * 设置站点名称。
-     * @param siteName 新的站点名称
+     *       。
+     * @param siteName       
      */
     public void setSiteName(String siteName) {
         this.siteName = siteName;
     }
 
     /**
-     * 获取该站点的所有反馈列表。
-     * @return 反馈列表
+     *             。
+     * @return     
      */
     public List<Feedback> getFeedbacks() {
         return feedbacks;
     }
 
     /**
-     * 向站点添加一个新的反馈。
-     * @param feedback 要添加的反馈对象
+     *            。
+     * @param feedback         
      */
     public void addFeedback(Feedback feedback) {
         if (feedback != null) {
@@ -72,9 +72,9 @@ public class Site {
     }
 
     /**
-     * 根据反馈ID查找反馈。
-     * @param feedbackId 要查找的反馈ID
-     * @return 如果找到则返回反馈对象，否则返回null
+     *     ID    。
+     * @param feedbackId       ID
+     * @return            ，    null
      */
     public Feedback findFeedbackById(int feedbackId) {
         for (Feedback feedback : feedbacks) {
@@ -86,8 +86,8 @@ public class Site {
     }
 
     /**
-     * 获取站点信息字符串表示。
-     * @return 站点信息字符串
+     *            。
+     * @return        
      */
     @Override
     public String toString() {

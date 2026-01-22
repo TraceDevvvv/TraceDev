@@ -1,5 +1,5 @@
 classDiagram
-    %% 实体类
+    %%    
     class Tourist {
         +Long id
         +String firstName
@@ -53,7 +53,7 @@ classDiagram
         +createLog(String action, Object entity, Object oldValue, Object newValue, String operatorId) AuditLog
     }
     
-    %% DTO类
+    %% DTO 
     class TouristDTO {
         +Long id
         +String fullName
@@ -88,7 +88,7 @@ classDiagram
         +static error(String message) TouristResponse
     }
     
-    %% 服务接口
+    %%     
     interface TouristService {
         +List~TouristDTO~ searchTourists(String searchTerm) List~TouristDTO~
         +TouristDTO getTouristById(Long id) TouristDTO
@@ -134,7 +134,7 @@ classDiagram
         +retryConnection(Integer maxRetries) boolean
     }
     
-    %% 仓库接口
+    %%     
     interface TouristRepository {
         +List~Tourist~ findBySearchTerm(String searchTerm) List~Tourist~
         +Optional~Tourist~ findById(Long id) Optional~Tourist~
@@ -150,7 +150,7 @@ classDiagram
         +Boolean isLoggedIn(Long operatorId) boolean
     }
     
-    %% 控制器
+    %%    
     class TouristController {
         -TouristService touristService
         +ResponseEntity~List~TouristDTO~~ searchTourists(@RequestParam String searchTerm) ResponseEntity~List~TouristDTO~~
@@ -165,7 +165,7 @@ classDiagram
         +ResponseEntity~Map~String, Object~~ handleETourConnectionException(ETourConnectionException ex) ResponseEntity~Map~String, Object~~
     }
     
-    %% 验证器
+    %%    
     class TouristValidator {
         -ValidationService validationService
         +ValidationResult validate(TouristUpdateRequest request) ValidationResult
@@ -181,7 +181,7 @@ classDiagram
         +String getErrorMessage() String
     }
     
-    %% 异常类
+    %%    
     class ETourConnectionException {
         +String connectionUrl
         +Integer statusCode
@@ -202,7 +202,7 @@ classDiagram
         +String fieldName
     }
     
-    %% 配置类
+    %%    
     class ETOURConnectionConfig {
         +String serverUrl
         +Integer timeoutSeconds
@@ -212,7 +212,7 @@ classDiagram
         +Boolean isProduction
     }
     
-    %% 关系
+    %%   
     Tourist "1" -- "1" Address
     TouristServiceImpl --> TouristRepository
     TouristServiceImpl --> ValidationService

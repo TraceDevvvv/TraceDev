@@ -1069,7 +1069,7 @@
                             },
                             {
                                 "id": "9944bd7a1102445ea331c3a15a71bb8c",
-                                "content": "Command Terminal.run_command executed:\n[command]: pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace\ntotal 8\ndrwxrwxr-x  2   4096 12月 27 18:12 .\ndrwxrwxr-x 17   4096 12月 27 17:34 ..\n",
+                                "content": "Command Terminal.run_command executed:\n[command]: pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace\ntotal 8\ndrwxrwxr-x  2   4096 12  27 18:12 .\ndrwxrwxr-x 17   4096 12  27 17:34 ..\n",
                                 "instruct_content": null,
                                 "role": "user",
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1093,7 +1093,7 @@
                             },
                             {
                                 "id": "5a2abb4bcc33430d9b2d9677668240ee",
-                                "content": "Command Terminal.run_command executed:\n[command]: mkdir -p InsertBanner_1766830362 && cd InsertBanner_1766830362 && pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace/InsertBanner_1766830362\ntotal 8\ndrwxrwxr-x 2   4096 12月 27 18:13 .\ndrwxrwxr-x 3   4096 12月 27 18:13 ..\n",
+                                "content": "Command Terminal.run_command executed:\n[command]: mkdir -p InsertBanner_1766830362 && cd InsertBanner_1766830362 && pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace/InsertBanner_1766830362\ntotal 8\ndrwxrwxr-x 2   4096 12  27 18:13 .\ndrwxrwxr-x 3   4096 12  27 18:13 ..\n",
                                 "instruct_content": null,
                                 "role": "user",
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1484,7 +1484,7 @@
                                 },
                                 {
                                     "id": "9944bd7a1102445ea331c3a15a71bb8c",
-                                    "content": "Command Terminal.run_command executed:\n[command]: pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace\ntotal 8\ndrwxrwxr-x  2   4096 12月 27 18:12 .\ndrwxrwxr-x 17   4096 12月 27 17:34 ..\n",
+                                    "content": "Command Terminal.run_command executed:\n[command]: pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace\ntotal 8\ndrwxrwxr-x  2   4096 12  27 18:12 .\ndrwxrwxr-x 17   4096 12  27 17:34 ..\n",
                                     "instruct_content": null,
                                     "role": "user",
                                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
@@ -1496,7 +1496,7 @@
                                 },
                                 {
                                     "id": "5a2abb4bcc33430d9b2d9677668240ee",
-                                    "content": "Command Terminal.run_command executed:\n[command]: mkdir -p InsertBanner_1766830362 && cd InsertBanner_1766830362 && pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace/InsertBanner_1766830362\ntotal 8\ndrwxrwxr-x 2   4096 12月 27 18:13 .\ndrwxrwxr-x 3   4096 12月 27 18:13 ..\n",
+                                    "content": "Command Terminal.run_command executed:\n[command]: mkdir -p InsertBanner_1766830362 && cd InsertBanner_1766830362 && pwd && ls -la \n[command output] : /home///baselines/MetaGPT/workspace/InsertBanner_1766830362\ntotal 8\ndrwxrwxr-x 2   4096 12  27 18:13 .\ndrwxrwxr-x 3   4096 12  27 18:13 ..\n",
                                     "instruct_content": null,
                                     "role": "user",
                                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
